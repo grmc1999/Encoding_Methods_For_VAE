@@ -1,0 +1,121 @@
+{
+      "experiment_state": "done",
+      "optimizer": {
+            "lr": 0.001
+      },
+      "trainer": {
+            "model": null,
+            "epochs": 510,
+            "folds": 2,
+            "batch_size": 32,
+            "use_cuda": true,
+            "data_dir": null,
+            "in_device": null,
+            "num_workers": 4,
+            "args": [
+                  "rgb",
+                  "poses"
+            ]
+      },
+      "transforms": {},
+      "model": {
+            "model_class": "CNN_graph",
+            "model_name": "ResNET_WL",
+            "sub_modules": {
+                  "image_encoding_mode": {
+                        "module_type": "ResNET_ENC",
+                        "parameters": {
+                              "repr_sizes": [
+                                    [
+                                          3,
+                                          64,
+                                          64
+                                    ],
+                                    [
+                                          64,
+                                          128,
+                                          128
+                                    ],
+                                    [
+                                          128,
+                                          128,
+                                          128
+                                    ]
+                              ],
+                              "kernel_sizes": [
+                                    [
+                                          3,
+                                          3
+                                    ],
+                                    [
+                                          3,
+                                          3
+                                    ],
+                                    [
+                                          5,
+                                          5
+                                    ]
+                              ],
+                              "bridge_kernel_size": 3,
+                              "act": {
+                                    "name": "Sigmoid",
+                                    "params": {}
+                              },
+                              "bridge_act": {
+                                    "name": "Sigmoid",
+                                    "params": {}
+                              },
+                              "lay_act": {
+                                    "name": "Sigmoid",
+                                    "params": {}
+                              },
+                              "batch_norm": true,
+                              "dropout": null,
+                              "stride": [
+                                    [
+                                          2,
+                                          2
+                                    ],
+                                    [
+                                          2,
+                                          2
+                                    ],
+                                    [
+                                          1,
+                                          1
+                                    ]
+                              ]
+                        }
+                  },
+                  "graph_encoding_mode": {
+                        "module_type": "WL_GNN_ENC",
+                        "parameters": {
+                              "attribute_dims": [
+                                    1350,
+                                    100,
+                                    50,
+                                    12
+                              ]
+                        }
+                  },
+                  "Estimation_NeuralNet": {
+                        "module_type": "NeuralNet",
+                        "parameters": {
+                              "layer_sizes": [
+                                    1536,
+                                    84,
+                                    12
+                              ],
+                              "activators": {
+                                    "name": "LeakyReLU",
+                                    "params": {}
+                              },
+                              "batch_norm": true,
+                              "dropout": null
+                        }
+                  }
+            },
+            "model_params": {}
+      },
+      "error": "CUDA out of memory. Tried to allocate 1.65 GiB (GPU 0; 11.91 GiB total capacity; 9.43 GiB already allocated; 441.50 MiB free; 10.33 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF"
+}
