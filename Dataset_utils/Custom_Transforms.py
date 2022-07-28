@@ -2,12 +2,15 @@
 
 class Tuple_to_dict(object):
 
-    def __init__(self):
-        pass
+    def __init__(self,mode):
+        self.new_sample={}
+        self.mode=mode
 
     def __call__(self, sample):
-        new_sample={}
-        new_sample["x"]=sample[0]
-        new_sample["y"]=sample[1]
+        
+        if self.mode=="sample":
+            self.new_sample["x"]=sample
+        elif self.mode=="target":
+            self.new_sample["t"]=sample
 
-        return new_sample
+        return self.new_sample
