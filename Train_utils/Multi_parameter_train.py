@@ -11,8 +11,8 @@ import traceback
 
 sys.path.append(os.path.join("..","Dataset_utils"))
 #from Dataset_utils import Custom_Transforms
-from Dataset_utils import poses_parser
-from Dataset_utils.DataLoader import UAV_GPS_Dataset
+#from Dataset_utils import poses_parser
+#from Dataset_utils.DataLoader import UAV_GPS_Dataset
 
 sys.path.append(os.path.join("..","Models"))
 from Models import DL_utils
@@ -22,8 +22,9 @@ import Models
 from .TT_class import trainer
 
 class multi_parameter_training(trainer):
-    def __init__(self,results_directory,dataset_root_directory,train=True,test=True,K_fold_training=None,visualization=False,split_frac=0.8):
+    def __init__(self,results_directory,dataset_root_directory,Dataset_type,train=True,test=True,K_fold_training=None,visualization=False,split_frac=0.8):
 
+        self.Dataset_type=Dataset_type
         self.datasets={}
         self.Compose_trans=None
         self.split_frac=split_frac
@@ -73,10 +74,8 @@ class multi_parameter_training(trainer):
 
     def set_datasets(self,test_dir,split=True):
 
-        dataset=UAV_GPS_Dataset(
+        dataset=self.Dataset_type(
             data_dir=self.dataset_root_directory,
-            representations=["rgb","poses"],
-            #size = (300, 100),
             transform=self.Compose_trans
             )
         if split:
