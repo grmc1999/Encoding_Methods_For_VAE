@@ -24,4 +24,4 @@ class No_target(object):
 
     def __call__(self, sample):
 
-        return _
+        return None
