@@ -78,8 +78,9 @@ class multi_parameter_training(trainer):
     def set_datasets(self,test_dir,split=True):
 
         dataset=self.Dataset_type(
-            data_dir=self.dataset_root_directory,
-            transform=self.Compose_trans
+            self.dataset_root_directory,
+            transform=self.Compose_trans,
+            target_transform=self.Compose_trans.transforms[0]
             )
         if split:
             self.split_dataset(dataset,test_dir)
