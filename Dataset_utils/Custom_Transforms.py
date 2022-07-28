@@ -16,3 +16,12 @@ class Tuple_to_dict(object):
             self.flag=0
 
         return self.new_sample
+
+class No_target(object):
+
+    def __init__(self):
+        pass
+
+    def __call__(self, sample):
+
+        return _
