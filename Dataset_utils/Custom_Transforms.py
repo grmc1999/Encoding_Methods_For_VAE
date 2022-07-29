@@ -37,5 +37,4 @@ class MultiInputToTensor(object):
       sample[k]=(self.TT(sample[k])).float()
     for k in self.metadata:
       sample[k]=torch.tensor(sample[k]).float()
-    print(sample)
     return sample
