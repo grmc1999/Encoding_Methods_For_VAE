@@ -224,7 +224,7 @@ class trainer(object):
                 if self.MNIST_debug:
                     x=test_set[idx][0][self.args[0]]
                 else:
-                    x=test_set[idx][self.args[0]]
+                    x=test_set[idx][0][self.args[0]]
                 if self.use_cuda:
                     x=x.cuda()
                 self.model.eval()
