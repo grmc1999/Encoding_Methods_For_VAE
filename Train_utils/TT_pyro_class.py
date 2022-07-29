@@ -113,7 +113,7 @@ class trainer(object):
             )
             #STACK MINIBATCH LOSS
             for l in self.loss_list:
-                self.loss_epoch["train"][l].append(losses[l].detach().item())
+                self.loss_epoch["train"][l].append(losses[l].cpu().detach().item())
 
         #EPOCH MEAN LOSSES
         for l in self.loss_list:
@@ -157,7 +157,7 @@ class trainer(object):
 
             #STACK MINIBATCH LOSS
             for l in self.loss_list:
-                self.loss_epoch["test"][l].append(losses[l].detach().item())
+                self.loss_epoch["test"][l].append(losses[l].cpu().detach().item())
 
         #EPOCH MEAN LOSSES
         for l in self.loss_list:
