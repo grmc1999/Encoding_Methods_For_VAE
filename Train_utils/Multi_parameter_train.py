@@ -153,6 +153,7 @@ class multi_parameter_training(trainer):
             model_args=test_json["model"]
             transforms_args=test_json["transforms"]
 
+            print("pre prepare transforms")
             self.prepare_transforms(transforms_args)
             self.set_datasets(test)
             self.set_model(model_args)
