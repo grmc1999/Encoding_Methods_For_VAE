@@ -7,8 +7,10 @@ class plot_training_sample(object):
         self.images_idxs=images_idxs
         self.titles=titles
         self.image_save_dir=image_save_dir
-        if "generated_imgs" not in os.listdir(self.image_save_dir):
+        try:
             os.mkdir(os.path.join(self.image_save_dir,"generated_imgs"))
+        except:
+            pass
         self.image_save_dir=os.path.join(self.image_save_dir,"generated_imgs")
 
         #plt.ion()
