@@ -39,6 +39,7 @@ class multi_parameter_training(trainer):
         self.K_fold_training=K_fold_training
 
         self.test_dirs=np.array(os.listdir(self.results_directory))
+        print(self.test_dirs)
         self.test_dirs=np.vectorize(lambda td:os.path.join(self.results_directory,td))(self.test_dirs)
         #self.test_dirs=np.vectorize(lambda td:os.path.join(td,"config.json"))(self.test_dirs)
     
