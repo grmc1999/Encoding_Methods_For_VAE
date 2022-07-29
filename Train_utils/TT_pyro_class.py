@@ -170,6 +170,7 @@ class trainer(object):
         return self.loss_epoch
 
     def train_test(self,train_set,test_set):
+        print("running train_test")
 
         #Is file already exists charge ------------------------------------------------------------------------------------------------------------------------
         if b"loss_results.npy" in os.listdir(self.data_dir) or "loss_results.npy" in os.listdir(self.data_dir):
