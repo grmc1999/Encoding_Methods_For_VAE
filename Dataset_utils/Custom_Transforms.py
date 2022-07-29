@@ -34,7 +34,7 @@ class MultiInputToTensor(object):
     self.TT=transforms.ToTensor()
   def __call__(self,sample):
     for k in self.images:
-      sample[k]=(self.TT(sample[k])).float()
+      sample[0][k]=(self.TT(sample[0][k])).float()
     for k in self.metadata:
-      sample[k]=torch.tensor(sample[k]).float()
+      sample[0][k]=torch.tensor(sample[0][k]).float()
     return sample
