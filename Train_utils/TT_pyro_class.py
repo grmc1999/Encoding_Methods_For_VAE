@@ -93,6 +93,9 @@ class trainer(object):
             if self.MNIST_debug:
                 batch=batch[0]
             #----------------------------------------------------------------------------------------
+            #DEBUG
+            print(batch)
+            batch=batch[0]
             args=(batch[arg].to(device) for arg in self.args)
             losses=self.model.compute_losses(*(args))
             
@@ -141,6 +144,7 @@ class trainer(object):
             #    losses=self.model.ELBO(*(args))
             if self.MNIST_debug:
                 batch=batch[0]
+            batch=batch[0]
             args=(batch[arg].to(device) for arg in self.args)
             losses=self.model.compute_losses(*(args))
 
