@@ -161,6 +161,7 @@ class trainer(object):
                 self.loss_epoch["test"][l].append(losses[l].cpu().detach().item())
 
         #EPOCH MEAN LOSSES
+        del losses
         for l in self.loss_list:
             self.loss_DATA["test"][l].append(
                 np.mean(
