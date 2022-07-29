@@ -197,7 +197,7 @@ class trainer(object):
 
         if self.view_out_state:
             #z_mu,z_sig,x_r,x
-            plot_sample=plot_training_sample(images_idxs=[2,3],titles=["reconstruction","input"])
+            plot_sample=plot_training_sample(images_idxs=[2,3],titles=["reconstruction","input"],image_save_dir=self.data_dir)
 
         for epoch in tqdm(range(self.current_epoch,self.epochs),desc="Epoch"):
 
@@ -233,7 +233,7 @@ class trainer(object):
                 out.append(x.unsqueeze(0))
                 #z_mu,z_sig,x_r,x
                 self.model.train()
-                plot_sample.plot(out)
+                plot_sample.plot(out,epoch)
 
             if (np.mean(np.array(losses_te["test"]["total_loss"])))>best_result:
                 best_result=(np.mean(np.array(losses_te["test"]["total_loss"])))
