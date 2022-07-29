@@ -170,7 +170,6 @@ class trainer(object):
         return self.loss_epoch
 
     def train_test(self,train_set,test_set):
-        print("running train_test")
 
         #Is file already exists charge ------------------------------------------------------------------------------------------------------------------------
         if b"loss_results.npy" in os.listdir(self.data_dir) or "loss_results.npy" in os.listdir(self.data_dir):
@@ -214,9 +213,7 @@ class trainer(object):
             dataloader_train=torch.utils.data.DataLoader(train_set,batch_size=self.batch_size,shuffle=True,num_workers=self.num_workers,drop_last=drop_train)
             dataloader_test=torch.utils.data.DataLoader(test_set,batch_size=self.batch_size,shuffle=True,num_workers=self.num_workers,drop_last=drop_test)
 
-            print("pre_train_done")
             loss_epoch=self.train(dataloader_train)
-            print("train_done")
             losses_te=self.test(dataloader_test)
             torch.cuda.empty_cache()
             

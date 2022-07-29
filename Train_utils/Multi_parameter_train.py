@@ -153,11 +153,8 @@ class multi_parameter_training(trainer):
             model_args=test_json["model"]
             transforms_args=test_json["transforms"]
 
-            print("pre prepare transforms")
             self.prepare_transforms(transforms_args)
-            print("prepare trans done")
             self.set_datasets(test)
-            print("set dataset done")
             self.set_model(model_args)
             
             if test_json["trainer"]["use_cuda"]:
@@ -169,7 +166,6 @@ class multi_parameter_training(trainer):
             trainer_args["dataset"]=self.datasets
 
             #model load debug
-            #print(self.instantiated_model)
 
             self.trainer=trainer(**(trainer_args))
             self.trainer.optimizer=torch.optim.Adam(self.trainer.model.parameters(),**(test_json["optimizer"]))
@@ -177,7 +173,6 @@ class multi_parameter_training(trainer):
             if test_json["experiment_state"]=="waiting":
                 try:
                     if self.train and self.test:
-                        print("pre train_test")
                         self.trainer.train_test(**(self.datasets))
                         test_json_save["experiment_state"]="done"
                     elif self.train and not(self.test):
