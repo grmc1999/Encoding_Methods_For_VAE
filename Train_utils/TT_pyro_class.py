@@ -94,7 +94,6 @@ class trainer(object):
                 batch=batch[0]
             #----------------------------------------------------------------------------------------
             #DEBUG
-            print(batch)
             batch=batch[0]
             args=(batch[arg].to(device) for arg in self.args)
             losses=self.model.compute_losses(*(args))
