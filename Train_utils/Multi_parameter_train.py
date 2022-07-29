@@ -155,7 +155,9 @@ class multi_parameter_training(trainer):
 
             print("pre prepare transforms")
             self.prepare_transforms(transforms_args)
+            print("prepare trans done")
             self.set_datasets(test)
+            print("set dataset done")
             self.set_model(model_args)
             
             if test_json["trainer"]["use_cuda"]:
