@@ -6,7 +6,7 @@ class plot_training_sample(object):
         self.images_idxs=images_idxs
         self.titles=titles
 
-        plt.ion()
+        #plt.ion()
         self.figure,self.axs=plt.subplots(1,len(self.images_idxs),figsize=(10,5),constrained_layout=True)
 
         
