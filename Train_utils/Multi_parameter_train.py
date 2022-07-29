@@ -177,6 +177,7 @@ class multi_parameter_training(trainer):
             if test_json["experiment_state"]=="waiting":
                 try:
                     if self.train and self.test:
+                        print("pre train_test")
                         self.trainer.train_test(**(self.datasets))
                         test_json_save["experiment_state"]="done"
                     elif self.train and not(self.test):
