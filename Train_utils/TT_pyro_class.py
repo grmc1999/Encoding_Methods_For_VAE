@@ -181,7 +181,11 @@ class trainer(object):
         if b"checkpoint.pt" in os.listdir(self.data_dir) or "checkpoint.pt" in os.listdir(self.data_dir):
             print("checkpoint found")
 
-            checkpoint=torch.load(os.path.join(self.data_dir,"checkpoint.pt"))
+            if self.use_cuda:
+                device=torch.device('cuda')
+            else:
+                device=torch.device('cpu')
+            checkpoint=torch.load(os.path.join(self.data_dir,"checkpoint.pt"),map_location=device)
             self.current_epoch=checkpoint["current_epoch"]
             #self.epochs=checkpoint["total_epoch"]
             if self.epochs-1!=self.current_epoch:
