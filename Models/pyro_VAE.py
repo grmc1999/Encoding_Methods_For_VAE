@@ -406,7 +406,7 @@ class Decoupled_Loss_Normal_Prior_Flexible_Encoding_Decoding_VAE(Base_Generative
     #Std
     x_re=self.P.x_z_sig(z)
     x_r_sig=self.Encoding_Decoding_sig.Decoding(x_re)
-    x_r_sig=torch.exp(x_r_sig*self.scale)
+    x_r_sig=torch.exp(x_r_sig*0.01)
     
     #Add losses
     #Define prior relation to obs
