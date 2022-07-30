@@ -190,7 +190,7 @@ class trainer(object):
             #self.epochs=checkpoint["total_epoch"]
             if self.epochs-1!=self.current_epoch:
 
-                self.model.load_state_dict(checkpoint['model_state_dict'],map_location=device)
+                self.model.load_state_dict(checkpoint['model_state_dict'])
                 self.optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
             else:
                 print("was the last")
