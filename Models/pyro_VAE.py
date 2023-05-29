@@ -413,3 +413,103 @@ class Decoupled_Loss_Normal_Prior_Flexible_Encoding_Decoding_VAE(Base_Generative
     x_r=dist.Normal(x_r_mu,x_r_sig).sample()
 
     return z_mu.detach(),z_sig.detach(),x_r.detach()
+
+
+class Unpaired_Flexible_Encoding_Decoding_VAE(Base_Generative_AutoEncoder):
+  def __init__(self,encoding_module,decoding_module,P_NET,Q_NET,losses_weigths={"generative_loss":1},subsample=None,sig_scale=1,resize=None,save_output=False,aux_dir=None,module_name=None):
+    super(Flexible_Encoding_Decoding_VAE,self).__init__(Encoder_Decoder_Module=None,P_NET=P_NET,Q_NET=Q_NET,losses_weigths=losses_weigths)
+    """
+    encoding_module: Trainable function that maps X to y where y is a vector
+    decoding_module: Trainable function that maps y to y where X is a vector
+    """
+    self.subsample=subsample
+    self.scale=sig_scale
+    self.losses={}
+    self.gen_loss_fun=pyro.infer.Trace_ELBO().differentiable_loss
+    self.resize=resize
+
+    self.Encoding=encoding_module
+    self.Decoding=decoding_module
+    #self.z_x_mu=NeuralNet(layer_size,enc_activators)
+    #self.z_x_sig=NeuralNet(layer_size,enc_activators)
+    #self.x_z=NeuralNet(layer_size[::-1],dec_activators)
+    self.z_dim=self.Q.z_x_mu.layer_sizes[-1]
+
+  def model(self,x):
+    #Sampling pass
+    #pyro.module("post_NET",self.Encoding_Decoding.Decoding)
+    pyro.module("x_z_NET",self.P.x_z)
+    with pyro.plate("data",x.shape[0]):
+      z_mu=x.new_zeros(torch.Size((x.shape[0],self.z_dim)))
+      z_sig=x.new_ones(torch.Size((x.shape[0],self.z_dim)))
+
+      #Allocate memory for sampling
+      #define "latent" probabilistic variable with its prior
+      #dimension 1 is independent
+      z=pyro.sample("latent",dist.Normal(z_mu,z_sig).to_event(1))
+
+      x_re=self.P.x_z(z)
+      x_r=self.Decoding.Decoding(x_re)
+
+      #Add losses
+
+      #Define prior relation to obs
+      if self.resize!=None:
+        x=F.interpolate(x,self.resize)
+
+      pyro.sample("obs",dist.Bernoulli(x_r).to_event(3),obs=((x>0.5)).float())
+      #pyro.sample("obs",dist.Bernoulli(x_r).to_event(1),obs=((x)).float())
+  
+  def guide(self,x):
+    #Inference pass
+    #pyro.module("pre_NET",self.Encoding_Decoding.Encoding)
+    pyro.module("z_x_mu_NET",self.Q.z_x_mu)
+    pyro.module("z_x_sig_NET",self.Q.z_x_sig)
+
+    with pyro.plate("data",x.shape[0],subsample=self.subsample):
+
+      xe=self.Encoding.Encoding(x)
+      z_mu=self.Q.z_x_mu(xe)
+      z_sig=torch.exp(self.Q.z_x_sig(xe)*self.scale)
+      #define prior in inference
+      z=pyro.sample("latent",dist.Normal(z_mu,z_sig).to_event(1))
+
+  def compute_losses(self,x_obs):
+    self.losses["total_loss"]=0
+    self.losses["generative_loss"]=self.gen_loss_fun(self.model,self.guide,x_obs)
+
+    for loss in self.losses_weigths.keys():
+      self.losses["total_loss"]=self.losses["total_loss"]+self.losses[loss]*self.losses_weigths[loss]
+
+    return self.losses
+
+  def gen_forward_pass(self,xi):
+    x=self.Encoding.Encoding(xi)
+    z_mu=self.Q.z_x_mu(x)
+    z_sig=torch.exp(self.Q.z_x_sig(x))
+
+    z=dist.Normal(z_mu,z_sig).sample()
+
+    x_re=self.P.x_z(z)
+    x_r=self.Decoding.Decoding(x_re)
+
+    return {"z_mu":z_mu.detach().cpu(),"z_sig":z_sig.detach().cpu(),"x_r":x_r.detach().cpu()}
+
+  def forward_pass(self,xi):
+    x=self.Encoding.Encoding(xi)
+    z_mu=self.Q.z_x_mu(x)
+    z_sig=torch.exp(self.Q.z_x_sig(x))
+
+    z=dist.Normal(z_mu,z_sig).sample()
+
+    x_re=self.P.x_z(z)
+    x_r=self.Decoding.Decoding(x_re)
+
+    return z_mu.detach(),z_sig.detach(),x_r.detach()
+
+  def forward_latent_pass(self,xi):
+    x=self.Encoding.Encoding(xi)
+    z_mu=self.Q.z_x_mu(x)
+    z_sig=torch.exp(self.Q.z_x_sig(x))
+
+    return z_mu.detach(),z_sig.detach()
