@@ -585,7 +585,7 @@ class Unpaired_Flexible_Encoding_Decoding_VAE_Decoupler(Base_Generative_AutoEnco
 
       xe_12_q=self.Q_Encoding.Encoding(x_12) #COMMENT: Q image encoding will output 2N entities [B,W,H,R]
       print(xe_12_q.shape)
-      xe_1_q,xe_2_q=rearrange(xe_12_q,' b w h (n_ent r) -> n_ent b w h r',n_ent=2)
+      xe_1_q,xe_2_q=rearrange(xe_12_q,' b (n_ent r) w h -> n_ent b w h r',n_ent=2)
       print(xe_1_q.shape)
       print(xe_2_q.shape)
       z_mu_1_q=self.Q.z_x_mu(xe_1_q)
