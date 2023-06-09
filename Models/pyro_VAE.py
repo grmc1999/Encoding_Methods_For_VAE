@@ -516,7 +516,7 @@ class Unpaired_Flexible_Encoding_Decoding_VAE(Base_Generative_AutoEncoder):
 
 
 class Unpaired_Flexible_Encoding_Decoding_VAE_Decoupler(Base_Generative_AutoEncoder):
-  def __init__(self,encoding_module,decoding_module,P_NET,Q_NET,P_NET_ENC,losses_weigths={"generative_loss":1},subsample=None,sig_scale=1,resize=None,save_output=False,aux_dir=None,module_name=None):
+  def __init__(self,p_encoding_module,q_encoding_module,decoding_module,P_NET,Q_NET,P_NET_ENC,losses_weigths={"generative_loss":1},subsample=None,sig_scale=1,resize=None,save_output=False,aux_dir=None,module_name=None):
     super(Unpaired_Flexible_Encoding_Decoding_VAE_Decoupler,self).__init__(Encoder_Decoder_Module=None,P_NET=P_NET,Q_NET=Q_NET,losses_weigths=losses_weigths)
     """
     encoding_module: Trainable function that maps X to y where y is a vector
@@ -528,8 +528,8 @@ class Unpaired_Flexible_Encoding_Decoding_VAE_Decoupler(Base_Generative_AutoEnco
     self.gen_loss_fun=pyro.infer.Trace_ELBO().differentiable_loss
     self.resize=resize
 
-    self.Q_Encoding=encoding_module
-    self.P_Encoding=copy.deepcopy(encoding_module)
+    self.Q_Encoding=q_encoding_module
+    self.P_Encoding=p_encoding_module
     self.Decoding=decoding_module
     self.P_ENC=P_NET_ENC
     self.z_dim=self.Q.z_x_mu.layer_sizes[-1]
