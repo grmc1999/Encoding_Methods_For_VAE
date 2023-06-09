@@ -546,8 +546,8 @@ class Unpaired_Flexible_Encoding_Decoding_VAE_Decoupler(Base_Generative_AutoEnco
       #Allocate memory for sampling
       #define "latent" probabilistic variable with its prior
       #dimension 1 is independent
-      z_1=pyro.sample("latent",dist.Normal(z_mu_1,z_sig_1).to_event(1))
-      z_2=pyro.sample("latent",dist.Normal(z_mu_2,z_sig_2).to_event(1))
+      z_1=pyro.sample("latent_1",dist.Normal(z_mu_1,z_sig_1).to_event(1))
+      z_2=pyro.sample("latent_2",dist.Normal(z_mu_2,z_sig_2).to_event(1))
 
       x_re_1=self.P.x_z(z_1)
       x_re_2=self.P.x_z(z_2)
@@ -576,12 +576,12 @@ class Unpaired_Flexible_Encoding_Decoding_VAE_Decoupler(Base_Generative_AutoEnco
       xe_1=self.P_Encoding.Encoding(x_1)
       z_mu_1=self.P_ENC.z_x_mu(xe_1)
       z_sig_1=torch.exp(self.P_ENC.z_x_sig(xe_1)*self.scale)
-      z_1=pyro.sample("latent",dist.Normal(z_mu_1,z_sig_1).to_event(1))
+      z_1=pyro.sample("latent_1",dist.Normal(z_mu_1,z_sig_1).to_event(1))
 
       xe_2=self.P_Encoding.Encoding(x_2)
       z_mu_2=self.P_ENC.z_x_mu(xe_2)
       z_sig_2=torch.exp(self.P_ENC.z_x_sig(xe_2)*self.scale)
-      z_2=pyro.sample("latent",dist.Normal(z_mu_2,z_sig_2).to_event(1))
+      z_2=pyro.sample("latent_2",dist.Normal(z_mu_2,z_sig_2).to_event(1))
 
       xe_12_q=self.Q_Encoding.Encoding(x_12) #COMMENT: Q image encoding will output 2N entities [B,W,H,R]
       print(xe_12_q.shape)
@@ -590,11 +590,11 @@ class Unpaired_Flexible_Encoding_Decoding_VAE_Decoupler(Base_Generative_AutoEnco
       print(xe_2_q.shape)
       z_mu_1_q=self.Q.z_x_mu(xe_1_q)
       z_sig_1_q=torch.exp(self.Q.z_x_sig(xe_1_q)*self.scale)
-      z_1=pyro.sample("latent",dist.Normal(z_mu_1_q,z_sig_1_q).to_event(1))
+      z_1=pyro.sample("latent_1",dist.Normal(z_mu_1_q,z_sig_1_q).to_event(1))
 
       z_mu_2_q=self.Q.z_x_mu(xe_2_q)
       z_sig_2_q=torch.exp(self.Q.z_x_sig(xe_2_q)*self.scale)
-      z_2=pyro.sample("latent",dist.Normal(z_mu_2_q,z_sig_2_q).to_event(1))
+      z_2=pyro.sample("latent_2",dist.Normal(z_mu_2_q,z_sig_2_q).to_event(1))
 
   def compute_losses(self,x_12,x_1,x_2):
     self.losses["total_loss"]=0
