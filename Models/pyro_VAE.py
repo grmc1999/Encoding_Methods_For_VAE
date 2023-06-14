@@ -561,8 +561,8 @@ class Unpaired_Flexible_Encoding_Decoding_VAE_Decoupler(Base_Generative_AutoEnco
         x_r_1=F.interpolate(x_r_1,self.resize)
         x_r_2=F.interpolate(x_r_2,self.resize)
 
-      pyro.sample("obs_1",dist.Bernoulli(x_r_1.view(x_1.shape[0],-1)).to_event(3),obs=((x_1.x_1.shape[0],-1>0.5)).float())
-      pyro.sample("obs_2",dist.Bernoulli(x_r_2.view(x_1.shape[0],-1)).to_event(3),obs=((x_2.x_1.shape[0],-1>0.5)).float())
+      pyro.sample("obs_1",dist.Bernoulli(x_r_1.view(x_1.shape[0],-1)).to_event(1),obs=((x_1.x_1.shape[0],-1>0.5)).float())
+      pyro.sample("obs_2",dist.Bernoulli(x_r_2.view(x_1.shape[0],-1)).to_event(1),obs=((x_2.x_1.shape[0],-1>0.5)).float())
       #pyro.sample("obs",dist.Bernoulli(x_r).to_event(1),obs=((x)).float())
   
   def guide(self,x_12,x_1,x_2):
