@@ -206,14 +206,15 @@ class b_encoder_conv(nn.Module):
                 dropout,
                 stride
                 )
+                #repr_size_in,repr_size_out,kernel_size=5,act=nn.ReLU(),pooling=True,batch_norm=True,dropout=None,stride=1
                 for repr_in,repr_out,kernel_size,act,pooling,batch_norm,dropout,stride in zip(
                     self.repr_sizes[:-1],
                     self.repr_sizes[1:],
                     self.kernels,
                     self.activators,
                     self.pooling,
-                    self.dropout,
                     self.batch_norm,
+                    self.dropout,
                     self.stride
                 )
             ]
@@ -268,6 +269,7 @@ class b_decoder_conv(nn.Module):
                 dropout,
                 stride
                 )
+                #repr_size_in,repr_size_out,kernel_size=5,act=nn.ReLU(),pooling=True,batch_norm=True,dropout=None,stride=1
                 for repr_in,repr_out,kernel_size,act,pooling,batch_norm,dropout,stride in zip(
                     self.repr_sizes[:-1],
                     self.repr_sizes[1:],
