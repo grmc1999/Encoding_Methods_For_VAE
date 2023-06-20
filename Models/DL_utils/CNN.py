@@ -97,8 +97,8 @@ class b_encoder_conv(nn.Module):
                     self.kernels,
                     self.activators,
                     self.pooling,
-                    self.dropout,
                     self.batch_norm,
+                    self.dropout,
                     self.stride
                 )
             ]
