@@ -127,7 +127,7 @@ class b_decoder_conv(nn.Module):
         if isinstance(stride,int):
             self.stride=[stride for i in range(len(repr_sizes)-1)]
         else:
-            self.stride=stride
+            self.stride=stride[::-1]
         #kernels
         if isinstance(kernel_size,int):
             self.kernels=[kernel_size for i in range(len(repr_sizes)-1)]
