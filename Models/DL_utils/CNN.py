@@ -52,13 +52,20 @@ class b_encoder_conv(nn.Module):
                 kernel_size=5,activators=nn.ReLU(),pooling=True,batch_norm=True,dropout=None,stride=1):
         super(b_encoder_conv, self).__init__()
         self.repr_sizes=repr_sizes
-        self.stride=[stride for i in range(len(repr_sizes)-1)]
+        #self.stride=[stride for i in range(len(repr_sizes)-1)]
         
         #kernels
         if isinstance(kernel_size,int):
             self.kernels=[kernel_size for i in range(len(repr_sizes)-1)]
         else:
             self.kernels=kernel_size
+
+        #stride
+        if isinstance(stride,int):
+            self.stride=[stride for i in range(len(repr_sizes)-1)]
+        else:
+            self.stride=stride
+
         #activators
         if isinstance(activators,nn.Module):
             self.activators=[activators for i in range(len(repr_sizes)-1)]
