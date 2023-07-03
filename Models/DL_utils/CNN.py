@@ -121,8 +121,13 @@ class b_decoder_conv(nn.Module):
         super(b_decoder_conv,self).__init__()
         self.repr_sizes=repr_sizes
         self.repr_sizes=self.repr_sizes[::-1]
-        self.stride=[stride for i in range(len(repr_sizes)-1)][::-1]
+        #self.stride=[stride for i in range(len(repr_sizes)-1)][::-1]
         
+        #stride
+        if isinstance(stride,int):
+            self.stride=[stride for i in range(len(repr_sizes)-1)]
+        else:
+            self.stride=stride
         #kernels
         if isinstance(kernel_size,int):
             self.kernels=[kernel_size for i in range(len(repr_sizes)-1)]
