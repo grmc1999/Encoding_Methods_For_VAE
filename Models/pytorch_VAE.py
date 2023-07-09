@@ -92,8 +92,8 @@ class Unpaired_Flexible_Encoding_Decoding_VAE_Decoupler(Base_Generative_AutoEnco
     z_1_p,z_2_p,z_1_q,z_2_q=self.guide(x_12,x_1,x_2)
     #TODO: distance between z_p and z_q
 
-    z_1_p=self.reparametrize(*(z_1_p))
-    z_2_p=self.reparametrize(*(z_2_p))
+    #z_1_p=self.reparametrize(*(z_1_p))
+    #z_2_p=self.reparametrize(*(z_2_p))
     z_1_q_=self.reparametrize(*(z_1_q))
     z_2_q_=self.reparametrize(*(z_2_q))
 
@@ -102,8 +102,10 @@ class Unpaired_Flexible_Encoding_Decoding_VAE_Decoupler(Base_Generative_AutoEnco
     self.losses["total_loss"]=0
     self.losses["reconstructive_1"]=self.reconstruction_loss(x_r_1,x_1)
     self.losses["reconstructive_2"]=self.reconstruction_loss(x_r_2,x_2)
-    self.losses["generative_1"]=self.KLD_loss(*(z_1_p))
-    self.losses["generative_2"]=self.KLD_loss(*(z_2_p))
+    self.losses["generative_p_1"]=self.KLD_loss(*(z_1_p))
+    self.losses["generative_p_2"]=self.KLD_loss(*(z_2_p))
+    self.losses["generative_q_1"]=self.KLD_loss(*(z_2_q))
+    self.losses["generative_q_2"]=self.KLD_loss(*(z_1_q))
       
     for loss in self.losses_weigths.keys():
       self.losses["total_loss"]=self.losses["total_loss"]+self.losses[loss]*self.losses_weigths[loss]
