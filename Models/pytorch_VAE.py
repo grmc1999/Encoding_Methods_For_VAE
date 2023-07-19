@@ -7,6 +7,85 @@ from DL_utils.utils import NeuralNet
 from DL_utils.Generative_autoencoder_utils import Base_Generative_AutoEncoder
 from einops import rearrange
 
+class Unpaired_Flexible_Encoding_Decoding_VAE(Base_Generative_AutoEncoder):
+  def __init__(self,encoding_module,decoding_module,P_NET,Q_NET,losses_weigths={"generative_loss":1},subsample=None,sig_scale=1,resize=None,save_output=False,aux_dir=None,module_name=None):
+    super(Unpaired_Flexible_Encoding_Decoding_VAE,self).__init__(Encoder_Decoder_Module=None,P_NET=P_NET,Q_NET=Q_NET,losses_weigths=losses_weigths)
+    """
+    encoding_module: Trainable function that maps X to y where y is a vector
+    decoding_module: Trainable function that maps y to y where X is a vector
+    """
+    self.subsample=subsample
+    self.scale=sig_scale
+    self.losses={}
+    self.reconstruction_fun=torch.nn.BCELoss(reduction="mean")
+    self.resize=resize
+
+    self.Encoding=encoding_module
+    self.Decoding=decoding_module
+    self.z_dim=self.Q.z_x_mu.layer_sizes[-1]
+
+  def model(self,z):
+    
+    x_re=self.P.x_z(z)
+    x_r=self.Decoding.Decoding(x_re)
+
+    if self.resize!=None:
+      x_r=F.interpolate(x_r,self.resize)
+    
+    return x_r
+  
+  def guide(self,x):
+
+    xe_q=self.Q_Encoding.Encoding(x) #COMMENT: Q image encoding will output 2N entities [B,W,H,R]
+
+    z_mu_q=self.Q.z_x_mu(xe_q)
+    z_sig_q=torch.exp(self.Q.z_x_sig(xe_q)*self.scale)
+
+    return (z_mu_q,z_sig_q)
+  
+  def reconstruction_loss(self,r_x,x):
+    BCE=self.reconstruction_fun(r_x,x) #TODO: implement BCE
+    return BCE
+  
+  def KLD_loss(self,z_mean,z_sig):
+    KLD=-0.5*torch.mean(1+torch.log(z_sig.pow(2))-z_mean.pow(2)-z_sig.pow(2))
+    return KLD
+  
+  def reparametrize(self,mu,sig):
+    std=sig.pow(2)
+    eps=torch.randn_like(std)
+    return eps*std + mu
+  
+  def ELBO(self,x):
+    x_r,z_mean,z_logvar=self.forward(x)  
+    reconstruction=self.reconstruction_loss(x_r,x)
+    KLD=self.KLD_loss(z_mean,z_logvar)
+
+    loss=reconstruction+KLD
+
+        #BUILD LOSSES DICT
+    self.losses['KLD']=KLD
+    self.losses['reconstruction']=reconstruction
+    self.losses["total_loss"]=loss
+      
+    return self.losses
+
+  def compute_losses(self,x):
+    z_q=self.guide(x)
+    z_q_=self.reparametrize(*(z_q))
+
+    x_r=self.model(z_q_)
+
+    self.losses["total_loss"]=0
+    self.losses["reconstructive_1"]=self.reconstruction_loss(x_r,x)
+    self.losses["generative_q_2"]=self.KLD_loss(*(z_q_))
+      
+    for loss in self.losses_weigths.keys():
+      self.losses["total_loss"]=self.losses["total_loss"]+self.losses[loss]*self.losses_weigths[loss]
+
+    return self.losses
+
+
 class Unpaired_Flexible_Encoding_Decoding_VAE_Decoupler(Base_Generative_AutoEncoder):
   def __init__(self,p_encoding_module,q_encoding_module,decoding_module,P_NET,Q_NET,P_NET_ENC,losses_weigths={"generative_loss":1},subsample=None,sig_scale=1,resize=None,save_output=False,aux_dir=None,module_name=None):
     super(Unpaired_Flexible_Encoding_Decoding_VAE_Decoupler,self).__init__(Encoder_Decoder_Module=None,P_NET=P_NET,Q_NET=Q_NET,losses_weigths=losses_weigths)
