@@ -84,6 +84,14 @@ class Unpaired_Flexible_Encoding_Decoding_VAE(Base_Generative_AutoEncoder):
       self.losses["total_loss"]=self.losses["total_loss"]+self.losses[loss]*self.losses_weigths[loss]
 
     return self.losses
+  
+  def forward_pass(self,xi):
+    z_d=self.guide(xi)
+    z_q_=self.reparametrize(*(z_d))
+
+    x_r=self.model(z_q_)
+
+    return z_d[0].detach(),z_d[1].detach(),x_r.detach()
 
 
 class Unpaired_Flexible_Encoding_Decoding_VAE_Decoupler(Base_Generative_AutoEncoder):
