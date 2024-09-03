@@ -48,7 +48,8 @@
                         "batch_norm":true,
                         "dropout":null
                       },
-                      "flat":false
+                      "flat":false,
+                      "input_size":[28,28,1]
                   }
                 },
                 "P_NET": {

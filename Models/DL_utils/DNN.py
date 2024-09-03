@@ -132,8 +132,5 @@ class b_decoder_NN(nn.Module):
         for l in self.im_layers:
             x=l(x)
         
-        if len(x.shape)>3:
-            x=rearrange(x,"b (h w c) -> b h w c",w=self.input_size[0],h=self.inp_sizes[1])
-        else:
-            x=rearrange(x,"b (h w c) -> b h w c",w=self.input_size[0],h=self.inp_sizes[1])
+        x=rearrange(x,"b (h w c) -> b h w c",w=self.input_size[0],h=self.inp_sizes[1],c=self.inp_sizes[1])
         return x
