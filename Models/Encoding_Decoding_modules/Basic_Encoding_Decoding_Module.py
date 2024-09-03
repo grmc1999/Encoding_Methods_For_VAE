@@ -61,6 +61,7 @@ class Asymmetrical_Dense_Neural_Net_EDM(nn.Module):
     return ex
     
   def Decoding(self,z):
+    dz=z
     if self.flat:
       dz=self.fl(z)
     dz=self.DEC(dz)
