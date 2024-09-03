@@ -27,7 +27,7 @@ class Unpaired_Flexible_Encoding_Decoding_VAE(Base_Generative_AutoEncoder):
   def model(self,z):
     
     x_re=self.P.x_z(z)
-    x_r=self.Decoding.Decoding(x_re)
+    x_r=self.Decoding(x_re)
 
     if self.resize!=None:
       x_r=F.interpolate(x_r,self.resize)

@@ -47,7 +47,8 @@
                             },
                         "batch_norm":true,
                         "dropout":null
-                      }
+                      },
+                      "flat":false
                   }
                 },
                 "P_NET": {

@@ -8,7 +8,7 @@ class set_enc_NN(nn.Module):
 
         self.comp_layer=nn.ModuleList(
             [nn.Linear(inp,out)]+\
-            ([nn.BatchNorm2d(out)] if batch_norm else [])+\
+            ([nn.BatchNorm1d(out)] if batch_norm else [])+\
             [act]+\
             ([nn.Dropout(dropout)] if dropout!=None else [])
         )
@@ -24,7 +24,7 @@ class set_dec_NN(nn.Module):
 
         self.comp_layer=nn.ModuleList(
             [nn.Linear(inp,out)]+\
-            ([nn.BatchNorm2d(out)] if batch_norm else [])+\
+            ([nn.BatchNorm1d(out)] if batch_norm else [])+\
             [act]+\
             ([nn.Dropout(dropout)] if dropout!=None else [])
         )
