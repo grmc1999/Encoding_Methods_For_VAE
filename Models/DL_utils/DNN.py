@@ -65,20 +65,16 @@ class b_encoder_NN(nn.Module):
             [
                 set_enc_NN(inp,
                 out,
-                kernel_size,
                 act,
                 batch_norm,
                 dropout
                 )
-                for inp,out,kernel_size,act,batch_norm,dropout in zip(
+                for inp,out,act,batch_norm,dropout in zip(
                     self.inp_sizes[:-1],
                     self.inp_sizes[1:],
-                    self.kernels,
                     self.activators,
-                    self.pooling,
                     self.batch_norm,
-                    self.dropout,
-                    self.stride
+                    self.dropout
                 )
             ]
         )
@@ -113,22 +109,18 @@ class b_decoder_NN(nn.Module):
             [
                 set_dec_NN(repr_in,
                 repr_out,
-                kernel_size,
                 act,
                 pooling,
                 batch_norm,
                 dropout,
                 stride
                 )
-                for repr_in,repr_out,kernel_size,act,pooling,batch_norm,dropout,stride in zip(
-                    self.repr_sizes[:-1],
-                    self.repr_sizes[1:],
-                    self.kernels,
+                for repr_in,repr_out,act,pooling,batch_norm,dropout,stride in zip(
+                    self.inp_sizes[:-1],
+                    self.inp_sizes[1:],
                     self.activators,
-                    self.pooling,
                     self.batch_norm,
-                    self.dropout,
-                    self.stride
+                    self.dropout
                 )
             ]
         )
