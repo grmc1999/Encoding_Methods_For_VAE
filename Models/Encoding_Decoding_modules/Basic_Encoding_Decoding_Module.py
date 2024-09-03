@@ -1,6 +1,7 @@
 from DL_utils.utils import *
 from DL_utils.ResNET import *
 from DL_utils.PCNN import *
+from DL_utils.DNN import *
 
 class EncodingDecodingModule(nn.Module):
   def __init__(self):
@@ -24,6 +25,45 @@ class EncodingDecodingModule(nn.Module):
     dz=self.fl(z)
     dz=self.dl1(dz)
     dz=self.dl2(dz)
+    return dz
+
+
+class Asymmetrical_Dense_Neural_Net_EDM(nn.Module):
+  def __init__(self,encoder_parameters,deccoder_parameters,flat=True):
+    super(Asymmetrical_Dense_Neural_Net_EDM,self).__init__()
+    #Encoding modules
+    self.flat=flat
+    self.ENC=b_encoder_NN(**encoder_parameters
+                   #inp_sizes=[5],
+                   #activators=nn.ReLU(),
+                   #batch_norm=True,
+                   #dropout=None
+                   )
+    #Decoding modules
+    self.DEC=b_decoder_NN(**deccoder_parameters
+                   #inp_sizes=[5],
+                   #activators=nn.ReLU(),
+                   #batch_norm=True,
+                   #dropout=None
+                   )
+    #flatten
+    self.fl=s_view()
+
+  def sanity_check(self,x):
+    ex=self.ENC(x)
+    ex=self.fl(ex).shape
+    return ex
+
+  def Encoding(self,x):
+    ex=self.ENC(x)
+    if self.flat:
+      ex=self.fl(ex)
+    return ex
+    
+  def Decoding(self,z):
+    if self.flat:
+      dz=self.fl(z)
+    dz=self.DEC(dz)
     return dz
 
 class Basic_Convolutional_EDM(nn.Module):
