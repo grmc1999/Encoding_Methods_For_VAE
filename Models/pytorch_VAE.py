@@ -8,7 +8,7 @@ from DL_utils.Generative_autoencoder_utils import Base_Generative_AutoEncoder
 from einops import rearrange
 
 class Unpaired_Flexible_Encoding_Decoding_VAE(Base_Generative_AutoEncoder):
-  def __init__(self,encoding_module,decoding_module,P_NET,Q_NET,losses_weigths={"generative_loss":1},subsample=None,sig_scale=1,resize=None,save_output=False,aux_dir=None,module_name=None):
+  def __init__(self,encoding_decoding_module,P_NET,Q_NET,losses_weigths={"generative_loss":1},subsample=None,sig_scale=1,resize=None,save_output=False,aux_dir=None,module_name=None):
     super(Unpaired_Flexible_Encoding_Decoding_VAE,self).__init__(Encoder_Decoder_Module=None,P_NET=P_NET,Q_NET=Q_NET,losses_weigths=losses_weigths)
     """
     encoding_module: Trainable function that maps X to y where y is a vector
@@ -20,8 +20,8 @@ class Unpaired_Flexible_Encoding_Decoding_VAE(Base_Generative_AutoEncoder):
     self.reconstruction_fun=torch.nn.BCELoss(reduction="mean")
     self.resize=resize
 
-    self.Encoding=encoding_module
-    self.Decoding=decoding_module
+    self.Encoding=encoding_decoding_module.Encoding
+    self.Decoding=encoding_decoding_module.Decoding
     self.z_dim=self.Q.z_x_mu.layer_sizes[-1]
 
   def model(self,z):
