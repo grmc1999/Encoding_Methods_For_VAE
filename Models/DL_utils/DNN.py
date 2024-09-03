@@ -1,5 +1,6 @@
 import torch
 from torch import nn
+from einops import rearrange
 
 class set_enc_NN(nn.Module):
     def __init__(self,inp,out,act=nn.ReLU(),batch_norm=True,dropout=None):
@@ -79,15 +80,20 @@ class b_encoder_NN(nn.Module):
             ]
         )
     def forward(self,x):
+        if len(x.shape)>3:
+            x=rearrange(x,"b h w c -> b (h w c)")
+        else:
+            x=rearrange(x,"b h w -> b (h w)")
         for l in self.im_layers:
             x=l(x)
         return x
     
 class b_decoder_NN(nn.Module):
-    def __init__(self,inp_sizes=[5],activators=nn.ReLU(),batch_norm=True,dropout=None):
+    def __init__(self,inp_sizes=[5],activators=nn.ReLU(),batch_norm=True,dropout=None,input_size=[28,28]):
         super(b_decoder_NN,self).__init__()
         self.inp_sizes=inp_sizes
         self.inp_sizes=self.inp_sizes[::-1]
+        self.input_size=input_size
         #self.stride=[stride for i in range(len(repr_sizes)-1)][::-1]
         #activators
         if isinstance(activators,nn.Module):
@@ -125,4 +131,9 @@ class b_decoder_NN(nn.Module):
     def forward(self,x):
         for l in self.im_layers:
             x=l(x)
+        
+        if len(x.shape)>3:
+            x=rearrange(x,"b (h w c) -> b h w c",w=self.input_size[0],h=self.inp_sizes[1])
+        else:
+            x=rearrange(x,"b (h w c) -> b h w c",w=self.input_size[0],h=self.inp_sizes[1])
         return x
