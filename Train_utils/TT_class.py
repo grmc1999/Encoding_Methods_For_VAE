@@ -35,6 +35,7 @@ class trainer():
         self.loss_epoch=self.create_loss_data(self.loss_epoch)
 
         self.loss_DATA=self.create_loss_data(self.loss_DATA)
+        self.view_out_state=view_out_state
 
 
     def create_loss_data(self,dict):
