@@ -2,7 +2,7 @@ import torch
 from torch import nn
 
 class set_enc_NN(nn.Module):
-    def __init__(self,inp,out,kernel_size=5,act=nn.ReLU(),batch_norm=True,dropout=None):
+    def __init__(self,inp,out,act=nn.ReLU(),batch_norm=True,dropout=None):
         super(set_enc_NN, self).__init__()
 
         self.comp_layer=nn.ModuleList(

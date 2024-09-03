@@ -37,7 +37,10 @@
                       },
                       "deccoder_parameters": {
                         "inp_sizes":[30,100],
-                        "activators":"ReLU",
+                        "act": {
+                                  "name": "Sigmoid",
+                                  "params": {}
+                            },
                         "batch_norm":true,
                         "dropout":null
                       }}
@@ -52,7 +55,7 @@
                                   512,
                                   2048
                             ],
-                            "dec_activators": {
+                            "act": {
                                   "name": "Sigmoid",
                                   "params": {}
                             },
