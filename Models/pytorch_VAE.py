@@ -36,7 +36,7 @@ class Unpaired_Flexible_Encoding_Decoding_VAE(Base_Generative_AutoEncoder):
   
   def guide(self,x):
 
-    xe_q=self.Q_Encoding.Encoding(x) #COMMENT: Q image encoding will output 2N entities [B,W,H,R]
+    xe_q=self.Encoding.Encoding(x) #COMMENT: Q image encoding will output 2N entities [B,W,H,R]
 
     z_mu_q=self.Q.z_x_mu(xe_q)
     z_sig_q=torch.exp(self.Q.z_x_sig(xe_q)*self.scale)
