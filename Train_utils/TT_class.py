@@ -10,7 +10,8 @@ import gc
 from plot_utils import plot_training_sample
 
 class trainer():
-    def __init__(self,model,dataset,epochs,folds,batch_size,use_cuda,data_dir,in_device=None,num_workers=0,args=["PhantomRGB"],uniform=True):
+    def __init__(self,model,dataset,epochs,folds,batch_size,use_cuda,data_dir,
+                 in_device=None,num_workers=0,args=["PhantomRGB"],uniform=True,view_out_state=True):
         self.epochs=epochs
         self.dataset=dataset
         self.folds=folds
@@ -186,6 +187,10 @@ class trainer():
 
         best_result=0
 
+        if self.view_out_state:
+            #z_mu,z_sig,x_r,x
+            plot_sample=plot_training_sample(images_idxs=[2,3],titles=["reconstruction","input"],image_save_dir=self.data_dir)
+
         for epoch in tqdm(range(self.current_epoch,self.epochs),desc="Epoch"):
 
             drop_train=False
@@ -201,6 +206,25 @@ class trainer():
 
             loss_epoch=self.train(dataloader_train)
             losses_te=self.test(dataloader_test)
+            torch.cuda.empty_cache()
+
+            gc.collect()
+
+            if self.view_out_state:
+                idx=np.random.randint(len(test_set))
+                if self.MNIST_debug:
+                    x=test_set[idx][0][self.args[0]]
+                else:
+                    x=test_set[idx][0][self.args[0]]
+                if self.use_cuda:
+                    x=x.cuda()
+                self.model.eval()
+                out=self.model.forward_pass(x.unsqueeze(0))
+                out=(list(out))
+                out.append(x.unsqueeze(0))
+                #z_mu,z_sig,x_r,x
+                self.model.train()
+                plot_sample.plot(out,epoch)
 
             if (np.mean(np.array(losses_te["test"]["total_loss"])))>best_result:
                 best_result=(np.mean(np.array(losses_te["test"]["total_loss"])))
