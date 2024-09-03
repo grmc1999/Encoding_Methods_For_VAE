@@ -29,7 +29,7 @@
           "sub_modules": {
                 "encoding_decoding_module": {
                       "module_type": "Asymmetrical_Dense_Neural_Net_EDM",
-                      "encoder_parameters": {
+                      "parameters":{"encoder_parameters": {
                         "inp_sizes":[100,30],
                         "activators":"ReLU",
                         "batch_norm":true,
@@ -40,7 +40,7 @@
                         "activators":"ReLU",
                         "batch_norm":true,
                         "dropout":null
-                      }
+                      }}
                 },
                 "P_NET": {
                       "variational_generation_type": "VAE_NETs",
