@@ -213,10 +213,8 @@ class trainer():
 
             if self.view_out_state:
                 idx=np.random.randint(len(test_set))
-                if self.MNIST_debug:
-                    x=test_set[idx][0][self.args[0]]
-                else:
-                    x=test_set[idx][0][self.args[0]]
+
+                x=test_set[idx][0][self.args[0]]
                 if self.use_cuda:
                     x=x.cuda()
                 self.model.eval()
