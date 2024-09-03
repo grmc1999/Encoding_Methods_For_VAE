@@ -120,7 +120,7 @@ class multi_parameter_training(trainer):
                     module
                     )(**(self.parse_activators(submodels_data[module]["parameters"])))
                 submodels_data[module]=inst_module
-            elif "Assymetrical" in submodels_data[module]["module_type"].split("_"):
+            elif "Asymmetrical" in submodels_data[module]["module_type"].split("_"):
                 #Load variational modules
                 inst_module=getattr(
                     getattr(

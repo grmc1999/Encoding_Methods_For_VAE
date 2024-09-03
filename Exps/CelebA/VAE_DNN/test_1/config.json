@@ -26,7 +26,6 @@
     "model": {
           "model_class": "pytorch_VAE",
           "model_name": "Unpaired_Flexible_Encoding_Decoding_VAE",
-          "unpaired":true
           "sub_modules": {
                 "encoding_decoding_module": {
                       "module_type": "Asymmetrical_Dense_Neural_Net_EDM",
