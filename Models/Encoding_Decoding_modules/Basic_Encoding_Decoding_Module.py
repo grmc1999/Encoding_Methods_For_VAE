@@ -29,7 +29,7 @@ class EncodingDecodingModule(nn.Module):
 
 
 class Asymmetrical_Dense_Neural_Net_EDM(nn.Module):
-  def __init__(self,encoder_parameters,deccoder_parameters,flat=True):
+  def __init__(self,encoder_parameters,decoder_parameters,flat=True):
     super(Asymmetrical_Dense_Neural_Net_EDM,self).__init__()
     #Encoding modules
     self.flat=flat
@@ -40,7 +40,7 @@ class Asymmetrical_Dense_Neural_Net_EDM(nn.Module):
                    #dropout=None
                    )
     #Decoding modules
-    self.DEC=b_decoder_NN(**deccoder_parameters
+    self.DEC=b_decoder_NN(**decoder_parameters
                    #inp_sizes=[5],
                    #activators=nn.ReLU(),
                    #batch_norm=True,

@@ -39,17 +39,17 @@
                         "batch_norm":true,
                         "dropout":null
                       },
-                      "deccoder_parameters": {
+                      "decoder_parameters": {
                         "inp_sizes":[30,100],
                         "activators": {
                                   "name": "Sigmoid",
                                   "params": {}
                             },
                         "batch_norm":true,
-                        "dropout":null
+                        "dropout":null,
+                        "input_size":[28,28,1]
                       },
-                      "flat":false,
-                      "input_size":[28,28,1]
+                      "flat":false
                   }
                 },
                 "P_NET": {
