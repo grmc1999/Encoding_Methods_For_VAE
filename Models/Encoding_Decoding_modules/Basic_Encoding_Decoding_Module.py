@@ -157,6 +157,7 @@ class MaxPooling_Convolutional_EDM(nn.Module):
     return ex
     
   def Decoding(self,z):
+    dz=z
     if self.flat:
       dz=self.fl(z)
     dz=self.DEC(dz,self.ENC.idx_list[::-1],self.ENC.Sidx_list[::-1])
