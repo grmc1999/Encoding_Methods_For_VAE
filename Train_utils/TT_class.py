@@ -3,6 +3,11 @@ import numpy as np
 import torch
 import os
 import pickle
+import copy
+import matplotlib.pyplot as plt
+import gc
+
+from plot_utils import plot_training_sample
 
 class trainer():
     def __init__(self,model,dataset,epochs,folds,batch_size,use_cuda,data_dir,in_device=None,num_workers=0,args=["PhantomRGB"],uniform=True):
@@ -85,6 +90,7 @@ class trainer():
             #else:
             #    args=(batch[arg].to(device) for arg in self.args)
             #    losses=self.model.ELBO(*(args))
+            batch=batch[0]
             args=(batch[arg].to(device) for arg in self.args)
             losses=self.model.compute_losses(*(args))
 
