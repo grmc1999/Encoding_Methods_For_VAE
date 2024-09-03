@@ -110,12 +110,10 @@ class b_decoder_NN(nn.Module):
                 set_dec_NN(repr_in,
                 repr_out,
                 act,
-                pooling,
                 batch_norm,
                 dropout,
-                stride
                 )
-                for repr_in,repr_out,act,pooling,batch_norm,dropout,stride in zip(
+                for repr_in,repr_out,act,batch_norm,dropout in zip(
                     self.inp_sizes[:-1],
                     self.inp_sizes[1:],
                     self.activators,
