@@ -26,24 +26,30 @@
     "model": {
           "model_class": "pytorch_VAE",
           "model_name": "Unpaired_Flexible_Encoding_Decoding_VAE",
+          "unpaired":true
           "sub_modules": {
                 "encoding_decoding_module": {
                       "module_type": "Asymmetrical_Dense_Neural_Net_EDM",
-                      "parameters":{"encoder_parameters": {
+                      "parameters":{
+                        "encoder_parameters": {
                         "inp_sizes":[100,30],
-                        "activators":"ReLU",
-                        "batch_norm":true,
-                        "dropout":null
-                      },
-                      "deccoder_parameters": {
-                        "inp_sizes":[30,100],
-                        "act": {
+                        "activators": {
                                   "name": "Sigmoid",
                                   "params": {}
                             },
                         "batch_norm":true,
                         "dropout":null
-                      }}
+                      },
+                      "deccoder_parameters": {
+                        "inp_sizes":[30,100],
+                        "activators": {
+                                  "name": "Sigmoid",
+                                  "params": {}
+                            },
+                        "batch_norm":true,
+                        "dropout":null
+                      }
+                  }
                 },
                 "P_NET": {
                       "variational_generation_type": "VAE_NETs",
@@ -55,7 +61,7 @@
                                   512,
                                   2048
                             ],
-                            "act": {
+                            "dec_activators": {
                                   "name": "Sigmoid",
                                   "params": {}
                             },

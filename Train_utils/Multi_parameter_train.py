@@ -120,6 +120,19 @@ class multi_parameter_training(trainer):
                     module
                     )(**(self.parse_activators(submodels_data[module]["parameters"])))
                 submodels_data[module]=inst_module
+            elif "Assymetrical" in submodels_data[module]["module_type"].split("_"):
+                #Load variational modules
+                inst_module=getattr(
+                    getattr(
+                        Encoding_Decoding_modules,
+                        "Basic_Encoding_Decoding_Module"
+                    ),
+                    submodels_data[module]["module_type"]
+                    )(
+                        (self.parse_activators(submodels_data[module]["parameters"]["encoder_parameters"])),
+                        (self.parse_activators(submodels_data[module]["parameters"]["deccoder_parameters"]))
+                        )
+                submodels_data[module]=inst_module
             else:
                 #Load variational modules
                 inst_module=getattr(
