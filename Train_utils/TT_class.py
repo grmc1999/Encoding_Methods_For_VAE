@@ -134,6 +134,7 @@ class trainer():
         for idx, batch in tqdm(enumerate(dataloader),desc="Test"):
             #if self.uniform:
                 #losses=self.model.ELBO(batch[self.args[0]].to(device))
+            batch=batch[0]
             args=(batch[arg].to(device) for arg in self.args)
             losses=self.model.compute_losses(*(args))
 
@@ -168,6 +169,10 @@ class trainer():
         if b"checkpoint.pt" in os.listdir(self.data_dir) or "checkpoint.pt" in os.listdir(self.data_dir):
             print("checkpoint found")
 
+            if self.use_cuda:
+                device=torch.device('cuda')
+            else:
+                device=torch.device('cpu')
             checkpoint=torch.load(os.path.join(self.data_dir,"checkpoint.pt"))
             self.current_epoch=checkpoint["current_epoch"]
             #self.epochs=checkpoint["total_epoch"]

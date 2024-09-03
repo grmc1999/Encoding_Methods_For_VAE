@@ -87,14 +87,12 @@
                               "batch_norm": true,
                               "dropout": null
                         }
-                  },
-                  "losses_weigths":{
-                        "reconstructive":0.5,
-                        "generative":0.5
-            }
-
+                  }
             },
             "model_params": {
+              "losses_weigths":{
+                        "reconstructive":0.5,
+                        "generative":0.5},
                   "resize": null
             }
       },
