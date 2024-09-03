@@ -132,5 +132,5 @@ class b_decoder_NN(nn.Module):
         for l in self.im_layers:
             x=l(x)
         
-        x=rearrange(x,"b (h w c) -> b h w c",w=self.input_size[0],h=self.inp_sizes[1],c=self.inp_sizes[1])
+        x=rearrange(x,"b (h w c) -> b h w c",h=self.input_size[0],w=self.input_size[1],c=self.input_size[2])
         return x

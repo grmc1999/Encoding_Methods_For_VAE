@@ -78,7 +78,7 @@ class Unpaired_Flexible_Encoding_Decoding_VAE(Base_Generative_AutoEncoder):
 
     self.losses["total_loss"]=0
     self.losses["reconstructive_1"]=self.reconstruction_loss(x_r,x)
-    self.losses["generative_q_2"]=self.KLD_loss(*(z_q_))
+    self.losses["generative_q_2"]=self.KLD_loss(*(z_q))
       
     for loss in self.losses_weigths.keys():
       self.losses["total_loss"]=self.losses["total_loss"]+self.losses[loss]*self.losses_weigths[loss]

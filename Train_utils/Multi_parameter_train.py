@@ -23,7 +23,7 @@ import DL_utils
 import Encoding_Decoding_modules
 
 
-from TT_pyro_class import trainer
+from TT_class import trainer
 
 class multi_parameter_training(trainer):
     def __init__(self,results_directory,dataset_root_directory,Dataset_type,train=True,test=True,K_fold_training=None,visualization=False,split_frac=0.8):
@@ -122,7 +122,7 @@ class multi_parameter_training(trainer):
                 submodels_data[module]=inst_module
             elif "Asymmetrical" in submodels_data[module]["module_type"].split("_"):
                 submodels_data[module]["parameters"]["encoder_parameters"]=self.parse_activators(submodels_data[module]["parameters"]["encoder_parameters"])
-                submodels_data[module]["parameters"]["deccoder_parameters"]=self.parse_activators(submodels_data[module]["parameters"]["deccoder_parameters"])
+                submodels_data[module]["parameters"]["decoder_parameters"]=self.parse_activators(submodels_data[module]["parameters"]["decoder_parameters"])
                 #Load variational modules
                 inst_module=getattr(
                     getattr(
@@ -185,27 +185,27 @@ class multi_parameter_training(trainer):
             self.trainer.optimizer=torch.optim.Adam(self.trainer.model.parameters(),**(test_json["optimizer"]))
             
             if test_json["experiment_state"]=="waiting":
-                try:
-                    if self.train and self.test:
-                        self.trainer.train_test(**(self.datasets))
-                        test_json_save["experiment_state"]="done"
-                    elif self.train and not(self.test):
-                        #set train rutine
-                        test_json_save["experiment_state"]="done"
-                    elif not(self.train) and self.test:
-                        self.trainer.train(self.datasets["train"])
-                        self.trainer.test(self.datasets["test"])
-                        test_json_save["experiment_state"]="done"
-                    #elif self.K_fold_training!=None:
+                #try:
+                if self.train and self.test:
+                    self.trainer.train_test(**(self.datasets))
+                    test_json_save["experiment_state"]="done"
+                elif self.train and not(self.test):
+                    #set train rutine
+                    test_json_save["experiment_state"]="done"
+                elif not(self.train) and self.test:
+                    self.trainer.train(self.datasets["train"])
+                    self.trainer.test(self.datasets["test"])
+                    test_json_save["experiment_state"]="done"
+                #elif self.K_fold_training!=None:
 
-                except Exception as e:
-                    #FOR DEBUGGING
-                    #traceback.print_exc()
-                    tqdm.write("tranning failed")
-                    tqdm.write(str(e))
-                    test_json_save["experiment_state"]="fail"
-                    test_json_save["error"]=str(e)
-                    #TODO show error
+                #except Exception as e:
+                #    #FOR DEBUGGING
+                #    #traceback.print_exc()
+                #    tqdm.write("tranning failed")
+                #    tqdm.write(str(e))
+                #    test_json_save["experiment_state"]="fail"
+                #    test_json_save["error"]=str(e)
+                #    #TODO show error
                 #save config.json
                 f=open(os.path.join(test,"config.json"),"w")
                 json.dump(test_json_save,f,indent=6)
