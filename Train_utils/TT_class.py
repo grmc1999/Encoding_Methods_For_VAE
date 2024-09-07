@@ -1,4 +1,5 @@
 from tqdm import tqdm
+from tqdm.notebook import tqdm
 import numpy as np
 import torch
 import os
@@ -124,6 +125,7 @@ class trainer():
 
 
     def test(self,dataloader):
+        self.model.eval()
         device="cpu"
         if self.use_cuda:
             device="cuda"

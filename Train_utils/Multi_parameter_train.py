@@ -4,6 +4,7 @@ import copy
 import numpy as np
 import json
 from tqdm import tqdm
+from tqdm.notebook import tqdm
 from torchvision import transforms
 import torch
 from torch import nn
