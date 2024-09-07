@@ -33,7 +33,7 @@
                           "encoder_parameters": {
                           "inp_sizes":[784,30],
                           "activators": {
-                                    "name": "LeakyRelu",
+                                    "name": "LeakyReLu",
                                     "params": {}
                               },
                           "batch_norm":true,
@@ -42,7 +42,7 @@
                         "decoder_parameters": {
                           "inp_sizes":[784,30],
                           "activators": {
-                                    "name": "LeakyRelu",
+                                    "name": "LeakyReLu",
                                     "params": {}
                               },
                           "batch_norm":true,
