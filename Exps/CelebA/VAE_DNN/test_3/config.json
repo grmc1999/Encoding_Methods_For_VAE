@@ -42,8 +42,8 @@
                         "decoder_parameters": {
                           "inp_sizes":[784,512,128,64,30],
                           "activators": {
-                                    "name": "LeakyReLU",
-                                    "params": {}
+                                    "name": ["Sigmoid","LeakyReLU","LeakyReLU","LeakyReLU","LeakyReLU"],
+                                    "params": [{},{},{},{}]
                               },
                           "batch_norm":true,
                           "dropout":null,

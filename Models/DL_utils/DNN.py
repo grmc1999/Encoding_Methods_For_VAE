@@ -92,24 +92,24 @@ class b_decoder_NN(nn.Module):
     def __init__(self,inp_sizes=[5],activators=nn.ReLU(),batch_norm=True,dropout=None,input_size=[28,28]):
         super(b_decoder_NN,self).__init__()
         self.inp_sizes=inp_sizes
-        self.inp_sizes=self.inp_sizes[::-1]
+        #self.inp_sizes=self.inp_sizes[::-1]
         self.input_size=input_size
         #self.stride=[stride for i in range(len(repr_sizes)-1)][::-1]
         #activators
         if isinstance(activators,nn.Module):
             self.activators=[activators for i in range(len(inp_sizes)-1)]
         else:
-            self.activators=activators[::-1]
+            self.activators=activators
         #batch_norm
         if isinstance(batch_norm,bool):
             self.batch_norm=[batch_norm for i in range(len(inp_sizes)-1)]
         else:
-            self.batch_norm=batch_norm[::-1]
+            self.batch_norm=batch_norm
 
         if isinstance(dropout,float) or dropout==None:
             self.dropout=[dropout for i in range(len(inp_sizes)-1)]
         else:
-            self.dropout=dropout[::-1]
+            self.dropout=dropout
         
         self.im_layers=nn.ModuleList(
             [
