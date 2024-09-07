@@ -31,18 +31,18 @@
                         "module_type": "Asymmetrical_Dense_Neural_Net_EDM",
                         "parameters":{
                           "encoder_parameters": {
-                          "inp_sizes":[784,30],
+                          "inp_sizes":[784,512,30],
                           "activators": {
-                                    "name": "Sigmoid",
+                                    "name": "LeakyRelu",
                                     "params": {}
                               },
                           "batch_norm":true,
                           "dropout":null
                         },
                         "decoder_parameters": {
-                          "inp_sizes":[784,30],
+                          "inp_sizes":[784,512,30],
                           "activators": {
-                                    "name": "Sigmoid",
+                                    "name": "LeakyRelu",
                                     "params": {}
                               },
                           "batch_norm":true,
@@ -57,9 +57,6 @@
                         "parameters": {
                               "layer_size": [
                                     64,
-                                    128,
-                                    512,
-                                    512,
                                     30
                               ],
                               "dec_activators": {
@@ -75,9 +72,6 @@
                         "parameters": {
                               "layer_size": [
                                     30,
-                                    512,
-                                    512,
-                                    128,
                                     64
                               ],
                               "enc_activators": {

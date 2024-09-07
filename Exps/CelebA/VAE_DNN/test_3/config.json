@@ -33,16 +33,16 @@
                           "encoder_parameters": {
                           "inp_sizes":[784,30],
                           "activators": {
-                                    "name": "Sigmoid",
+                                    "name": "LeakyRelu",
                                     "params": {}
                               },
                           "batch_norm":true,
                           "dropout":null
                         },
                         "decoder_parameters": {
-                          "inp_sizes":[784,30],
+                          "inp_sizes":[784,512,128,64,30],
                           "activators": {
-                                    "name": "Sigmoid",
+                                    "name": "LeakyRelu",
                                     "params": {}
                               },
                           "batch_norm":true,
