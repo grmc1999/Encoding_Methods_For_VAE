@@ -186,27 +186,27 @@ class multi_parameter_training(trainer):
             self.trainer.optimizer=torch.optim.Adam(self.trainer.model.parameters(),**(test_json["optimizer"]))
             
             if test_json["experiment_state"]=="waiting":
-                #try:
-                if self.train and self.test:
-                    self.trainer.train_test(**(self.datasets))
-                    test_json_save["experiment_state"]="done"
-                elif self.train and not(self.test):
-                    #set train rutine
-                    test_json_save["experiment_state"]="done"
-                elif not(self.train) and self.test:
-                    self.trainer.train(self.datasets["train"])
-                    self.trainer.test(self.datasets["test"])
-                    test_json_save["experiment_state"]="done"
+                try:
+                    if self.train and self.test:
+                        self.trainer.train_test(**(self.datasets))
+                        test_json_save["experiment_state"]="done"
+                    elif self.train and not(self.test):
+                        #set train rutine
+                        test_json_save["experiment_state"]="done"
+                    elif not(self.train) and self.test:
+                        self.trainer.train(self.datasets["train"])
+                        self.trainer.test(self.datasets["test"])
+                        test_json_save["experiment_state"]="done"
                 #elif self.K_fold_training!=None:
 
-                #except Exception as e:
-                #    #FOR DEBUGGING
-                #    #traceback.print_exc()
-                #    tqdm.write("tranning failed")
-                #    tqdm.write(str(e))
-                #    test_json_save["experiment_state"]="fail"
-                #    test_json_save["error"]=str(e)
-                #    #TODO show error
+                except Exception as e:
+                    #FOR DEBUGGING
+                    #traceback.print_exc()
+                    tqdm.write("tranning failed")
+                    tqdm.write(str(e))
+                    test_json_save["experiment_state"]="fail"
+                    test_json_save["error"]=str(e)
+                    #TODO show error
                 #save config.json
                 f=open(os.path.join(test,"config.json"),"w")
                 json.dump(test_json_save,f,indent=6)
