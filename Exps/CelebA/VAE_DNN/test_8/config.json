@@ -31,21 +31,21 @@
                         "module_type": "Asymmetrical_Dense_Neural_Net_EDM",
                         "parameters":{
                           "encoder_parameters": {
-                          "inp_sizes":[784,30],
+                          "inp_sizes":[784,512],
                           "activators": {
                                     "name": "LeakyReLU",
                                     "params": {}
                               },
-                          "batch_norm":true,
+                          "batch_norm":false,
                           "dropout":null
                         },
                         "decoder_parameters": {
-                          "inp_sizes":[30,784],
+                          "inp_sizes":[512,784],
                           "activators": {
                                     "name": "Sigmoid",
                                     "params": {}
                               },
-                          "batch_norm":true,
+                          "batch_norm":false,
                           "dropout":null,
                           "input_size":[1,28,28]
                         },
@@ -56,14 +56,14 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    15,
-                                    30
+                                    512,
+                                    10
                               ],
                               "dec_activators": {
-                                    "name": "Sigmoid",
+                                    "name": "LeakyReLU",
                                     "params": {}
                               },
-                              "batch_norm": true,
+                              "batch_norm": false,
                               "dropout": null
                         }
                   },
@@ -71,14 +71,14 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    30,
-                                    15
+                                    10,
+                                    512
                               ],
                               "enc_activators": {
                                     "name": "Sigmoid",
                                     "params": {}
                               },
-                              "batch_norm": true,
+                              "batch_norm": false,
                               "dropout": null
                         }
                   }
