@@ -69,7 +69,7 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    128,
+                                    512,
                                     784
                               ],
                               "dec_activators": {
@@ -85,7 +85,7 @@
                         "parameters": {
                               "layer_size": [
                                     784,
-                                    128
+                                    512
                               ],
                               "enc_activators": {
                                     "name": "Sigmoid",

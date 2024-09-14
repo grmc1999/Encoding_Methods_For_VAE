@@ -33,8 +33,8 @@
                               "encoder_parameters": {
                                     "repr_sizes": [
                                           1,
-                                          8,
-                                          16
+                                          2,
+                                          4
                                     ],
                                     "kernel_size": 5,
                                     "activators": {
@@ -48,14 +48,14 @@
                               },
                               "decoder_parameters": {
                                     "repr_sizes": [
-                                          16,
-                                          8,
+                                          4,
+                                          2,
                                           1
                                     ],
                                     "kernel_size": 5,
                                     "activators": {
-                                          "name": "Sigmoid",
-                                          "params": {}
+                                          "name": ["LeakyReLU","Sigmoid"],
+                                          "params": [{},{}]
                                     },
                                     "pooling": false,
                                     "batch_norm": true,
