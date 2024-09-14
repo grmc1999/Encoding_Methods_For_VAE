@@ -110,6 +110,52 @@ class Basic_Convolutional_EDM(nn.Module):
       dz=self.fl(z)
     dz=self.DEC(dz)
     return dz
+  
+class Asymmetrical_Convolutional_EDM(nn.Module):
+  def __init__(self,encoder_parameters,decoder_parameters,
+#               repr_sizes=[3,32,64,128,256],kernel_size=5,activators=nn.ReLU(),pooling=True,batch_norm=True,dropout=None,stride=1,
+               flat=True):
+    super(Asymmetrical_Convolutional_EDM,self).__init__()
+    #Encoding modules
+    self.flat=flat
+    self.ENC=b_encoder_conv(**encoder_parameters
+                   #repr_sizes=repr_sizes,
+                   #kernel_size=kernel_size,
+                   #activators=activators,
+                   #batch_norm=batch_norm,
+                   #dropout=dropout,
+                   #stride=stride,
+                   #pooling=pooling
+                   )
+    #Decoding modules
+    self.DEC=b_decoder_conv(**decoder_parameters
+                   #repr_sizes=repr_sizes,
+                   #kernel_size=kernel_size,
+                   #activators=activators,
+                   #batch_norm=batch_norm,
+                   #dropout=dropout,
+                   #stride=stride,
+                   #pooling=pooling
+                   )
+    #flatten
+    self.fl=s_view()
+
+  def sanity_check(self,x):
+    ex=self.ENC(x)
+    ex=self.fl(ex).shape
+    return ex
+
+  def Encoding(self,x):
+    ex=self.ENC(x)
+    if self.flat:
+      ex=self.fl(ex)
+    return ex
+    
+  def Decoding(self,z):
+    if self.flat:
+      dz=self.fl(z)
+    dz=self.DEC(dz)
+    return dz
 
 
 from DL_utils.PCNN import *

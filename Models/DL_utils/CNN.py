@@ -120,39 +120,39 @@ class b_decoder_conv(nn.Module):
                 kernel_size=5,activators=nn.ReLU(),pooling=True,batch_norm=True,dropout=None,stride=1):
         super(b_decoder_conv,self).__init__()
         self.repr_sizes=repr_sizes
-        self.repr_sizes=self.repr_sizes[::-1]
-        #self.stride=[stride for i in range(len(repr_sizes)-1)][::-1]
+        self.repr_sizes=self.repr_sizes
+        #self.stride=[stride for i in range(len(repr_sizes)-1)]
         
         #stride
         if isinstance(stride,int):
             self.stride=[stride for i in range(len(repr_sizes)-1)]
         else:
-            self.stride=stride[::-1]
+            self.stride=stride
         #kernels
         if isinstance(kernel_size,int):
             self.kernels=[kernel_size for i in range(len(repr_sizes)-1)]
         else:
-            self.kernels=kernel_size[::-1]
+            self.kernels=kernel_size
         #activators
         if isinstance(activators,nn.Module):
             self.activators=[activators for i in range(len(repr_sizes)-1)]
         else:
-            self.activators=activators[::-1]
+            self.activators=activators
         #pooling
         if isinstance(pooling,bool):
             self.pooling=[pooling for i in range(len(repr_sizes)-1)]
         else:
-            self.pooling=pooling[::-1]
+            self.pooling=pooling
         #batch_norm
         if isinstance(batch_norm,bool):
             self.batch_norm=[batch_norm for i in range(len(repr_sizes)-1)]
         else:
-            self.batch_norm=batch_norm[::-1]
+            self.batch_norm=batch_norm
 
         if isinstance(dropout,float) or dropout==None:
             self.dropout=[dropout for i in range(len(repr_sizes)-1)]
         else:
-            self.dropout=dropout[::-1]
+            self.dropout=dropout
         
         self.im_layers=nn.ModuleList(
             [
