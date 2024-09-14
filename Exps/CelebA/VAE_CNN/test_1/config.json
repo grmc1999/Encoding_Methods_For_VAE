@@ -1,14 +1,14 @@
 {
       "experiment_state": "waiting",
       "optimizer": {
-            "lr": 0.001,
+            "lr": 0.0001,
             "capturable": false
       },
       "trainer": {
             "model": null,
             "epochs": 50,
             "folds": 2,
-            "batch_size": 128,
+            "batch_size": 2048,
             "use_cuda": false,
             "data_dir": null,
             "in_device": null,
@@ -28,28 +28,33 @@
             "model_name": "Unpaired_Flexible_Encoding_Decoding_VAE",
             "sub_modules": {
                   "encoding_decoding_module": {
-                        "module_type": "Asymmetrical_Dense_Neural_Net_EDM",
+                        "module_type": "Asymmetrical_Convolutional_EDM",
                         "parameters":{
                           "encoder_parameters": {
-                          "inp_sizes":[784,512],
-                          "activators": {
+                              "repr_sizes":[3,32,64,128,256],
+                              "kernel_size":5,
+                              "activators":{
                                     "name": "LeakyReLU",
                                     "params": {}
                               },
-                          "batch_norm":false,
-                          "dropout":null
+                              "pooling":true,
+                              "batch_norm":true,
+                              "dropout":null,
+                              "stride":1
                         },
                         "decoder_parameters": {
-                          "inp_sizes":[512,784],
-                          "activators": {
-                                    "name": "Sigmoid",
+                              "repr_sizes":[32,64,128,256],
+                              "kernel_size":5,
+                              "activators":{
+                                    "name": "LeakyReLU",
                                     "params": {}
                               },
-                          "batch_norm":false,
-                          "dropout":null,
-                          "input_size":[1,28,28]
+                              "pooling":true,
+                              "batch_norm":true,
+                              "dropout":null,
+                              "stride":1
                         },
-                        "flat":false
+                        "flat":true
                     }
                   },
                   "P_NET": {
@@ -57,7 +62,7 @@
                         "parameters": {
                               "layer_size": [
                                     128,
-                                    512
+                                    1024
                               ],
                               "dec_activators": {
                                     "name": "LeakyReLU",
