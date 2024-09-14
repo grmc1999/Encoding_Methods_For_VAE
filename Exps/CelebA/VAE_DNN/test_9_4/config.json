@@ -40,13 +40,13 @@
                           "dropout":null
                         },
                         "decoder_parameters": {
-                          "inp_sizes":[512,784],
+                          "inp_sizes":[2048,784],
                           "activators": {
                                     "name": "Sigmoid",
                                     "params": {}
                               },
                           "batch_norm":false,
-                          "dropout":0.5,
+                          "dropout":null,
                           "input_size":[1,28,28]
                         },
                         "flat":false
@@ -57,7 +57,7 @@
                         "parameters": {
                               "layer_size": [
                                     128,
-                                    512
+                                    2048
                               ],
                               "dec_activators": {
                                     "name": "LeakyReLU",
@@ -79,7 +79,7 @@
                                     "params": {}
                               },
                               "batch_norm": false,
-                              "dropout": 0.5
+                              "dropout": null
                         }
                   }
             },

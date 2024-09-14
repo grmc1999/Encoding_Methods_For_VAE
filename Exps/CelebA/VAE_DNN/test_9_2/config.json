@@ -1,14 +1,14 @@
 {
       "experiment_state": "waiting",
       "optimizer": {
-            "lr": 0.001,
+            "lr": 0.0001,
             "capturable": false
       },
       "trainer": {
             "model": null,
             "epochs": 50,
             "folds": 2,
-            "batch_size": 128,
+            "batch_size": 2048,
             "use_cuda": false,
             "data_dir": null,
             "in_device": null,
@@ -40,13 +40,13 @@
                           "dropout":null
                         },
                         "decoder_parameters": {
-                          "inp_sizes":[512,784],
+                          "inp_sizes":[1024,784],
                           "activators": {
                                     "name": "Sigmoid",
                                     "params": {}
                               },
                           "batch_norm":false,
-                          "dropout":0.5,
+                          "dropout":null,
                           "input_size":[1,28,28]
                         },
                         "flat":false
@@ -57,7 +57,7 @@
                         "parameters": {
                               "layer_size": [
                                     128,
-                                    512
+                                    1024
                               ],
                               "dec_activators": {
                                     "name": "LeakyReLU",

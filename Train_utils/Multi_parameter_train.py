@@ -161,6 +161,7 @@ class multi_parameter_training(trainer):
         
     def Train(self):
         for test_id in tqdm(range(len(self.test_dirs)),desc="Model test"):
+            tqdm.write(self.test_dirs[test_id])
             test=self.test_dirs[test_id]
             test_json=json.load(open(os.path.join(test,"config.json")))
             test_json_save=copy.deepcopy(test_json)
