@@ -6,7 +6,7 @@
       },
       "trainer": {
             "model": null,
-            "epochs": 200,
+            "epochs": 50,
             "folds": 2,
             "batch_size": 2048,
             "use_cuda": false,
@@ -28,49 +28,36 @@
             "model_name": "Unpaired_Flexible_Encoding_Decoding_VAE",
             "sub_modules": {
                   "encoding_decoding_module": {
-                        "module_type": "Asymmetrical_Convolutional_EDM",
-                        "parameters": {
-                              "encoder_parameters": {
-                                    "repr_sizes": [
-                                          1,
-                                          2,
-                                          4
-                                    ],
-                                    "kernel_size": 5,
-                                    "activators": {
-                                          "name": "LeakyReLU",
-                                          "params": {}
-                                    },
-                                    "pooling": false,
-                                    "batch_norm": true,
-                                    "dropout": null,
-                                    "stride": 2
+                        "module_type": "Asymmetrical_Dense_Neural_Net_EDM",
+                        "parameters":{
+                          "encoder_parameters": {
+                          "inp_sizes":[784,512,512,512],
+                          "activators": {
+                                    "name": "LeakyReLU",
+                                    "params": {}
                               },
-                              "decoder_parameters": {
-                                    "repr_sizes": [
-                                          4,
-                                          2,
-                                          1
-                                    ],
-                                    "kernel_size": 5,
-                                    "activators": {
-                                          "name": ["LeakyReLU","Sigmoid"],
-                                          "params": [{},{}]
-                                    },
-                                    "pooling": false,
-                                    "batch_norm": true,
-                                    "dropout": null,
-                                    "stride": 2
+                          "batch_norm":false,
+                          "dropout":null
+                        },
+                        "decoder_parameters": {
+                          "inp_sizes":[512,512,512,784],
+                          "activators": {
+                                    "name": ["LeakyReLU","LeakyReLU","Sigmoid"],
+                                    "params": [{},{},{}]
                               },
-                              "flat": true
-                        }
+                          "batch_norm":false,
+                          "dropout":null,
+                          "input_size":[1,28,28]
+                        },
+                        "flat":false
+                    }
                   },
                   "P_NET": {
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
                                     128,
-                                    784
+                                    512
                               ],
                               "dec_activators": {
                                     "name": "LeakyReLU",
@@ -84,7 +71,7 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    784,
+                                    512,
                                     128
                               ],
                               "enc_activators": {
@@ -97,12 +84,11 @@
                   }
             },
             "model_params": {
-                  "losses_weigths": {
-                        "reconstructive": 0.5,
-                        "generative": 0.5
-                  },
+              "losses_weigths":{
+                        "reconstructive":0.5,
+                        "generative":0.5},
                   "resize": null
             }
       },
-      "error": "Given groups=1, weight of size [32, 3, 5, 5], expected input[2048, 1, 28, 28] to have 3 channels, but got 1 channels instead"
-}
+      "error": "If capturable=False, state_steps should not be CUDA tensors."
+  }
