@@ -107,7 +107,7 @@ class trainer():
 
             msg=self.prep_log(losses)
 
-            tqdm.write(
+            pbar.set_description(
                 msg+" \tbatch {shape:.4f}".format(
                     shape=batch[self.args[0]].shape[0]
             )
@@ -147,7 +147,7 @@ class trainer():
 
             msg=self.prep_log(losses)
 
-            tqdm.write(
+            pbar.set_description(
                 msg+" \tbatch {shape:.4f}".format(
                     shape=batch[self.args[0]].shape[0]
             )
@@ -237,7 +237,7 @@ class trainer():
                 torch.save(best_model,"{fname}.pt".format(fname=os.path.join(self.data_dir,"best"+str(self.current_fold))))
 
             #TODO: add epoch data
-            tqdm.write("epoch {epoch:.2f}%".format(
+            pbar.set_description("epoch {epoch:.2f}%".format(
                         epoch=epoch
                         ))
 
@@ -325,7 +325,7 @@ class trainer():
 
             self.loss_DATA_FOLD[fold]=self.loss_DATA
 
-            tqdm.write("fold {fold:.2f}%".format(
+            pbar.set_description("fold {fold:.2f}%".format(
                         fold=fold
                         ))
 
