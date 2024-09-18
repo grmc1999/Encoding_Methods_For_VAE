@@ -8,7 +8,7 @@
             "model": null,
             "epochs": 50,
             "folds": 2,
-            "batch_size": 2048,
+            "batch_size": 1024,
             "use_cuda": false,
             "data_dir": null,
             "in_device": null,
@@ -29,28 +29,50 @@
             "sub_modules": {
                   "encoding_decoding_module": {
                         "module_type": "Asymmetrical_Dense_Neural_Net_EDM",
-                        "parameters":{
-                          "encoder_parameters": {
-                          "inp_sizes":[784,512,512,512],
-                          "activators": {
-                                    "name": "LeakyReLU",
-                                    "params": {}
+                        "parameters": {
+                              "encoder_parameters": {
+                                    "inp_sizes": [
+                                          116412,
+                                          512,
+                                          512,
+                                          512
+                                    ],
+                                    "activators": {
+                                          "name": "LeakyReLU",
+                                          "params": {}
+                                    },
+                                    "batch_norm": false,
+                                    "dropout": null
                               },
-                          "batch_norm":false,
-                          "dropout":null
-                        },
-                        "decoder_parameters": {
-                          "inp_sizes":[512,512,512,784],
-                          "activators": {
-                                    "name": ["LeakyReLU","LeakyReLU","Sigmoid"],
-                                    "params": [{},{},{}]
+                              "decoder_parameters": {
+                                    "inp_sizes": [
+                                          512,
+                                          512,
+                                          512,
+                                          116412
+                                    ],
+                                    "activators": {
+                                          "name": [
+                                                "LeakyReLU",
+                                                "LeakyReLU",
+                                                "Sigmoid"
+                                          ],
+                                          "params": [
+                                                {},
+                                                {},
+                                                {}
+                                          ]
+                                    },
+                                    "batch_norm": false,
+                                    "dropout": null,
+                                    "input_size": [
+                                          3,
+                                          218,
+                                          178
+                                    ]
                               },
-                          "batch_norm":false,
-                          "dropout":null,
-                          "input_size":[1,28,28]
-                        },
-                        "flat":false
-                    }
+                              "flat": false
+                        }
                   },
                   "P_NET": {
                         "variational_generation_type": "VAE_NETs",
@@ -84,11 +106,12 @@
                   }
             },
             "model_params": {
-              "losses_weigths":{
-                        "reconstructive":0.5,
-                        "generative":0.5},
+                  "losses_weigths": {
+                        "reconstructive": 0.5,
+                        "generative": 0.5
+                  },
                   "resize": null
             }
       },
       "error": "If capturable=False, state_steps should not be CUDA tensors."
-  }
+}
