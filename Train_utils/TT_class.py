@@ -7,6 +7,7 @@ import pickle
 import copy
 import matplotlib.pyplot as plt
 import gc
+from tqdm.notebook import tqdm_notebook
 
 from plot_utils import plot_training_sample
 
@@ -87,7 +88,8 @@ class trainer():
         for l in self.loss_list:
             self.loss_epoch["train"][l]=[]
 
-        for idx, batch in tqdm(enumerate(dataloader),desc="instances"):
+        pbar=tqdm_notebook(enumerate(dataloader),desc="instances")
+        for idx, batch in pbar:
             #if self.uniform:
             #    losses=self.model.ELBO(batch[self.args[0]].to(device))
             #else:
@@ -135,7 +137,8 @@ class trainer():
         for l in self.loss_list:
             self.loss_epoch["test"][l]=[]
         
-        for idx, batch in tqdm(enumerate(dataloader),desc="Test"):
+        pbar=tqdm_notebook(enumerate(dataloader),desc="Test")
+        for idx, batch in pbar:
             #if self.uniform:
                 #losses=self.model.ELBO(batch[self.args[0]].to(device))
             batch=batch[0]
@@ -194,7 +197,8 @@ class trainer():
             #z_mu,z_sig,x_r,x
             plot_sample=plot_training_sample(images_idxs=[2,3],titles=["reconstruction","input"],image_save_dir=self.data_dir)
 
-        for epoch in tqdm(range(self.current_epoch,self.epochs),desc="Epoch"):
+        pbar=tqdm_notebook(range(self.current_epoch,self.epochs),desc="Epoch")
+        for epoch in pbar:
 
             drop_train=False
             drop_test=False
@@ -287,7 +291,8 @@ class trainer():
         train_set = torch.utils.data.Subset(self.dataset, train_index)
         test_set = torch.utils.data.Subset(self.dataset, test_index)
 
-        for fold in tqdm(range(self.folds),desc="folds"):
+        pbar=tqdm_notebook(range(self.folds),desc="folds")
+        for fold in pbar:
             self.current_fold=fold
             #TODO: check and load current fold
 
