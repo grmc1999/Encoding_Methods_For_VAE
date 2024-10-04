@@ -4,7 +4,7 @@ import argparse
 import os
 
 def get_jsons(args):
-    jsons_list=glob.glob(os.path.join(".",args.model,"*","*.json"))
+    jsons_list=glob.glob(os.path.join(args.path,args.model,"*","*.json"))
     return jsons_list
 
 def load_change_json(json_dir,args):
@@ -37,5 +37,6 @@ def change_json(args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser('Send API')
     parser.add_argument('--model', '-m', help='model_type_name',type=str, required=True)
+    parser.add_argument('--path', '-p', help='environment_specific_path',type=str, required=True)
     args = parser.parse_args()
     change_json(args)
