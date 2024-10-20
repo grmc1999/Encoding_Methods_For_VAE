@@ -57,7 +57,7 @@
                                     "dropout": null,
                                     "stride": 2
                               },
-                              "flat": false,
+                              "flat": true,
                               "Enc_type":"DNN_ENC",
                               "Dec_type":"CNN_DEC"
                         }
