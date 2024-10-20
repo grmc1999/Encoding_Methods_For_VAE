@@ -58,6 +58,8 @@
                                     "stride": 2
                               },
                               "flat": true,
+                              "compression_factor":1,
+                              "i_shape":[28,28],
                               "Enc_type":"DNN_ENC",
                               "Dec_type":"CNN_DEC"
                         }

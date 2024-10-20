@@ -139,7 +139,7 @@ class Asymmetrical_Convolutional_EDM(nn.Module):
   
 
 class Asymmetrical_CNN_DNN_EDM(nn.Module):
-  def __init__(self,encoder_parameters,decoder_parameters,Enc_type="DNN",Dec_type="CNN",compression_factor=1,flat=True):
+  def __init__(self,encoder_parameters,decoder_parameters,Enc_type="DNN",Dec_type="CNN",compression_factor=1,flat=True,i_shape=[28,28]):
     super(Asymmetrical_CNN_DNN_EDM,self).__init__()
     #Encoding modules
     self.flat=flat
@@ -147,7 +147,7 @@ class Asymmetrical_CNN_DNN_EDM(nn.Module):
     self.DEC=globals()[Dec_type](**decoder_parameters)
     #flatten
     self.compression_factor=compression_factor
-    #self.fl=hyb_view()
+    self.fl=hyb_view(i_shape,compression_factor)
 
   def sanity_check(self,x):
     ex=self.ENC(x)
@@ -155,7 +155,7 @@ class Asymmetrical_CNN_DNN_EDM(nn.Module):
     return ex
 
   def Encoding(self,x):
-    self.fl=hyb_view(list(x.shape),cf=self.compression_factor)
+    #self.fl=hyb_view(list(x.shape),cf=self.compression_factor)
     ex=self.ENC(x)
     if self.flat:
       ex=self.fl(ex)
