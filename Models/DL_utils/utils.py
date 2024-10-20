@@ -67,11 +67,10 @@ class s_view(nn.Module):
         return out
     
 class hyb_view(object):
-    def __init__(self,original_shape,cf):      
-        self.i_shape=[original_shape[0],
-                int(original_shape[1]*cf),
-                int(original_shape[2]*cf)
-                  ]
+    def __init__(self,original_shape,cf): 
+        original_shape[-1]=int(original_shape[-1]*cf)
+        original_shape[-2]=int(original_shape[-2]*cf)
+        self.i_shape=original_shape
     def __call__(self,x):
         if len(x.shape)==4:
             self.i_shape=x.shape
