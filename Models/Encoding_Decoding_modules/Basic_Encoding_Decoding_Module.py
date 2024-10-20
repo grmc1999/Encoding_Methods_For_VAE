@@ -139,10 +139,11 @@ class Asymmetrical_Convolutional_EDM(nn.Module):
   
 
 class Asymmetrical_CNN_DNN_EDM(nn.Module):
-  def __init__(self,encoder_parameters,decoder_parameters,Enc_type="DNN",Dec_type="CNN",compression_factor=1,flat=True,i_shape=[28,28]):
+  def __init__(self,encoder_parameters,decoder_parameters,Enc_type="DNN",Dec_type="CNN",compression_factor=1,flat=True,deflat=True,i_shape=[28,28]):
     super(Asymmetrical_CNN_DNN_EDM,self).__init__()
     #Encoding modules
     self.flat=flat
+    self.deflat=deflat
     self.ENC=globals()[Enc_type](**encoder_parameters)
     self.DEC=globals()[Dec_type](**decoder_parameters)
     #flatten
@@ -158,14 +159,12 @@ class Asymmetrical_CNN_DNN_EDM(nn.Module):
     #self.fl=hyb_view(list(x.shape),cf=self.compression_factor)
     ex=self.ENC(x)
     if self.flat:
-      with torch.no_grad():
-        ex=self.fl(ex)
+      ex=self.fl(ex)
     return ex
     
   def Decoding(self,z):
-    if self.flat:
-      with torch.no_grad():
-        dz=self.fl(z)
+    if self.deflat:
+      dz=self.fl(z)
     dz=self.DEC(dz)
     return dz
   
