@@ -28,7 +28,7 @@
             "model_name": "Unpaired_Flexible_Encoding_Decoding_VAE",
             "sub_modules": {
                   "encoding_decoding_module": {
-                        "module_type": "Asymmetrical_Dense_Neural_Net_EDM",
+                        "module_type": "Asymmetrical_CNN_DNN_EDM",
                         "parameters": {
                               "encoder_parameters": {
                                     "inp_sizes": [
@@ -43,23 +43,23 @@
                                     "dropout": null
                               },
                               "decoder_parameters": {
-                                    "inp_sizes": [
-                                          784, 784, 784, 784, 784, 784, 784, 784, 784, 784, 784, 784, 784, 784, 784, 784, 784
-                                          
+                                    "repr_sizes": [
+                                          16,
+                                          1
                                     ],
+                                    "kernel_size": 5,
                                     "activators": {
                                           "name": "Sigmoid",
                                           "params": {}
                                     },
+                                    "pooling": false,
                                     "batch_norm": true,
                                     "dropout": null,
-                                    "input_size": [
-                                          1,
-                                          28,
-                                          28
-                                    ]
+                                    "stride": 2
                               },
-                              "flat": false
+                              "flat": false,
+                              "Enc_type":"DNN_ENC",
+                              "Dec_type":"CNN_DEC"
                         }
                   },
                   "P_NET": {
