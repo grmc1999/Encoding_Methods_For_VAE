@@ -140,7 +140,7 @@ class Asymmetrical_Convolutional_EDM(nn.Module):
 
 class Asymmetrical_CNN_DNN_EDM(nn.Module):
   def __init__(self,encoder_parameters,decoder_parameters,Enc_type="DNN",Dec_type="CNN",flat=True):
-    super(Asymmetrical_CNN_DNN_EDM,self).__init__(encoder_parameters,decoder_parameters,flat)
+    super(Asymmetrical_CNN_DNN_EDM,self).__init__()
     #Encoding modules
     self.flat=flat
     self.ENC=globals()[Enc_type](**encoder_parameters)
