@@ -67,18 +67,17 @@ class s_view(nn.Module):
         return out
     
 class hyb_view(nn.Module):
-    def __init__(self,original_shape,cf):
-        with torch.no_grad():
-            self.i_shape=[original_shape[0],
-                    int(original_shape[1]*cf),
-                    int(original_shape[2]*cf)
-                      ]
+    def __init__(self,original_shape,cf):      
+        self.i_shape=[original_shape[0],
+                int(original_shape[1]*cf),
+                int(original_shape[2]*cf)
+                  ]
     def forward(self,x):
         if len(x.shape)==4:
             self.i_shape=x.shape
             out=x.view(x.shape[0],-1)
         elif len(x.shape)==2:
-            out=x.view(self.i_shape)
+            out=x.view([x.shape[0]]+self.i_shape)
         return out
 
 class NN_layer(nn.Module):
