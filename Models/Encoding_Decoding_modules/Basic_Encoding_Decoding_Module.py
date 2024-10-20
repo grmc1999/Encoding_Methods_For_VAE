@@ -155,7 +155,7 @@ class Asymmetrical_CNN_DNN_EDM(nn.Module):
     return ex
 
   def Encoding(self,x):
-    self.fl=hyb_view(x.shape,cf=self.compression_factor)
+    self.fl=hyb_view(list(x.shape),cf=self.compression_factor)
     ex=self.ENC(x)
     if self.flat:
       ex=self.fl(ex)
