@@ -72,7 +72,7 @@ class hyb_view(object):
         original_shape[-2]=int(original_shape[-2]*cf)
         self.i_shape=original_shape
     def __call__(self,x):
-        if len(x.shape)==4:
+        if len(x.shape)==4 or  len(x.shape)==3:
             self.i_shape=x.shape
             out=x.view(x.shape[0],-1)
         elif len(x.shape)==2:
