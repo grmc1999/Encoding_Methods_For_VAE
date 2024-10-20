@@ -68,7 +68,8 @@ class s_view(nn.Module):
     
 class hyb_view(nn.Module):
     def __init__(self,original_shape,cf):
-        self.i_shape=[original_shape[0],
+        with torch.no_grad():
+            self.i_shape=[original_shape[0],
                     int(original_shape[1]*cf),
                     int(original_shape[2]*cf)
                       ]
