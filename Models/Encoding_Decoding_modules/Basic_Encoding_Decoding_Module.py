@@ -2,6 +2,10 @@ from DL_utils.utils import *
 from DL_utils.ResNET import *
 from DL_utils.PCNN import *
 from DL_utils.DNN import *
+from DL_utils.DNN import b_encoder_NN as DNN_ENC
+from DL_utils.DNN import b_decoder_NN as DNN_DEC
+from DL_utils.utils import b_encoder_conv as CNN_ENC
+from DL_utils.utils import b_decoder_conv as CNN_DEC
 
 class EncodingDecodingModule(nn.Module):
   def __init__(self):
@@ -34,17 +38,9 @@ class Asymmetrical_Dense_Neural_Net_EDM(nn.Module):
     #Encoding modules
     self.flat=flat
     self.ENC=b_encoder_NN(**encoder_parameters
-                   #inp_sizes=[5],
-                   #activators=nn.ReLU(),
-                   #batch_norm=True,
-                   #dropout=None
                    )
     #Decoding modules
     self.DEC=b_decoder_NN(**decoder_parameters
-                   #inp_sizes=[5],
-                   #activators=nn.ReLU(),
-                   #batch_norm=True,
-                   #dropout=None
                    )
     #flatten
     self.fl=s_view()
@@ -112,30 +108,14 @@ class Basic_Convolutional_EDM(nn.Module):
     return dz
   
 class Asymmetrical_Convolutional_EDM(nn.Module):
-  def __init__(self,encoder_parameters,decoder_parameters,
-#               repr_sizes=[3,32,64,128,256],kernel_size=5,activators=nn.ReLU(),pooling=True,batch_norm=True,dropout=None,stride=1,
-               flat=True):
+  def __init__(self,encoder_parameters,decoder_parameters,flat=True):
     super(Asymmetrical_Convolutional_EDM,self).__init__()
     #Encoding modules
     self.flat=flat
     self.ENC=b_encoder_conv(**encoder_parameters
-                   #repr_sizes=repr_sizes,
-                   #kernel_size=kernel_size,
-                   #activators=activators,
-                   #batch_norm=batch_norm,
-                   #dropout=dropout,
-                   #stride=stride,
-                   #pooling=pooling
                    )
     #Decoding modules
     self.DEC=b_decoder_conv(**decoder_parameters
-                   #repr_sizes=repr_sizes,
-                   #kernel_size=kernel_size,
-                   #activators=activators,
-                   #batch_norm=batch_norm,
-                   #dropout=dropout,
-                   #stride=stride,
-                   #pooling=pooling
                    )
     #flatten
     self.fl=s_view()
@@ -156,6 +136,35 @@ class Asymmetrical_Convolutional_EDM(nn.Module):
       dz=self.fl(z)
     dz=self.DEC(dz)
     return dz
+  
+
+class Asymmetrical_CNN_DNN_EDM(Asymmetrical_Convolutional_EDM):
+  def __init__(self,encoder_parameters,decoder_parameters,Enc_type="DNN",Dec_type="CNN",flat=True):
+    super(Asymmetrical_Convolutional_EDM,self).__init__(encoder_parameters,decoder_parameters,flat)
+    #Encoding modules
+    self.flat=flat
+    self.ENC=globals()[Enc_type](**encoder_parameters)
+    self.DEC=globals()[Dec_type](**decoder_parameters)
+    #flatten
+    self.fl=s_view()
+
+  #def sanity_check(self,x):
+  #  ex=self.ENC(x)
+  #  ex=self.fl(ex).shape
+  #  return ex
+#
+  #def Encoding(self,x):
+  #  ex=self.ENC(x)
+  #  if self.flat:
+  #    ex=self.fl(ex)
+  #  return ex
+  #  
+  #def Decoding(self,z):
+  #  if self.flat:
+  #    dz=self.fl(z)
+  #  dz=self.DEC(dz)
+  #  return dz
+  
 
 
 from DL_utils.PCNN import *
@@ -186,11 +195,6 @@ class MaxPooling_Convolutional_EDM(nn.Module):
     )
     #flatten
     self.fl=s_view()
-
-#ci=MPEC(torch.rand((1,15,15)))
-#print(ci.shape)
-#i=MUEC(ci,MPEC.idx_list[::-1])
-#print(di.shape)
 
   def sanity_check(self,x):
     ex=self.ENC(x)
