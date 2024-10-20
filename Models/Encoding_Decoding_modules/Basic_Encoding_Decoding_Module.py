@@ -158,12 +158,14 @@ class Asymmetrical_CNN_DNN_EDM(nn.Module):
     #self.fl=hyb_view(list(x.shape),cf=self.compression_factor)
     ex=self.ENC(x)
     if self.flat:
-      ex=self.fl(ex)
+      with torch.no_grad():
+        ex=self.fl(ex)
     return ex
     
   def Decoding(self,z):
     if self.flat:
-      dz=self.fl(z)
+      with torch.no_grad():
+        dz=self.fl(z)
     dz=self.DEC(dz)
     return dz
   
