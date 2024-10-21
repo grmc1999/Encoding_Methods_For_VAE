@@ -6,10 +6,10 @@
       },
       "trainer": {
             "model": null,
-            "epochs": 70,
+            "epochs": 100,
             "folds": 2,
             "batch_size": 2048,
-            "use_cuda": "cuda:0",
+            "use_cuda": null,
             "data_dir": null,
             "in_device": null,
             "num_workers": 10,
@@ -33,7 +33,7 @@
                               "encoder_parameters": {
                                     "inp_sizes": [
                                           784,
-                                          30
+                                          490
                                     ],
                                     "activators": {
                                           "name": "LeakyReLU",
@@ -44,25 +44,12 @@
                               },
                               "decoder_parameters": {
                                     "inp_sizes": [
-                                          30,
-                                          64,
-                                          128,
-                                          512,
-                                          784
+                                          784,
+                                          490
                                     ],
                                     "activators": {
-                                          "name": [
-                                                "LeakyReLU",
-                                                "LeakyReLU",
-                                                "LeakyReLU",
-                                                "Sigmoid"
-                                          ],
-                                          "params": [
-                                                {},
-                                                {},
-                                                {},
-                                                {}
-                                          ]
+                                          "name": "Sigmoid",
+                                          "params": {}
                                     },
                                     "batch_norm": true,
                                     "dropout": null,
@@ -79,11 +66,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    64,
-                                    128,
-                                    512,
-                                    512,
-                                    30
+                                    196,
+                                    490
                               ],
                               "dec_activators": {
                                     "name": "Sigmoid",
@@ -97,11 +81,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    30,
-                                    512,
-                                    512,
-                                    128,
-                                    64
+                                    490,
+                                    196
                               ],
                               "enc_activators": {
                                     "name": "Sigmoid",

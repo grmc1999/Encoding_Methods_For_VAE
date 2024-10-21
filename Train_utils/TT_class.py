@@ -169,7 +169,7 @@ class trainer():
     def train_test(self,train_set,test_set):
 
         #Is file already exists charge ------------------------------------------------------------------------------------------------------------------------
-        if "loss_results.npy" in os.listdir(self.data_dir):
+        if b"checkpoint.pt" in os.listdir(self.data_dir) or "loss_results.npy" in os.listdir(self.data_dir):
             print("result found")
             self.loss_DATA=np.load(os.path.join(self.data_dir,'loss_results.npy'),allow_pickle=True).tolist()
         
