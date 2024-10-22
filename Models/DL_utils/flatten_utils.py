@@ -10,7 +10,7 @@ class s_view(nn.Module):
             out=x.view(self.i_shape)
         return out
 
-dim_DNN_type=(lambda module: module.comp_layer[0].outfeatures)
+dim_DNN_type=(lambda module: module.comp_layer[0].out_features)
 dim_CNN_type=(lambda module: module.comp_layer[0].out_channels)
 
 
