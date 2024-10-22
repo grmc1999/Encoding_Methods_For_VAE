@@ -161,6 +161,9 @@ class set_deconv(nn.Module):
         elif stride==2:
             self.padding=int((kernel_size-1)/2)
             self.out_pad=1
+        elif kernel_size%2==0:
+            self.padding=int((kernel_size-1)/2)
+            self.out_pad=1
 
         self.comp_layer=nn.ModuleList(
             [nn.ConvTranspose2d(repr_size_in,repr_size_out,kernel_size=kernel_size,stride=self.stride,padding=self.padding,output_padding=self.out_pad)]+\
