@@ -15,9 +15,9 @@ dim_CNN_type=(lambda module: module.comp_layer[0].out_channels)
 
 
 class hyb_view(object):
-    def __init__(self,original_shape,cf,model,enc_dim_func,dec_dim_func):
-        self.enc_dims=enc_dim_func(model.EncoderDecoder.ENC.im_layers[-1])
-        self.dec_dims=dec_dim_func(model.EncoderDecoder.DEC.im_layers[0])
+    def __init__(self,original_shape,cf,enc,dec,enc_dim_func,dec_dim_func):
+        self.enc_dims=enc_dim_func(enc.im_layers[-1])
+        self.dec_dims=dec_dim_func(dec.im_layers[0])
         original_shape[-1]=int(original_shape[-1]*cf)
         original_shape[-2]=int(original_shape[-2]*cf)
         self.i_shape=original_shape

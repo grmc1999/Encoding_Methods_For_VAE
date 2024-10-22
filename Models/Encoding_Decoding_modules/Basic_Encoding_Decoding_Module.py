@@ -149,7 +149,7 @@ class Asymmetrical_CNN_DNN_EDM(nn.Module):
     self.DEC=globals()[Dec_type](**decoder_parameters)
     #flatten
     self.compression_factor=compression_factor
-    self.fl=hyb_view(i_shape,compression_factor,enc_dim_func=dim_DNN_type,dec_dim_func=dim_CNN_type)
+    self.fl=hyb_view(i_shape,compression_factor,enc=self.ENC,dec=self.DEC,enc_dim_func=dim_DNN_type,dec_dim_func=dim_CNN_type)
 
   def sanity_check(self,x):
     ex=self.ENC(x)
