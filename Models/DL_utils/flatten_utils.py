@@ -34,8 +34,8 @@ class hyb_view(object):
         elif len(x.shape)==2: # batch layer_dim
             out=rearrange(x,"b (c h w) -> b c h w",
                           c=self.dec_dims,
-                          h=self.i_shape[-2]*(self.dec_dims//self.channel_shape),
-                          w=self.i_shape[-1]*(self.dec_dims//self.channel_shape)
+                          h=self.i_shape[-2]*(self.channel_shape//self.dec_dims),
+                          w=self.i_shape[-1]*(self.channel_shape//self.dec_dims)
                           )
             #out=x.view([x.shape[0]]+self.i_shape)
         return out
