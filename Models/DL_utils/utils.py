@@ -161,7 +161,7 @@ class set_deconv(nn.Module):
         elif stride==2:
             self.padding=int((kernel_size-1)/2)
             self.out_pad=1
-        elif kernel_size%2==0:
+        elif kernel_size%2==1:
             self.padding=int((kernel_size-1)/2)
             self.out_pad=1
 
