@@ -1,4 +1,5 @@
 from DL_utils.utils import *
+from DL_utils.flatten_utils import s_view,hyb_view
 from DL_utils.ResNET import *
 from DL_utils.PCNN import *
 from DL_utils.DNN import *
