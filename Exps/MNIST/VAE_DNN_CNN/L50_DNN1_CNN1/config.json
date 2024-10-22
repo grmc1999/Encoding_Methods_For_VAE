@@ -33,7 +33,7 @@
                               "encoder_parameters": {
                                     "inp_sizes": [
                                           784,
-                                          1568
+                                          784
                                     ],
                                     "activators": {
                                           "name": "LeakyReLU",
@@ -55,7 +55,7 @@
                                     "pooling": false,
                                     "batch_norm": true,
                                     "dropout": null,
-                                    "stride": 2
+                                    "stride": 4
                               },
                               "flat": false,
                               "deflat": true,
@@ -69,8 +69,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    1568,
-                                    1568
+                                    784,
+                                    784
                               ],
                               "dec_activators": {
                                     "name": "Sigmoid",
@@ -84,8 +84,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    1568,
-                                    1568
+                                    784,
+                                    784
                               ],
                               "enc_activators": {
                                     "name": "Sigmoid",
