@@ -1,5 +1,5 @@
 from DL_utils.utils import *
-from DL_utils.flatten_utils import s_view,hyb_view
+from DL_utils.flatten_utils import s_view,hyb_view,dim_DNN_type,dim_CNN_type
 from DL_utils.ResNET import *
 from DL_utils.PCNN import *
 from DL_utils.DNN import *
@@ -149,7 +149,7 @@ class Asymmetrical_CNN_DNN_EDM(nn.Module):
     self.DEC=globals()[Dec_type](**decoder_parameters)
     #flatten
     self.compression_factor=compression_factor
-    self.fl=hyb_view(i_shape,compression_factor)
+    self.fl=hyb_view(i_shape,compression_factor,enc_dim_func=dim_DNN_type,dec_dim_func=dim_CNN_type)
 
   def sanity_check(self,x):
     ex=self.ENC(x)
