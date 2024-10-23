@@ -26,7 +26,6 @@ class hyb_view(object):
         original_shape[-2]=int(original_shape[-2]*cf)
         self.i_shape=original_shape
     def __call__(self,x):
-        print(x.shape)
         if len(x.shape)==4: # batch c w h
             self.i_shape=x.shape
             #out=x.view(x.shape[0],-1)

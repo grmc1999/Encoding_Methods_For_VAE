@@ -33,7 +33,7 @@
                               "encoder_parameters": {
                                     "inp_sizes": [
                                           784,
-                                          784
+                                          196
                                     ],
                                     "activators": {
                                           "name": "LeakyReLU",
@@ -44,7 +44,7 @@
                               },
                               "decoder_parameters": {
                                     "repr_sizes": [
-                                          16,
+                                          8,
                                           1
                                     ],
                                     "kernel_size": 5,
@@ -59,7 +59,7 @@
                               },
                               "flat": false,
                               "deflat": true,
-                              "compression_factor":1,
+                              "compression_factor":0.25,
                               "i_shape":[28,28],
                               "Enc_type":"DNN_ENC",
                               "Dec_type":"CNN_DEC"
@@ -69,8 +69,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    784,
-                                    784
+                                    196,
+                                    196
                               ],
                               "dec_activators": {
                                     "name": "Sigmoid",
@@ -84,8 +84,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    784,
-                                    784
+                                    196,
+                                    196
                               ],
                               "enc_activators": {
                                     "name": "Sigmoid",
@@ -101,7 +101,7 @@
                         "reconstructive": 0.5,
                         "generative": 0.5
                   },
-                  "resize": null
+                  "resize": [28,28]
             }
       },
       "error": "If capturable=False, state_steps should not be CUDA tensors."

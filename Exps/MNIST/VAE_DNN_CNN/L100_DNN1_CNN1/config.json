@@ -44,7 +44,7 @@
                               },
                               "decoder_parameters": {
                                     "repr_sizes": [
-                                          4,
+                                          1,
                                           1
                                     ],
                                     "kernel_size": 5,
@@ -55,7 +55,7 @@
                                     "pooling": false,
                                     "batch_norm": true,
                                     "dropout": null,
-                                    "stride": 2
+                                    "stride": 1
                               },
                               "flat": false,
                               "deflat": true,

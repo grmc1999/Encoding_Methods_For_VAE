@@ -44,7 +44,7 @@
                               },
                               "decoder_parameters": {
                                     "repr_sizes": [
-                                          8,
+                                          2,
                                           1
                                     ],
                                     "kernel_size": 5,
@@ -55,11 +55,11 @@
                                     "pooling": false,
                                     "batch_norm": true,
                                     "dropout": null,
-                                    "stride": 2
+                                    "stride": 1
                               },
                               "flat": false,
                               "deflat": true,
-                              "compression_factor":1,
+                              "compression_factor":2,
                               "i_shape":[28,28],
                               "Enc_type":"DNN_ENC",
                               "Dec_type":"CNN_DEC"
