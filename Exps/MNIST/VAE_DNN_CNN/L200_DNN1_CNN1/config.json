@@ -101,7 +101,7 @@
                         "reconstructive": 0.5,
                         "generative": 0.5
                   },
-                  "resize": null
+                  "resize": [28,28]
             }
       },
       "error": "If capturable=False, state_steps should not be CUDA tensors."
