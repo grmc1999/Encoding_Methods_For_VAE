@@ -11,7 +11,7 @@ class s_view(nn.Module):
         return out
 
 dim_DNN_type=(lambda module: module.comp_layer[0].out_features)
-dim_CNN_type=(lambda module: module.comp_layer[0].out_channels)
+dim_CNN_type=(lambda module: module.comp_layer[0].in_channels)
 
 
 class hyb_view(object):
