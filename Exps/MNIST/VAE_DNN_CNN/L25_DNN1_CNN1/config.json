@@ -44,8 +44,8 @@
                               },
                               "decoder_parameters": {
                                     "repr_sizes": [
-                                          8,
-                                          1
+                                          1,
+                                          8
                                     ],
                                     "kernel_size": 5,
                                     "activators": {
