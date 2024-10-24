@@ -33,7 +33,6 @@
                               "encoder_parameters": {
                                     "repr_sizes": [
                                           1,
-                                          2,
                                           4
                                     ],
                                     "kernel_size": 5,
@@ -44,29 +43,22 @@
                                     "pooling": false,
                                     "batch_norm": true,
                                     "dropout": null,
-                                    "stride": 2
+                                    "stride": 4
                               },
                               "decoder_parameters": {
                                     "repr_sizes": [
                                           4,
-                                          2,
                                           1
                                     ],
                                     "kernel_size": 5,
                                     "activators": {
-                                          "name": [
-                                                "LeakyReLU",
-                                                "Sigmoid"
-                                          ],
-                                          "params": [
-                                                {},
-                                                {}
-                                          ]
+                                          "name": "Sigmoid",
+                                          "params": {}
                                     },
                                     "pooling": false,
                                     "batch_norm": true,
                                     "dropout": null,
-                                    "stride": 2
+                                    "stride": 4
                               },
                               "flat": true
                         }
@@ -75,8 +67,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    128,
-                                    196
+                                    392,
+                                    392
                               ],
                               "dec_activators": {
                                     "name": "LeakyReLU",
@@ -90,8 +82,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    196,
-                                    128
+                                    392,
+                                    392
                               ],
                               "enc_activators": {
                                     "name": "Sigmoid",
@@ -107,8 +99,8 @@
                         "reconstructive": 0.5,
                         "generative": 0.5
                   },
-                  "resize": null
+                  "resize": [28,28]
             }
       },
-      "error": "mat1 and mat2 shapes cannot be multiplied (2048x196 and 784x128)"
+      "error": "Given groups=1, weight of size [32, 3, 5, 5], expected input[2048, 1, 28, 28] to have 3 channels, but got 1 channels instead"
 }

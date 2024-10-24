@@ -69,7 +69,7 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    512,
+                                    128,
                                     784
                               ],
                               "dec_activators": {
@@ -85,7 +85,7 @@
                         "parameters": {
                               "layer_size": [
                                     784,
-                                    512
+                                    128
                               ],
                               "enc_activators": {
                                     "name": "Sigmoid",
@@ -101,7 +101,7 @@
                         "reconstructive": 0.5,
                         "generative": 0.5
                   },
-                  "resize": null
+                  "resize": [28,28]
             }
       },
       "error": "Given groups=1, weight of size [32, 3, 5, 5], expected input[2048, 1, 28, 28] to have 3 channels, but got 1 channels instead"

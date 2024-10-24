@@ -54,14 +54,8 @@
                                     ],
                                     "kernel_size": 5,
                                     "activators": {
-                                          "name": [
-                                                "LeakyReLU",
-                                                "Sigmoid"
-                                          ],
-                                          "params": [
-                                                {},
-                                                {}
-                                          ]
+                                          "name": "Sigmoid",
+                                          "params": {}
                                     },
                                     "pooling": false,
                                     "batch_norm": true,
@@ -107,7 +101,7 @@
                         "reconstructive": 0.5,
                         "generative": 0.5
                   },
-                  "resize": null
+                  "resize": [28,28]
             }
       },
       "error": "Given groups=1, weight of size [32, 3, 5, 5], expected input[2048, 1, 28, 28] to have 3 channels, but got 1 channels instead"
