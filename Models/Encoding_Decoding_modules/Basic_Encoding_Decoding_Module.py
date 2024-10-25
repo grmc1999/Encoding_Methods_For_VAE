@@ -164,9 +164,9 @@ class Asymmetrical_CNN_DNN_EDM(nn.Module):
     
   def Decoding(self,z):
     if self.deflat:
-      dz=self.fl(z)
-    dz=self.DEC(dz)
-    return dz
+      z=self.fl(z)
+    z=self.DEC(z)
+    return z
   
 
 
