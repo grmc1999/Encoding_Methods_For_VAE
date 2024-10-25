@@ -13,8 +13,10 @@ class s_view(nn.Module):
 
 # TODO: add flexibility on in or out for decoder or encoder
 
-dim_DNN_type=(lambda module: module.comp_layer[0].out_features)
-dim_CNN_type=(lambda module: module.comp_layer[0].in_channels)
+enc_dim_DNN_type=(lambda module: module.comp_layer[0].out_features)
+dec_dim_DNN_type=(lambda module: module.comp_layer[0].in_features)
+enc_dim_CNN_type=(lambda module: module.comp_layer[0].out_channels)
+dec_dim_CNN_type=(lambda module: module.comp_layer[0].in_channels)
 
 
 class hyb_view(object):

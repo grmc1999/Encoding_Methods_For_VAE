@@ -86,7 +86,7 @@
                                     392
                               ],
                               "enc_activators": {
-                                    "name": "Sigmoid",
+                                    "name": "LeakyReLU",
                                     "params": {}
                               },
                               "batch_norm": false,
