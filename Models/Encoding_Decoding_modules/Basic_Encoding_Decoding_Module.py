@@ -1,6 +1,6 @@
 from DL_utils.utils import *
 from DL_utils import flatten_utils
-from DL_utils.flatten_utils import s_view,hyb_view,enc_dim_DNN_type,dec_dim_CNN_type
+from DL_utils.flatten_utils import s_view,hyb_view#,enc_dim_DNN_type,dec_dim_CNN_type
 from DL_utils.ResNET import *
 from DL_utils.PCNN import *
 from DL_utils.DNN import *
