@@ -57,28 +57,6 @@ def convtransp_output_shape(h_w, kernel_size=1, stride=1, pad=0, dilation=1,out_
     
     return h, w
 
-class s_view(nn.Module):
-    def forward(self,x):
-        if len(x.shape)==4:
-            self.i_shape=x.shape
-            out=x.view(x.shape[0],-1)
-        elif len(x.shape)==2:
-            out=x.view(self.i_shape)
-        return out
-    
-class hyb_view(object):
-    def __init__(self,original_shape,cf): 
-        original_shape[-1]=int(original_shape[-1]*cf)
-        original_shape[-2]=int(original_shape[-2]*cf)
-        self.i_shape=original_shape
-    def __call__(self,x):
-        if len(x.shape)==4:
-            self.i_shape=x.shape
-            out=x.view(x.shape[0],-1)
-        elif len(x.shape)==2:
-            out=x.view([x.shape[0]]+self.i_shape)
-        return out
-
 class NN_layer(nn.Module):
     def __init__(self,inp,out,act=nn.ReLU(),batch_norm=True,dropout=None):
         super(NN_layer,self).__init__()
@@ -159,6 +137,9 @@ class set_deconv(nn.Module):
             self.padding=0
             self.out_pad=0
         elif stride==2:
+            self.padding=int((kernel_size-1)/2)
+            self.out_pad=1
+        elif kernel_size%2==1:
             self.padding=int((kernel_size-1)/2)
             self.out_pad=1
 

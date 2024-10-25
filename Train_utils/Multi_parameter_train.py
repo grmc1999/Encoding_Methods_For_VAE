@@ -11,20 +11,17 @@ from torch import nn
 import traceback
 
 sys.path.append(os.path.join("..","Dataset_utils"))
-#from Dataset_utils import Custom_Transforms
-import Custom_Transforms
-#from Dataset_utils import poses_parser
-#from Dataset_utils.DataLoader import UAV_GPS_Dataset
+from Dataset_utils import Custom_Transforms
+
 
 sys.path.append(os.path.join("..","Models"))
-#from Models import DL_utils
-#from Models import Encoding_Decoding_modules
 import Models
 import DL_utils
 import Encoding_Decoding_modules
 
+#sys.path.append(os.path.join("..","Train_utils"))
 
-from TT_class import trainer
+from .TT_class import trainer
 
 class multi_parameter_training(trainer):
     def __init__(self,results_directory,dataset_root_directory,Dataset_type,train=True,test=True,K_fold_training=None,visualization=False,split_frac=0.8):

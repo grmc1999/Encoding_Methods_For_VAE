@@ -18,4 +18,6 @@ class inception_score(object):
         self.batch_size=batch_size
         self.split=split
 
-    def
+    def predict(self,x):
+
+    def predict_batch(self,batch):

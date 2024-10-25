@@ -33,7 +33,7 @@
                               "encoder_parameters": {
                                     "inp_sizes": [
                                           784,
-                                          1568
+                                          392
                                     ],
                                     "activators": {
                                           "name": "LeakyReLU",
@@ -45,7 +45,7 @@
                               "decoder_parameters": {
                                     "repr_sizes": [
                                           1,
-                                          2
+                                          4
                                     ],
                                     "kernel_size": 5,
                                     "activators": {
@@ -55,11 +55,11 @@
                                     "pooling": false,
                                     "batch_norm": true,
                                     "dropout": null,
-                                    "stride": 1
+                                    "stride": 4
                               },
                               "flat": false,
                               "deflat": true,
-                              "compression_factor":2,
+                              "compression_factor":0.5,
                               "i_shape":[28,28],
                               "Enc_type":"DNN_ENC",
                               "Dec_type":"CNN_DEC"
@@ -69,8 +69,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    1568,
-                                    1568
+                                    392,
+                                    392
                               ],
                               "dec_activators": {
                                     "name": "Sigmoid",
@@ -84,8 +84,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    1568,
-                                    1568
+                                    392,
+                                    392
                               ],
                               "enc_activators": {
                                     "name": "Sigmoid",
