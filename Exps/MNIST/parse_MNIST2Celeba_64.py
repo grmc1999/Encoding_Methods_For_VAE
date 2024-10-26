@@ -16,9 +16,10 @@ def load_change_json(json_dir,args):
         config_json["trainer"]["use_cuda"]=True
         config_json["trainer"]["use_cuda"]='cuda:0'
         config_json["trainer"]["num_workers"]=10
-        #config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["input_size"]=[3,218,178]
-        #config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["encoder_parameters"]["inp_sizes"][0]=116412
-        #config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["inp_sizes"][-1]=116412
+        config_json["model"]["sub_modules"]["P_NET"]["parameters"]["batch_norm"]=False
+        config_json["model"]["sub_modules"]["Q_NET"]["parameters"]["batch_norm"]=False
+        config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["encoder_parameters"]["batch_norm"]=False
+        config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["batch_norm"]=False
     elif args.model=="VAE_CNN":
         config_json["experiment_state"]="waiting"
         config_json["trainer"]["batch_size"]=2048
