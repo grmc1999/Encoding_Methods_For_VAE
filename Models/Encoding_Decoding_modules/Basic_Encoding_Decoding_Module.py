@@ -154,8 +154,8 @@ class Asymmetrical_CNN_DNN_EDM(nn.Module):
                      compression_factor,
                      enc=self.ENC,
                      dec=self.DEC,
-                     enc_dim_func=getattr(flatten_utils,"enc_dim_{}_type".format(Enc_type)),
-                     dec_dim_func=getattr(flatten_utils,"dec_dim_{}_type".format(Enc_type))
+                     enc_dim_func=getattr(flatten_utils,"dim_{}_type".format(Enc_type)),
+                     dec_dim_func=getattr(flatten_utils,"dim_{}_type".format(Enc_type))
                      )
 
   def sanity_check(self,x):
