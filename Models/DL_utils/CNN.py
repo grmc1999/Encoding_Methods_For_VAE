@@ -28,6 +28,7 @@ class set_deconv(nn.Module):
     def __init__(self,repr_size_in,repr_size_out,kernel_size=5,act=nn.ReLU(),pooling=True,batch_norm=True,dropout=None,stride=1):
         super(set_deconv, self).__init__()
         self.stride=stride
+        self.out_pad=1
         self.padding=int((kernel_size-1)/2)
         if stride==1:
             self.padding=int((kernel_size-1)/2)
