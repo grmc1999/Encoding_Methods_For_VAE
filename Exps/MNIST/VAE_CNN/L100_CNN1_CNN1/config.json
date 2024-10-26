@@ -9,7 +9,7 @@
             "epochs": 200,
             "folds": 2,
             "batch_size": 2048,
-            "use_cuda": true,
+            "use_cuda": "cuda:0",
             "data_dir": null,
             "in_device": "cuda:0",
             "num_workers": 10,
@@ -33,8 +33,7 @@
                               "encoder_parameters": {
                                     "repr_sizes": [
                                           1,
-                                          8,
-                                          16
+                                          4
                                     ],
                                     "kernel_size": 5,
                                     "activators": {
@@ -42,23 +41,26 @@
                                           "params": {}
                                     },
                                     "pooling": false,
-                                    "batch_norm": true,
+                                    "batch_norm": false,
                                     "dropout": null,
                                     "stride": 2
                               },
                               "decoder_parameters": {
                                     "repr_sizes": [
-                                          16,
-                                          8,
+                                          4,
                                           1
                                     ],
                                     "kernel_size": 5,
                                     "activators": {
-                                          "name": "Sigmoid",
-                                          "params": {}
+                                          "name": [
+                                                "Sigmoid"
+                                          ],
+                                          "params": [
+                                                {}
+                                          ]
                                     },
                                     "pooling": false,
-                                    "batch_norm": true,
+                                    "batch_norm": false,
                                     "dropout": null,
                                     "stride": 2
                               },
@@ -69,7 +71,7 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    128,
+                                    784,
                                     784
                               ],
                               "dec_activators": {
@@ -85,7 +87,7 @@
                         "parameters": {
                               "layer_size": [
                                     784,
-                                    128
+                                    784
                               ],
                               "enc_activators": {
                                     "name": "Sigmoid",
@@ -101,7 +103,10 @@
                         "reconstructive": 0.5,
                         "generative": 0.5
                   },
-                  "resize": [28,28]
+                  "resize": [
+                        28,
+                        28
+                  ]
             }
       },
       "error": "Given groups=1, weight of size [32, 3, 5, 5], expected input[2048, 1, 28, 28] to have 3 channels, but got 1 channels instead"

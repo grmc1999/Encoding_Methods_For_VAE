@@ -30,6 +30,9 @@ def load_change_json(json_dir,args):
         config_json["trainer"]["use_cuda"]=True
         config_json["trainer"]["use_cuda"]='cuda:0'
         config_json["trainer"]["num_workers"]=10
+        nl=len(config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["repr_sizes"])
+        config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["activators"]["name"]=["LeakyReLU" for i in range(nl-2)]+["Sigmoid"]
+        config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["activators"]["params"]=[{} for i in range(nl-1)]
     else:
         print("type not found")
     

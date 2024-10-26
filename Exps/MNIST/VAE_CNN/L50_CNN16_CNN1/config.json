@@ -33,6 +33,19 @@
                               "encoder_parameters": {
                                     "repr_sizes": [
                                           1,
+                                          2,
+                                          2,
+                                          2,
+                                          2,
+                                          2,
+                                          2,
+                                          2,
+                                          2,
+                                          2,
+                                          2,
+                                          2,
+                                          2,
+                                          2,
                                           2
                                     ],
                                     "kernel_size": 5,

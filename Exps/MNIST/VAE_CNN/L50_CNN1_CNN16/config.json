@@ -48,14 +48,53 @@
                               "decoder_parameters": {
                                     "repr_sizes": [
                                           2,
+                                          2,
+                                          2,
+                                          2,
+                                          2,
+                                          2,
+                                          2,
+                                          2,
+                                          2,
+                                          2,
+                                          2,
+                                          2,
+                                          2,
+                                          2,
                                           1
                                     ],
                                     "kernel_size": 5,
                                     "activators": {
                                           "name": [
+                                                "LeakyReLU",
+                                                "LeakyReLU",
+                                                "LeakyReLU",
+                                                "LeakyReLU",
+                                                "LeakyReLU",
+                                                "LeakyReLU",
+                                                "LeakyReLU",
+                                                "LeakyReLU",
+                                                "LeakyReLU",
+                                                "LeakyReLU",
+                                                "LeakyReLU",
+                                                "LeakyReLU",
+                                                "LeakyReLU",
                                                 "Sigmoid"
                                           ],
                                           "params": [
+                                                {},
+                                                {},
+                                                {},
+                                                {},
+                                                {},
+                                                {},
+                                                {},
+                                                {},
+                                                {},
+                                                {},
+                                                {},
+                                                {},
+                                                {},
                                                 {}
                                           ]
                                     },

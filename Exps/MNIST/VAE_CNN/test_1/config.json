@@ -54,8 +54,14 @@
                                     ],
                                     "kernel_size": 5,
                                     "activators": {
-                                          "name": "Sigmoid",
-                                          "params": {}
+                                          "name": [
+                                                "LeakyReLU",
+                                                "Sigmoid"
+                                          ],
+                                          "params": [
+                                                {},
+                                                {}
+                                          ]
                                     },
                                     "pooling": false,
                                     "batch_norm": true,

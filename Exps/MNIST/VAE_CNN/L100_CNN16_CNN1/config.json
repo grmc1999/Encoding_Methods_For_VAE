@@ -33,9 +33,24 @@
                               "encoder_parameters": {
                                     "repr_sizes": [
                                           1,
-                                          2
+                                          16,
+                                          16,
+                                          16,
+                                          16,
+                                          16,
+                                          16,
+                                          16,
+                                          16,
+                                          16,
+                                          16,
+                                          16,
+                                          16,
+                                          16,
+                                          16,
+                                          16,
+                                          16
                                     ],
-                                    "kernel_size": 5,
+                                    "kernel_size": 9,
                                     "activators": {
                                           "name": "LeakyReLU",
                                           "params": {}
@@ -43,11 +58,11 @@
                                     "pooling": false,
                                     "batch_norm": false,
                                     "dropout": null,
-                                    "stride": 2
+                                    "stride": 4
                               },
                               "decoder_parameters": {
                                     "repr_sizes": [
-                                          2,
+                                          4,
                                           1
                                     ],
                                     "kernel_size": 5,
@@ -71,8 +86,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    392,
-                                    392
+                                    784,
+                                    784
                               ],
                               "dec_activators": {
                                     "name": "LeakyReLU",
@@ -86,8 +101,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    392,
-                                    392
+                                    784,
+                                    784
                               ],
                               "enc_activators": {
                                     "name": "Sigmoid",
