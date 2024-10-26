@@ -7,9 +7,11 @@ from tqdm import tqdm
 from tqdm.notebook import tqdm
 from torchvision import transforms
 import torch
+import gc
 from torch import nn
 import traceback
 
+import torch
 sys.path.append(os.path.join("..","Dataset_utils"))
 from Dataset_utils import Custom_Transforms
 
@@ -188,12 +190,17 @@ class multi_parameter_training(trainer):
                     if self.train and self.test:
                         self.trainer.train_test(**(self.datasets))
                         test_json_save["experiment_state"]="done"
+                        self.trainer.model.cpu()
+                        del self.trainer.model
+                        gc.collect()
+                        torch.cuda.empty_cache()
                     elif self.train and not(self.test):
                         #set train rutine
                         test_json_save["experiment_state"]="done"
                     elif not(self.train) and self.test:
                         self.trainer.train(self.datasets["train"])
                         self.trainer.test(self.datasets["test"])
+                        
                         test_json_save["experiment_state"]="done"
                 #elif self.K_fold_training!=None:
 
