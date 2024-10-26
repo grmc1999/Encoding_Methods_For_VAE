@@ -21,7 +21,7 @@ import Encoding_Decoding_modules
 
 #sys.path.append(os.path.join("..","Train_utils"))
 
-from .TT_class import trainer
+from TT_class import trainer
 
 class multi_parameter_training(trainer):
     def __init__(self,results_directory,dataset_root_directory,Dataset_type,train=True,test=True,K_fold_training=None,visualization=False,split_frac=0.8):
