@@ -9,7 +9,7 @@
             "epochs": 50,
             "folds": 2,
             "batch_size": 2048,
-            "use_cuda": null,
+            "use_cuda": "cuda:0",
             "data_dir": null,
             "in_device": null,
             "num_workers": 10,
@@ -32,25 +32,78 @@
                         "parameters": {
                               "encoder_parameters": {
                                     "inp_sizes": [
-                                          784,  896, 1045, 1254, 1568
+                                          784,
+                                          896,
+                                          1045,
+                                          1254,
+                                          1568
                                     ],
                                     "activators": {
                                           "name": "LeakyReLU",
                                           "params": {}
                                     },
-                                    "batch_norm": true,
+                                    "batch_norm": false,
                                     "dropout": null
                               },
                               "decoder_parameters": {
                                     "inp_sizes": [
-                                          1568, 1475, 1393, 1320, 1254, 1194, 1140, 1090, 1045, 1003,  964,929,  896,  865,  836,  809,  784
-                                          
+                                          1568,
+                                          1475,
+                                          1393,
+                                          1320,
+                                          1254,
+                                          1194,
+                                          1140,
+                                          1090,
+                                          1045,
+                                          1003,
+                                          964,
+                                          929,
+                                          896,
+                                          865,
+                                          836,
+                                          809,
+                                          784
                                     ],
                                     "activators": {
-                                          "name": "Sigmoid",
-                                          "params": {}
+                                          "name": [
+                                                "LeakyReLU",
+                                                "LeakyReLU",
+                                                "LeakyReLU",
+                                                "LeakyReLU",
+                                                "LeakyReLU",
+                                                "LeakyReLU",
+                                                "LeakyReLU",
+                                                "LeakyReLU",
+                                                "LeakyReLU",
+                                                "LeakyReLU",
+                                                "LeakyReLU",
+                                                "LeakyReLU",
+                                                "LeakyReLU",
+                                                "LeakyReLU",
+                                                "LeakyReLU",
+                                                "Sigmoid"
+                                          ],
+                                          "params": [
+                                                {},
+                                                {},
+                                                {},
+                                                {},
+                                                {},
+                                                {},
+                                                {},
+                                                {},
+                                                {},
+                                                {},
+                                                {},
+                                                {},
+                                                {},
+                                                {},
+                                                {},
+                                                {}
+                                          ]
                                     },
-                                    "batch_norm": true,
+                                    "batch_norm": false,
                                     "dropout": null,
                                     "input_size": [
                                           1,
@@ -69,10 +122,10 @@
                                     1568
                               ],
                               "dec_activators": {
-                                    "name": "Sigmoid",
+                                    "name": "LeakyReLU",
                                     "params": {}
                               },
-                              "batch_norm": true,
+                              "batch_norm": false,
                               "dropout": null
                         }
                   },
@@ -87,7 +140,7 @@
                                     "name": "Sigmoid",
                                     "params": {}
                               },
-                              "batch_norm": true,
+                              "batch_norm": false,
                               "dropout": null
                         }
                   }

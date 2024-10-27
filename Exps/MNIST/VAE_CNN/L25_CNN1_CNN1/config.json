@@ -11,7 +11,7 @@
             "batch_size": 2048,
             "use_cuda": "cuda:0",
             "data_dir": null,
-            "in_device": null,
+            "in_device": "cuda:0",
             "num_workers": 10,
             "args": [
                   "x"
@@ -35,13 +35,13 @@
                                           1,
                                           4
                                     ],
-                                    "kernel_size": 5,
+                                    "kernel_size": 9,
                                     "activators": {
                                           "name": "LeakyReLU",
                                           "params": {}
                                     },
                                     "pooling": false,
-                                    "batch_norm": true,
+                                    "batch_norm": false,
                                     "dropout": null,
                                     "stride": 4
                               },
@@ -50,13 +50,17 @@
                                           4,
                                           1
                                     ],
-                                    "kernel_size": 5,
+                                    "kernel_size": 9,
                                     "activators": {
-                                          "name": "Sigmoid",
-                                          "params": {}
+                                          "name": [
+                                                "Sigmoid"
+                                          ],
+                                          "params": [
+                                                {}
+                                          ]
                                     },
                                     "pooling": false,
-                                    "batch_norm": true,
+                                    "batch_norm": false,
                                     "dropout": null,
                                     "stride": 4
                               },
@@ -67,8 +71,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    392,
-                                    392
+                                    196,
+                                    196
                               ],
                               "dec_activators": {
                                     "name": "LeakyReLU",
@@ -82,8 +86,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    392,
-                                    392
+                                    196,
+                                    196
                               ],
                               "enc_activators": {
                                     "name": "LeakyReLU",
@@ -99,7 +103,10 @@
                         "reconstructive": 0.5,
                         "generative": 0.5
                   },
-                  "resize": [28,28]
+                  "resize": [
+                        28,
+                        28
+                  ]
             }
       },
       "error": "Given groups=1, weight of size [32, 3, 5, 5], expected input[2048, 1, 28, 28] to have 3 channels, but got 1 channels instead"

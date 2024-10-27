@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import gc
 from tqdm.notebook import tqdm_notebook
 
-from plot_utils import plot_training_sample
+from .plot_utils import plot_training_sample
 
 class trainer():
     def __init__(self,model,dataset,epochs,folds,batch_size,use_cuda,data_dir,
