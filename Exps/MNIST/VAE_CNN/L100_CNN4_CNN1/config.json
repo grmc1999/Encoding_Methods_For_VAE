@@ -34,9 +34,9 @@
                                     "repr_sizes": [
                                           1,
                                           4,
-                                          4,
-                                          4,
-                                          4
+                                          16,
+                                          64,
+                                          256
                                     ],
                                     "kernel_size": 5,
                                     "activators": {

@@ -155,7 +155,7 @@ class Asymmetrical_CNN_DNN_EDM(nn.Module):
                      enc=self.ENC,
                      dec=self.DEC,
                      enc_dim_func=getattr(flatten_utils,"dim_{}_type".format(Enc_type)),
-                     dec_dim_func=getattr(flatten_utils,"dim_{}_type".format(Enc_type))
+                     dec_dim_func=getattr(flatten_utils,"dim_{}_type".format(Dec_type))
                      )
 
   def sanity_check(self,x):
