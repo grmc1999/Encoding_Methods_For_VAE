@@ -34,15 +34,9 @@
                                     "repr_sizes": [
                                           1,
                                           2,
-                                          4,
-                                          4,
-                                          4,
-                                          4,
-                                          4,
-                                          4,
-                                          4,
-                                          4,
-                                          4
+                                          8,
+                                          8,
+                                          8
                                     ],
                                     "kernel_size": 5,
                                     "activators": {
@@ -56,26 +50,15 @@
                                           2,
                                           2,
                                           1,
-                                          1,
-                                          1,
-                                          1,
-                                          1,
-                                          1,
-                                          1,
                                           1
                                     ]
                               },
                               "decoder_parameters": {
                                     "repr_sizes": [
-                                          4,
-                                          4,
-                                          4,
-                                          4,
-                                          4,
-                                          4,
-                                          4,
-                                          4,
-                                          4,
+                                          8,
+                                          8,
+                                          8,
+                                          8,
                                           2,
                                           1
                                     ],
@@ -86,19 +69,9 @@
                                                 "LeakyReLU",
                                                 "LeakyReLU",
                                                 "LeakyReLU",
-                                                "LeakyReLU",
-                                                "LeakyReLU",
-                                                "LeakyReLU",
-                                                "LeakyReLU",
-                                                "LeakyReLU",
                                                 "Sigmoid"
                                           ],
                                           "params": [
-                                                {},
-                                                {},
-                                                {},
-                                                {},
-                                                {},
                                                 {},
                                                 {},
                                                 {},

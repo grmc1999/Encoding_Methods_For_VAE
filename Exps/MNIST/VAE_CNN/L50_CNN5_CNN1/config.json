@@ -30,19 +30,14 @@
                   "encoding_decoding_module": {
                         "module_type": "Asymmetrical_Convolutional_EDM",
                         "parameters": {
-                              "encoder_parameters": {
+                              "encoder_parameters":{
                                     "repr_sizes": [
                                           1,
                                           2,
-                                          4,
-                                          4,
-                                          4,
-                                          4,
-                                          4,
-                                          4,
-                                          4,
-                                          4,
-                                          4
+                                          8,
+                                          8,
+                                          8,
+                                          8
                                     ],
                                     "kernel_size": 5,
                                     "activators": {
@@ -55,11 +50,6 @@
                                     "stride": [
                                           2,
                                           2,
-                                          1,
-                                          1,
-                                          1,
-                                          1,
-                                          1,
                                           1,
                                           1,
                                           1

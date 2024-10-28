@@ -33,7 +33,11 @@
                               "encoder_parameters": {
                                     "repr_sizes": [
                                           1,
-                                          2
+                                          2,
+                                          8,
+                                          8,
+                                          8,
+                                          8
                                     ],
                                     "kernel_size": 5,
                                     "activators": {
@@ -44,20 +48,19 @@
                                     "batch_norm": false,
                                     "dropout": null,
                                     "stride": [
-                                          2
+                                          2,
+                                          2,
+                                          1,
+                                          1,
+                                          1
                                     ]
                               },
                               "decoder_parameters": {
                                     "repr_sizes": [
-                                          2,
-                                          2,
-                                          2,
-                                          2,
-                                          2,
-                                          2,
-                                          2,
-                                          2,
-                                          2,
+                                          8,
+                                          8,
+                                          8,
+                                          8,
                                           2,
                                           1
                                     ],
@@ -68,19 +71,9 @@
                                                 "LeakyReLU",
                                                 "LeakyReLU",
                                                 "LeakyReLU",
-                                                "LeakyReLU",
-                                                "LeakyReLU",
-                                                "LeakyReLU",
-                                                "LeakyReLU",
-                                                "LeakyReLU",
                                                 "Sigmoid"
                                           ],
                                           "params": [
-                                                {},
-                                                {},
-                                                {},
-                                                {},
-                                                {},
                                                 {},
                                                 {},
                                                 {},
