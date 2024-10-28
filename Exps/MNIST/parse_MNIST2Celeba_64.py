@@ -2,6 +2,7 @@ import glob
 import json
 import argparse
 import os
+import numpy as np
 
 def get_jsons(args):
     jsons_list=glob.glob(os.path.join(args.path,args.model,"*","*.json"))
@@ -33,6 +34,14 @@ def load_change_json(json_dir,args):
         nl=len(config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["repr_sizes"])
         config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["activators"]["name"]=["LeakyReLU" for i in range(nl-2)]+["Sigmoid"]
         config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["activators"]["params"]=[{} for i in range(nl-1)]
+
+        # Size correction
+        rep_dims = config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["encoder_parameters"]["repr_sizes"]
+        base_stride=config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["encoder_parameters"]["stride"]
+        base_stride=(base_stride[0] if isinstance(base_stride,list) else base_stride)
+        min_rep=np.sum(28%(base_stride**np.arange(15))==0)-1
+        config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["encoder_parameters"]["repr_sizes"]=[r if i<min_rep else rep_dims[min_rep] for i,r in enumerate(rep_dims)]
+        config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["encoder_parameters"]["stride"]=[base_stride if i<min_rep else 1 for i,_ in enumerate(rep_dims[:-1])]
     else:
         print("type not found")
     

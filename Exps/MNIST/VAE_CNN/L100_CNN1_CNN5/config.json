@@ -43,14 +43,16 @@
                                     "pooling": false,
                                     "batch_norm": false,
                                     "dropout": null,
-                                    "stride": 2
+                                    "stride": [
+                                          2
+                                    ]
                               },
                               "decoder_parameters": {
                                     "repr_sizes": [
-                                          1024,
-                                          256,
-                                          64,
-                                          16,
+                                          4,
+                                          4,
+                                          4,
+                                          4,
                                           4,
                                           1
                                     ],
