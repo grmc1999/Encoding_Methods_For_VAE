@@ -35,3 +35,4 @@ class plot_training_sample(object):
         self.figure.show()
         if epoch!=None:
             plt.savefig(os.path.join(self.image_save_dir,(str(epoch)+".png")))
+        plt.close()
