@@ -61,8 +61,8 @@
                                     "dropout": null,
                                     "stride": 2
                               },
-                              "flat": true,
-                              "deflat": false,
+                              "flat": false,
+                              "deflat": true,
                               "compression_factor": 2.0,
                               "i_shape": [
                                     28,

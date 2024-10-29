@@ -75,8 +75,8 @@
                                           2
                                     ]
                               },
-                              "flat": true,
-                              "deflat": false,
+                              "flat": false,
+                              "deflat": true,
                               "compression_factor": 1.0,
                               "i_shape": [
                                     28,

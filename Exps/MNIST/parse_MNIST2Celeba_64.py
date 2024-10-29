@@ -53,6 +53,20 @@ def load_change_json(json_dir,args):
         # Size correction
         rep_dims = config_json["model"]["sub_modules"]["encoding_decoding_module"]["module_type"]="Asymmetrical_CNN_DNN_EDM"
 
+        rep_dims = config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["flat"]=False
+        rep_dims = config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["deflat"]=True
+
+    elif args.model=="VAE_CNN_DNN":
+        config_json["experiment_state"]="waiting"
+        config_json["trainer"]["batch_size"]=2048
+        config_json["trainer"]["use_cuda"]=True
+        config_json["trainer"]["use_cuda"]='cuda:0'
+        config_json["trainer"]["num_workers"]=10
+
+        # Size correction
+        rep_dims = config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["flat"]=True
+        rep_dims = config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["deflat"]=False
+
     else:
         print("type not found")
     

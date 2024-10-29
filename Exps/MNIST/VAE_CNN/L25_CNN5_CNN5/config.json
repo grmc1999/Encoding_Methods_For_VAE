@@ -84,7 +84,13 @@
                                     "pooling": false,
                                     "batch_norm": false,
                                     "dropout": null,
-                                    "stride": 4
+                                    "stride": [
+                                          4,
+                                          1,
+                                          1,
+                                          1,
+                                          1
+                                    ]
                               },
                               "flat": true
                         }
