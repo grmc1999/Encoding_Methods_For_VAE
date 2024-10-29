@@ -30,14 +30,14 @@
                   "encoding_decoding_module": {
                         "module_type": "Asymmetrical_Convolutional_EDM",
                         "parameters": {
-                              "encoder_parameters":  {
+                              "encoder_parameters": {
                                     "repr_sizes": [
                                           1,
                                           4,
                                           16,
-                                          64,
-                                          256,
-                                          1024
+                                          16,
+                                          16,
+                                          16
                                     ],
                                     "kernel_size": 5,
                                     "activators": {
@@ -47,12 +47,18 @@
                                     "pooling": false,
                                     "batch_norm": false,
                                     "dropout": null,
-                                    "stride": 2
+                                    "stride": [
+                                          2,
+                                          2,
+                                          1,
+                                          1,
+                                          1
+                                    ]
                               },
                               "decoder_parameters": {
                                     "repr_sizes": [
-                                          256,
-                                          64,
+                                          16,
+                                          16,
                                           16,
                                           4,
                                           1
@@ -75,7 +81,12 @@
                                     "pooling": false,
                                     "batch_norm": false,
                                     "dropout": null,
-                                    "stride": 2
+                                    "stride": [
+                                          1,
+                                          1,
+                                          2,
+                                          2
+                                    ]
                               },
                               "flat": true
                         }

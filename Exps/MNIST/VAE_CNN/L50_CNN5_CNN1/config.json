@@ -1,0 +1,123 @@
+{
+      "experiment_state": "waiting",
+      "optimizer": {
+            "lr": 0.0001,
+            "capturable": false
+      },
+      "trainer": {
+            "model": null,
+            "epochs": 200,
+            "folds": 2,
+            "batch_size": 2048,
+            "use_cuda": "cuda:0",
+            "data_dir": null,
+            "in_device": "cuda:0",
+            "num_workers": 10,
+            "args": [
+                  "x"
+            ]
+      },
+      "transforms": {
+            "Tuple_to_dict": {},
+            "MultiInputToTensor": {
+                  "metadata": []
+            }
+      },
+      "model": {
+            "model_class": "pytorch_VAE",
+            "model_name": "Unpaired_Flexible_Encoding_Decoding_VAE",
+            "sub_modules": {
+                  "encoding_decoding_module": {
+                        "module_type": "Asymmetrical_Convolutional_EDM",
+                        "parameters": {
+                              "encoder_parameters":{
+                                    "repr_sizes": [
+                                          1,
+                                          2,
+                                          8,
+                                          8,
+                                          8,
+                                          8
+                                    ],
+                                    "kernel_size": 5,
+                                    "activators": {
+                                          "name": "LeakyReLU",
+                                          "params": {}
+                                    },
+                                    "pooling": false,
+                                    "batch_norm": false,
+                                    "dropout": null,
+                                    "stride": [
+                                          2,
+                                          2,
+                                          1,
+                                          1,
+                                          1
+                                    ]
+                              },
+                              "decoder_parameters": {
+                                    "repr_sizes": [
+                                          4,
+                                          1
+                                    ],
+                                    "kernel_size": 5,
+                                    "activators": {
+                                          "name": [
+                                                "Sigmoid"
+                                          ],
+                                          "params": [
+                                                {}
+                                          ]
+                                    },
+                                    "pooling": false,
+                                    "batch_norm": false,
+                                    "dropout": null,
+                                    "stride": 2
+                              },
+                              "flat": true
+                        }
+                  },
+                  "P_NET": {
+                        "variational_generation_type": "VAE_NETs",
+                        "parameters": {
+                              "layer_size": [
+                                    392,
+                                    392
+                              ],
+                              "dec_activators": {
+                                    "name": "LeakyReLU",
+                                    "params": {}
+                              },
+                              "batch_norm": false,
+                              "dropout": null
+                        }
+                  },
+                  "Q_NET": {
+                        "variational_generation_type": "VAE_NETs",
+                        "parameters": {
+                              "layer_size": [
+                                    392,
+                                    392
+                              ],
+                              "enc_activators": {
+                                    "name": "Sigmoid",
+                                    "params": {}
+                              },
+                              "batch_norm": false,
+                              "dropout": null
+                        }
+                  }
+            },
+            "model_params": {
+                  "losses_weigths": {
+                        "reconstructive": 0.5,
+                        "generative": 0.5
+                  },
+                  "resize": [
+                        28,
+                        28
+                  ]
+            }
+      },
+      "error": "Given groups=1, weight of size [32, 3, 5, 5], expected input[2048, 1, 28, 28] to have 3 channels, but got 1 channels instead"
+}

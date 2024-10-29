@@ -34,11 +34,11 @@
                                     "repr_sizes": [
                                           1,
                                           4,
-                                          16,
-                                          64,
-                                          256
+                                          4,
+                                          4,
+                                          4
                                     ],
-                                    "kernel_size": 5,
+                                    "kernel_size": 9,
                                     "activators": {
                                           "name": "LeakyReLU",
                                           "params": {}
@@ -46,13 +46,18 @@
                                     "pooling": false,
                                     "batch_norm": false,
                                     "dropout": null,
-                                    "stride": 2
+                                    "stride": [
+                                          4,
+                                          1,
+                                          1,
+                                          1
+                                    ]
                               },
                               "decoder_parameters": {
                                     "repr_sizes": [
-                                          256,
-                                          64,
-                                          16,
+                                          4,
+                                          4,
+                                          4,
                                           4,
                                           1
                                     ],
@@ -74,7 +79,13 @@
                                     "pooling": false,
                                     "batch_norm": false,
                                     "dropout": null,
-                                    "stride": 4
+                                    "stride": [
+                                          4,
+                                          4,
+                                          1,
+                                          1,
+                                          1
+                                    ]
                               },
                               "flat": true
                         }

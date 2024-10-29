@@ -43,18 +43,20 @@
                                     "pooling": false,
                                     "batch_norm": false,
                                     "dropout": null,
-                                    "stride": 2
+                                    "stride": [
+                                          2
+                                    ]
                               },
                               "decoder_parameters": {
                                     "repr_sizes": [
-                                          1024,
-                                          256,
-                                          64,
-                                          16,
+                                          4,
+                                          4,
+                                          4,
+                                          4,
                                           4,
                                           1
                                     ],
-                                    "kernel_size": 9,
+                                    "kernel_size": 5,
                                     "activators": {
                                           "name": [
                                                 "LeakyReLU",
@@ -74,7 +76,13 @@
                                     "pooling": false,
                                     "batch_norm": false,
                                     "dropout": null,
-                                    "stride": 4
+                                    "stride": [
+                                          1,
+                                          1,
+                                          1,
+                                          2,
+                                          2
+                                    ]
                               },
                               "flat": true
                         }

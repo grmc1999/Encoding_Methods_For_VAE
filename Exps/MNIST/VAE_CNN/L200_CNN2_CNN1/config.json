@@ -34,7 +34,7 @@
                                     "repr_sizes": [
                                           1,
                                           8,
-                                          64
+                                          32
                                     ],
                                     "kernel_size": 5,
                                     "activators": {
@@ -44,11 +44,14 @@
                                     "pooling": false,
                                     "batch_norm": false,
                                     "dropout": null,
-                                    "stride": 2
+                                    "stride": [
+                                          2,
+                                          2
+                                    ]
                               },
                               "decoder_parameters": {
                                     "repr_sizes": [
-                                          8,
+                                          32,
                                           1
                                     ],
                                     "kernel_size": 5,
