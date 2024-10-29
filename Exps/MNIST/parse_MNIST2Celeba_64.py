@@ -42,6 +42,17 @@ def load_change_json(json_dir,args):
         min_rep=np.sum(28%(base_stride**np.arange(15))==0)-1
         config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["encoder_parameters"]["repr_sizes"]=[r if i<min_rep else rep_dims[min_rep] for i,r in enumerate(rep_dims)]
         config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["encoder_parameters"]["stride"]=[base_stride if i<min_rep else 1 for i,_ in enumerate(rep_dims[:-1])]
+
+    elif args.model=="VAE_DNN_CNN":
+        config_json["experiment_state"]="waiting"
+        config_json["trainer"]["batch_size"]=2048
+        config_json["trainer"]["use_cuda"]=True
+        config_json["trainer"]["use_cuda"]='cuda:0'
+        config_json["trainer"]["num_workers"]=10
+
+        # Size correction
+        rep_dims = config_json["model"]["sub_modules"]["encoding_decoding_module"]["module_type"]="Asymmetrical_CNN_DNN_EDM"
+
     else:
         print("type not found")
     
