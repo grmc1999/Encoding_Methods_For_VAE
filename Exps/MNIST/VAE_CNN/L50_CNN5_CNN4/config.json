@@ -57,9 +57,9 @@
                               },
                               "decoder_parameters": {
                                     "repr_sizes": [
-                                          4,
-                                          4,
-                                          4,
+                                          8,
+                                          8,
+                                          8,
                                           2,
                                           1
                                     ],

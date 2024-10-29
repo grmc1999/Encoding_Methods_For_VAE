@@ -91,8 +91,8 @@
                                           1
                                     ]
                               },
-                              "flat": true,
-                              "deflat": false,
+                              "flat": false,
+                              "deflat": true,
                               "compression_factor": 0.25,
                               "i_shape": [
                                     28,
