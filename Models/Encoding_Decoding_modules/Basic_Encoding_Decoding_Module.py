@@ -6,8 +6,8 @@ from DL_utils.PCNN import *
 from DL_utils.DNN import *
 from DL_utils.DNN import b_encoder_NN as DNN_ENC
 from DL_utils.DNN import b_decoder_NN as DNN_DEC
-from DL_utils.utils import b_encoder_conv as CNN_ENC
-from DL_utils.utils import b_decoder_conv as CNN_DEC
+from DL_utils.CNN import b_encoder_conv as CNN_ENC
+from DL_utils.CNN import b_decoder_conv as CNN_DEC
 
 class EncodingDecodingModule(nn.Module):
   def __init__(self):
