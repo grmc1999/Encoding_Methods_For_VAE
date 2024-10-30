@@ -56,6 +56,10 @@ def load_change_json(json_dir,args):
         rep_dims = config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["flat"]=False
         rep_dims = config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["deflat"]=True
 
+
+        oid = config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["repr_sizes"][0]
+        config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["repr_sizes"][0]=round(oid**0.5)**2
+
     elif args.model=="VAE_CNN_DNN":
         config_json["experiment_state"]="waiting"
         config_json["trainer"]["batch_size"]=2048
