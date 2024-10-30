@@ -39,9 +39,9 @@ class hyb_view(object):
             out=rearrange(x,"b (c h w) -> b c h w",
                           c=self.dec_dims,
                           #h=int(self.i_shape[-2]*(self.channel_shape/self.dec_dims)),
-                          h=int(self.i_shape[-2]),
+                          h=int(self.i_shape[-2]/(self.dec_dims**0.5)),
                           #w=int(self.i_shape[-1]*(self.channel_shape/self.dec_dims))
-                          w=int(self.i_shape[-1])
+                          w=int(self.i_shape[-1]/(self.dec_dims**0.5))
                           )
             #out=x.view([x.shape[0]]+self.i_shape)
         return out
