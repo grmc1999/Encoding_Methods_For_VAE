@@ -9,7 +9,7 @@
             "epochs": 200,
             "folds": 2,
             "batch_size": 2048,
-            "use_cuda": "cuda:0",
+            "use_cuda": true,
             "data_dir": null,
             "in_device": "cuda:0",
             "num_workers": 10,
