@@ -65,7 +65,7 @@ def load_change_json(json_dir,args):
 
         c_shape=config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["i_shape"]
         cf=config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["compression_factor"]
-        config_json["model"]["sub_modules"]["P_NET"]["parameters"]["layer_size"][-1]=int((round(oid**0.5)**2)*cf*cf*c_shape[0]*c_shape[1])
+        config_json["model"]["sub_modules"]["P_NET"]["parameters"]["layer_size"][-1]=int((round(oid**0.5)**2)*cf*cf*(c_shape[0]**0.5)*(c_shape[1]**0.5))
 
         config_json["model"]["model_params"]["resize"]=[28, 28]
 
