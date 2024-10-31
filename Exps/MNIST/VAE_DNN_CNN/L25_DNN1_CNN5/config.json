@@ -9,9 +9,9 @@
             "epochs": 50,
             "folds": 2,
             "batch_size": 2048,
-            "use_cuda": "cuda:0",
+            "use_cuda": true,
             "data_dir": null,
-            "in_device": null,
+            "in_device": "cuda:0",
             "num_workers": 10,
             "args": [
                   "x"
@@ -120,7 +120,10 @@
                         "reconstructive": 0.5,
                         "generative": 0.5
                   },
-                  "resize": null
+                  "resize": [
+                        28,
+                        28
+                  ]
             }
       },
       "error": "If capturable=False, state_steps should not be CUDA tensors."

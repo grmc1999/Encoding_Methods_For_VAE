@@ -15,7 +15,8 @@ def load_change_json(json_dir,args):
         config_json["experiment_state"]="waiting"
         config_json["trainer"]["batch_size"]=2048
         config_json["trainer"]["use_cuda"]=True
-        config_json["trainer"]["use_cuda"]='cuda:0'
+        config_json["trainer"]["in_device"]='cuda:0'
+        #config_json["trainer"]["epochs"]=2
         config_json["trainer"]["num_workers"]=10
         config_json["model"]["sub_modules"]["P_NET"]["parameters"]["batch_norm"]=False
         config_json["model"]["sub_modules"]["Q_NET"]["parameters"]["batch_norm"]=False
@@ -29,7 +30,8 @@ def load_change_json(json_dir,args):
         config_json["experiment_state"]="waiting"
         config_json["trainer"]["batch_size"]=2048
         config_json["trainer"]["use_cuda"]=True
-        config_json["trainer"]["use_cuda"]='cuda:0'
+        config_json["trainer"]["in_device"]='cuda:0'
+        #config_json["trainer"]["epochs"]=2
         config_json["trainer"]["num_workers"]=10
         nl=len(config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["repr_sizes"])
         config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["activators"]["name"]=["LeakyReLU" for i in range(nl-2)]+["Sigmoid"]
@@ -47,7 +49,8 @@ def load_change_json(json_dir,args):
         config_json["experiment_state"]="waiting"
         config_json["trainer"]["batch_size"]=2048
         config_json["trainer"]["use_cuda"]=True
-        config_json["trainer"]["use_cuda"]='cuda:0'
+        config_json["trainer"]["in_device"]='cuda:0'
+        #config_json["trainer"]["epochs"]=2
         config_json["trainer"]["num_workers"]=10
 
         # Size correction
@@ -57,19 +60,28 @@ def load_change_json(json_dir,args):
         rep_dims = config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["deflat"]=True
 
 
-        #oid = config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["repr_sizes"][0]
+        oid = config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["repr_sizes"][0]
         #config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["repr_sizes"][0]=round(oid**0.5)**2
+
+        c_shape=config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["i_shape"]
+        cf=config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["compression_factor"]
+        config_json["model"]["sub_modules"]["P_NET"]["parameters"]["layer_size"][-1]=int((round(oid**0.5)**2)*cf*cf*c_shape[0]*c_shape[1])
+
+        config_json["model"]["model_params"]["resize"]=[28, 28]
 
     elif args.model=="VAE_CNN_DNN":
         config_json["experiment_state"]="waiting"
         config_json["trainer"]["batch_size"]=2048
         config_json["trainer"]["use_cuda"]=True
-        config_json["trainer"]["use_cuda"]='cuda:0'
+        config_json["trainer"]["in_device"]='cuda:0'
+        #config_json["trainer"]["epochs"]=2
         config_json["trainer"]["num_workers"]=10
 
         # Size correction
         rep_dims = config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["flat"]=True
         rep_dims = config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["deflat"]=False
+
+        config_json["model"]["model_params"]["resize"]=[28, 28]
 
     else:
         print("type not found")
