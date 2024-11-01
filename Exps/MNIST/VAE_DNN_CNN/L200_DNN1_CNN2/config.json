@@ -80,7 +80,7 @@
                         "parameters": {
                               "layer_size": [
                                     1568,
-                                    4032
+                                    112896
                               ],
                               "dec_activators": {
                                     "name": "LeakyReLU",
