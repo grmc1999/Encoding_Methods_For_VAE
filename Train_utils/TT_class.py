@@ -191,7 +191,7 @@ class trainer():
                 print("was the last")
 
 
-        best_result=0
+        best_result=1e10
 
         if self.view_out_state:
             #z_mu,z_sig,x_r,x
