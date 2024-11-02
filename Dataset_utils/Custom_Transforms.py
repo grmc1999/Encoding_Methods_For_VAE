@@ -38,3 +38,13 @@ class MultiInputToTensor(object):
     for k in self.metadata:
       sample[k]=torch.tensor(sample[k]).float()
     return sample
+
+class Size_Normalization(object):
+  def __init__(self,normalized_size=(512,512)):
+    self.normalized_size=transforms.Resize(size=normalized_size,interpolation=transforms.InterpolationMode.BILINEAR)
+  def __call__(self,sample):
+    for k in self.images:
+      sample[k]=(self.normalized_size(sample[k])).float()
+    for k in self.metadata:
+      sample[k]=torch.tensor(sample[k]).float()
+    return sample
