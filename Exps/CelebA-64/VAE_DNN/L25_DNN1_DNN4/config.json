@@ -24,8 +24,8 @@
             },
             "Size_Normalization": {
                   "normalized_size": [
-                        512,
-                        512
+                        256,
+                        256
                   ]
             }
       },
@@ -38,11 +38,11 @@
                         "parameters": {
                               "encoder_parameters": {
                                     "inp_sizes": [
-                                          29103,
-                                          35784,
-                                          46475,
-                                          66521,
-                                          116412
+                                          49152,
+                                          60436,
+                                          78492,
+                                          112347,
+                                          196608
                                     ],
                                     "activators": {
                                           "name": "LeakyReLU",
@@ -88,8 +88,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    29103,
-                                    29103
+                                    7298319,
+                                    7298319
                               ],
                               "dec_activators": {
                                     "name": "LeakyReLU",
@@ -103,8 +103,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    29103,
-                                    29103
+                                    7298319,
+                                    7298319
                               ],
                               "enc_activators": {
                                     "name": "Sigmoid",

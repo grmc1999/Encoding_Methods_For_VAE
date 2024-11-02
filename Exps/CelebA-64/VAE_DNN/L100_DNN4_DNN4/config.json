@@ -24,8 +24,8 @@
             },
             "Size_Normalization": {
                   "normalized_size": [
-                        512,
-                        512
+                        256,
+                        256
                   ]
             }
       },
@@ -38,11 +38,11 @@
                         "parameters": {
                               "encoder_parameters": {
                                     "inp_sizes": [
-                                          116412,
-                                          116412,
-                                          116412,
-                                          116412,
-                                          116412
+                                          196608,
+                                          196608,
+                                          196608,
+                                          196608,
+                                          196608
                                     ],
                                     "activators": {
                                           "name": "LeakyReLU",
@@ -88,8 +88,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    116412,
-                                    116412
+                                    29193278,
+                                    29193278
                               ],
                               "dec_activators": {
                                     "name": "LeakyReLU",
@@ -103,8 +103,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    116412,
-                                    116412
+                                    29193278,
+                                    29193278
                               ],
                               "enc_activators": {
                                     "name": "Sigmoid",

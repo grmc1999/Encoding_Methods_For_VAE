@@ -23,19 +23,19 @@ def load_change_json(json_dir,args):
                   "metadata": []
             },
             "Size_Normalization":{
-                  "normalized_size":[512,512]
+                  "normalized_size":[256,256]
             }
       }
 
-        #mn_rs=config_json["model"]["sub_modules"]["P_NET"]["parameters"]["layer_size"]
-        #config_json["model"]["sub_modules"]["P_NET"]["parameters"]["layer_size"]=[int(nr*(218*178*3/784)) for nr in mn_rs]
-        #mn_rs=config_json["model"]["sub_modules"]["Q_NET"]["parameters"]["layer_size"]
-        #config_json["model"]["sub_modules"]["Q_NET"]["parameters"]["layer_size"]=[int(nr*(218*178*3/784)) for nr in mn_rs]
+        mn_rs=config_json["model"]["sub_modules"]["P_NET"]["parameters"]["layer_size"]
+        config_json["model"]["sub_modules"]["P_NET"]["parameters"]["layer_size"]=[int(nr*(256*256*3/784)) for nr in mn_rs]
+        mn_rs=config_json["model"]["sub_modules"]["Q_NET"]["parameters"]["layer_size"]
+        config_json["model"]["sub_modules"]["Q_NET"]["parameters"]["layer_size"]=[int(nr*(256*256*3/784)) for nr in mn_rs]
 
-        #mn_rs=config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["encoder_parameters"]["inp_sizes"]
-        #config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["encoder_parameters"]["inp_sizes"]=[int(nr*(218*178*3/784)) for nr in mn_rs]
-        #mn_rs=config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["inp_sizes"]
-        #config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["encoder_parameters"]["inp_sizes"]=[int(nr*(218*178*3/784)) for nr in mn_rs]
+        mn_rs=config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["encoder_parameters"]["inp_sizes"]
+        config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["encoder_parameters"]["inp_sizes"]=[int(nr*(256*256*3/784)) for nr in mn_rs]
+        mn_rs=config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["inp_sizes"]
+        config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["encoder_parameters"]["inp_sizes"]=[int(nr*(256*256*3/784)) for nr in mn_rs]
     if args.model=="VAE_CNN":
         config_json["experiment_state"]="waiting"
     else:

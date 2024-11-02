@@ -24,8 +24,8 @@
             },
             "Size_Normalization": {
                   "normalized_size": [
-                        512,
-                        512
+                        256,
+                        256
                   ]
             }
       },
@@ -38,8 +38,8 @@
                         "parameters": {
                               "encoder_parameters": {
                                     "inp_sizes": [
-                                          58206,
-                                          116412
+                                          98304,
+                                          196608
                                     ],
                                     "activators": {
                                           "name": "LeakyReLU",
@@ -76,8 +76,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    58206,
-                                    58206
+                                    14596639,
+                                    14596639
                               ],
                               "dec_activators": {
                                     "name": "LeakyReLU",
@@ -91,8 +91,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    58206,
-                                    58206
+                                    14596639,
+                                    14596639
                               ],
                               "enc_activators": {
                                     "name": "Sigmoid",
