@@ -231,7 +231,7 @@ class trainer():
                 self.model.train()
                 plot_sample.plot(out,epoch)
 
-            if (np.mean(np.array(losses_te["test"]["total_loss"])))>best_result:
+            if (np.mean(np.array(losses_te["test"]["total_loss"])))<best_result:
                 best_result=(np.mean(np.array(losses_te["test"]["total_loss"])))
                 best_model=self.model.state_dict()
                 torch.save(best_model,"{fname}.pt".format(fname=os.path.join(self.data_dir,"best"+str(self.current_fold))))
