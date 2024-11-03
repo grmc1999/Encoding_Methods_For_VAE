@@ -21,12 +21,6 @@
             "Tuple_to_dict": {},
             "MultiInputToTensor": {
                   "metadata": []
-            },
-            "Size_Normalization": {
-                  "normalized_size": [
-                        256,
-                        256
-                  ]
             }
       },
       "model": {
@@ -38,8 +32,11 @@
                         "parameters": {
                               "encoder_parameters": {
                                     "inp_sizes": [
-                                          98304,
-                                          196608
+                                          784,
+                                          627,
+                                          522,
+                                          448,
+                                          392
                                     ],
                                     "activators": {
                                           "name": "LeakyReLU",
@@ -76,8 +73,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    14596639,
-                                    14596639
+                                    392,
+                                    392
                               ],
                               "dec_activators": {
                                     "name": "LeakyReLU",
@@ -91,8 +88,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    14596639,
-                                    14596639
+                                    392,
+                                    392
                               ],
                               "enc_activators": {
                                     "name": "Sigmoid",
