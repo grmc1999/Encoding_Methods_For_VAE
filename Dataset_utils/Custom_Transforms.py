@@ -47,6 +47,4 @@ class Size_Normalization(object):
   def __call__(self,sample):
     for k in self.images:
       sample[k]=(self.normalized_size(sample[k])).float()
-    for k in self.metadata:
-      sample[k]=torch.tensor(sample[k]).float()
     return sample
