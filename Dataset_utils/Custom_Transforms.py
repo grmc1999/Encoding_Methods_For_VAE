@@ -40,7 +40,9 @@ class MultiInputToTensor(object):
     return sample
   
 class Size_Normalization(object):
-  def __init__(self,normalized_size=(512,512)):
+  def __init__(self,images=["x"],metadata=["y"],normalized_size=(512,512)):
+    self.images=images
+    self.metadata=metadata
     self.normalized_size=transforms.Resize(size=normalized_size,interpolation=transforms.InterpolationMode.BILINEAR)
   def __call__(self,sample):
     for k in self.images:
