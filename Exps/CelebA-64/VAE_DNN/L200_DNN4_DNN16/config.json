@@ -8,10 +8,10 @@
             "model": null,
             "epochs": 50,
             "folds": 2,
-            "batch_size": 2048,
-            "use_cuda": "cuda:0",
+            "batch_size": 64,
+            "use_cuda": true,
             "data_dir": null,
-            "in_device": null,
+            "in_device": "cuda:0",
             "num_workers": 10,
             "args": [
                   "x"
@@ -21,6 +21,12 @@
             "Tuple_to_dict": {},
             "MultiInputToTensor": {
                   "metadata": []
+            },
+            "Size_Normalization": {
+                  "normalized_size": [
+                        128,
+                        128
+                  ]
             }
       },
       "model": {
@@ -32,23 +38,11 @@
                         "parameters": {
                               "encoder_parameters": {
                                     "inp_sizes": [
-                                          232824,
-                                          219014,
-                                          206839,
-                                          195999,
-                                          186199,
-                                          177290,
-                                          169272,
-                                          161848,
-                                          155166,
-                                          148930,
-                                          143139,
-                                          137942,
-                                          133042,
-                                          128439,
-                                          124133,
-                                          120124,
-                                          116412
+                                          49152,
+                                          56173,
+                                          65515,
+                                          78618,
+                                          98304
                                     ],
                                     "activators": {
                                           "name": "LeakyReLU",
@@ -59,23 +53,23 @@
                               },
                               "decoder_parameters": {
                                     "inp_sizes": [
-                                          1568,
-                                          1475,
-                                          1393,
-                                          1320,
-                                          1254,
-                                          1194,
-                                          1140,
-                                          1090,
-                                          1045,
-                                          1003,
-                                          964,
-                                          929,
-                                          896,
-                                          865,
-                                          836,
-                                          809,
-                                          784
+                                          98304,
+                                          92473,
+                                          87332,
+                                          82755,
+                                          78618,
+                                          74856,
+                                          71471,
+                                          68336,
+                                          65515,
+                                          62881,
+                                          60436,
+                                          58242,
+                                          56173,
+                                          54230,
+                                          52412,
+                                          50719,
+                                          49152
                                     ],
                                     "activators": {
                                           "name": [
@@ -119,8 +113,8 @@
                                     "dropout": null,
                                     "input_size": [
                                           1,
-                                          28,
-                                          28
+                                          128,
+                                          128
                                     ]
                               },
                               "flat": false
@@ -130,8 +124,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    232824,
-                                    232824
+                                    98304,
+                                    98304
                               ],
                               "dec_activators": {
                                     "name": "LeakyReLU",
@@ -145,8 +139,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    232824,
-                                    232824
+                                    98304,
+                                    98304
                               ],
                               "enc_activators": {
                                     "name": "Sigmoid",
