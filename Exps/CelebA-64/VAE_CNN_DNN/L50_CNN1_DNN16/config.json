@@ -114,9 +114,9 @@
                                     "batch_norm": false,
                                     "dropout": null,
                                     "input_size": [
-                                          1,
-                                          28,
-                                          28
+                                          3,
+                                          64,
+                                          64
                                     ]
                               },
                               "flat": true,

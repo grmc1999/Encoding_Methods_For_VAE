@@ -74,8 +74,9 @@
                               "deflat": true,
                               "compression_factor": 2.0,
                               "i_shape": [
-                                    28,
-                                    28
+                                    3,
+                                    64,
+                                    64
                               ],
                               "Enc_type": "DNN_ENC",
                               "Dec_type": "CNN_DEC"
@@ -86,7 +87,7 @@
                         "parameters": {
                               "layer_size": [
                                     24576,
-                                    2916
+                                    15876
                               ],
                               "dec_activators": {
                                     "name": "LeakyReLU",
