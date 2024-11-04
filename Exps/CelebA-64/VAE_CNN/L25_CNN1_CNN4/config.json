@@ -24,8 +24,8 @@
             },
             "Size_Normalization": {
                   "normalized_size": [
-                        128,
-                        128
+                        64,
+                        64
                   ]
             }
       },
@@ -94,8 +94,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    12288,
-                                    12288
+                                    3072,
+                                    3072
                               ],
                               "dec_activators": {
                                     "name": "LeakyReLU",
@@ -109,8 +109,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    12288,
-                                    12288
+                                    3072,
+                                    3072
                               ],
                               "enc_activators": {
                                     "name": "LeakyReLU",
@@ -127,8 +127,8 @@
                         "generative": 0.5
                   },
                   "resize": [
-                        128,
-                        128
+                        64,
+                        64
                   ]
             }
       },

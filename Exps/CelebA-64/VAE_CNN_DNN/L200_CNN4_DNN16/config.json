@@ -24,8 +24,8 @@
             },
             "Size_Normalization": {
                   "normalized_size": [
-                        128,
-                        128
+                        64,
+                        64
                   ]
             }
       },
@@ -61,23 +61,23 @@
                               },
                               "decoder_parameters": {
                                     "inp_sizes": [
-                                          98304,
-                                          92473,
-                                          87332,
-                                          82755,
-                                          78618,
-                                          74856,
-                                          71471,
-                                          68336,
-                                          65515,
-                                          62881,
-                                          60436,
-                                          58242,
-                                          56173,
-                                          54230,
-                                          52412,
-                                          50719,
-                                          49152
+                                          24576,
+                                          23118,
+                                          21833,
+                                          20688,
+                                          19654,
+                                          18714,
+                                          17867,
+                                          17084,
+                                          16378,
+                                          15720,
+                                          15109,
+                                          14560,
+                                          14043,
+                                          13557,
+                                          13103,
+                                          12679,
+                                          12288
                                     ],
                                     "activators": {
                                           "name": [
@@ -140,8 +140,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    98304,
-                                    98304
+                                    24576,
+                                    24576
                               ],
                               "dec_activators": {
                                     "name": "LeakyReLU",
@@ -155,8 +155,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    98304,
-                                    98304
+                                    24576,
+                                    24576
                               ],
                               "enc_activators": {
                                     "name": "Sigmoid",
@@ -173,8 +173,8 @@
                         "generative": 0.5
                   },
                   "resize": [
-                        128,
-                        128
+                        64,
+                        64
                   ]
             }
       },

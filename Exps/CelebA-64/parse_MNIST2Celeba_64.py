@@ -24,21 +24,21 @@ def load_change_json(json_dir,args):
                   "metadata": []
             },
             "Size_Normalization":{
-                  "normalized_size":[128,128]
+                  "normalized_size":[64,64]
             }
         }
 
         mn_rs=config_json["model"]["sub_modules"]["P_NET"]["parameters"]["layer_size"]
-        config_json["model"]["sub_modules"]["P_NET"]["parameters"]["layer_size"]=[int(nr*(128*128*3/784)) for nr in mn_rs]
+        config_json["model"]["sub_modules"]["P_NET"]["parameters"]["layer_size"]=[int(nr*(64*64*3/784)) for nr in mn_rs]
         mn_rs=config_json["model"]["sub_modules"]["Q_NET"]["parameters"]["layer_size"]
-        config_json["model"]["sub_modules"]["Q_NET"]["parameters"]["layer_size"]=[int(nr*(128*128*3/784)) for nr in mn_rs]
+        config_json["model"]["sub_modules"]["Q_NET"]["parameters"]["layer_size"]=[int(nr*(64*64*3/784)) for nr in mn_rs]
 
         mn_rs=config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["encoder_parameters"]["inp_sizes"]
-        config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["encoder_parameters"]["inp_sizes"]=[int(nr*(128*128*3/784)) for nr in mn_rs]
+        config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["encoder_parameters"]["inp_sizes"]=[int(nr*(64*64*3/784)) for nr in mn_rs]
         mn_rs=config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["inp_sizes"]
-        config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["inp_sizes"]=[int(nr*(128*128*3/784)) for nr in mn_rs]
+        config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["inp_sizes"]=[int(nr*(64*64*3/784)) for nr in mn_rs]
 
-        config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["input_size"]=[1,128,128]
+        config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["input_size"]=[1,64,64]
     elif args.model=="VAE_CNN":
         config_json["experiment_state"]="waiting"
         config_json["trainer"]["batch_size"]=64
@@ -53,7 +53,7 @@ def load_change_json(json_dir,args):
                   "metadata": []
             },
             "Size_Normalization":{
-                  "normalized_size":[128,128]
+                  "normalized_size":[64,64]
             }
         }
 
@@ -62,19 +62,19 @@ def load_change_json(json_dir,args):
         #config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["activators"]["params"]=[{} for i in range(nl-1)]
 
         mn_rs=config_json["model"]["sub_modules"]["P_NET"]["parameters"]["layer_size"]
-        config_json["model"]["sub_modules"]["P_NET"]["parameters"]["layer_size"]=[int(nr*(128*128*3/784)) for nr in mn_rs]
+        config_json["model"]["sub_modules"]["P_NET"]["parameters"]["layer_size"]=[int(nr*(64*64*3/784)) for nr in mn_rs]
         mn_rs=config_json["model"]["sub_modules"]["Q_NET"]["parameters"]["layer_size"]
-        config_json["model"]["sub_modules"]["Q_NET"]["parameters"]["layer_size"]=[int(nr*(128*128*3/784)) for nr in mn_rs]
+        config_json["model"]["sub_modules"]["Q_NET"]["parameters"]["layer_size"]=[int(nr*(64*64*3/784)) for nr in mn_rs]
         
         # Size correction
         rep_dims = config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["encoder_parameters"]["repr_sizes"]
         base_stride=config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["encoder_parameters"]["stride"]
         base_stride=(base_stride[0] if isinstance(base_stride,list) else base_stride)
-        min_rep=np.sum(128%(base_stride**np.arange(25))==0)-1
+        min_rep=np.sum(64%(base_stride**np.arange(25))==0)-1
         config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["encoder_parameters"]["repr_sizes"]=[r if i<min_rep else rep_dims[min_rep] for i,r in enumerate(rep_dims)]
         config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["encoder_parameters"]["stride"]=[base_stride if i<min_rep else 1 for i,_ in enumerate(rep_dims[:-1])]
 
-        config_json["model"]["model_params"]["resize"]=[128, 128]
+        config_json["model"]["model_params"]["resize"]=[64, 64]
 
     elif args.model=="VAE_DNN_CNN":
         config_json["experiment_state"]="waiting"
@@ -90,7 +90,7 @@ def load_change_json(json_dir,args):
                   "metadata": []
             },
             "Size_Normalization":{
-                  "normalized_size":[128,128]
+                  "normalized_size":[64,64]
             }
         }
 
@@ -99,12 +99,12 @@ def load_change_json(json_dir,args):
 
 
         mn_rs=config_json["model"]["sub_modules"]["P_NET"]["parameters"]["layer_size"]
-        config_json["model"]["sub_modules"]["P_NET"]["parameters"]["layer_size"]=[int(nr*(128*128*3/784)) for nr in mn_rs]
+        config_json["model"]["sub_modules"]["P_NET"]["parameters"]["layer_size"]=[int(nr*(64*64*3/784)) for nr in mn_rs]
         mn_rs=config_json["model"]["sub_modules"]["Q_NET"]["parameters"]["layer_size"]
-        config_json["model"]["sub_modules"]["Q_NET"]["parameters"]["layer_size"]=[int(nr*(128*128*3/784)) for nr in mn_rs]
+        config_json["model"]["sub_modules"]["Q_NET"]["parameters"]["layer_size"]=[int(nr*(64*64*3/784)) for nr in mn_rs]
 
         mn_rs=config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["encoder_parameters"]["inp_sizes"]
-        config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["encoder_parameters"]["inp_sizes"]=[int(nr*(128*128*3/784)) for nr in mn_rs]
+        config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["encoder_parameters"]["inp_sizes"]=[int(nr*(64*64*3/784)) for nr in mn_rs]
 
         rep_dims = config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["flat"]=False
         rep_dims = config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["deflat"]=True
@@ -118,7 +118,7 @@ def load_change_json(json_dir,args):
         new_channel=int((round(oid**0.5)**2))
         config_json["model"]["sub_modules"]["P_NET"]["parameters"]["layer_size"][-1]=int(new_channel*int(c_shape[0]*cf/(new_channel**0.5))*int(c_shape[1]*cf/(new_channel**0.5)))
 
-        config_json["model"]["model_params"]["resize"]=[128, 128]
+        config_json["model"]["model_params"]["resize"]=[64, 64]
     elif args.model=="VAE_CNN_DNN":
         config_json["experiment_state"]="waiting"
         config_json["trainer"]["batch_size"]=2048
@@ -133,23 +133,23 @@ def load_change_json(json_dir,args):
                   "metadata": []
             },
             "Size_Normalization":{
-                  "normalized_size":[128,128]
+                  "normalized_size":[64,64]
             }
         }
 
         mn_rs=config_json["model"]["sub_modules"]["P_NET"]["parameters"]["layer_size"]
-        config_json["model"]["sub_modules"]["P_NET"]["parameters"]["layer_size"]=[int(nr*(128*128*3/784)) for nr in mn_rs]
+        config_json["model"]["sub_modules"]["P_NET"]["parameters"]["layer_size"]=[int(nr*(64*64*3/784)) for nr in mn_rs]
         mn_rs=config_json["model"]["sub_modules"]["Q_NET"]["parameters"]["layer_size"]
-        config_json["model"]["sub_modules"]["Q_NET"]["parameters"]["layer_size"]=[int(nr*(128*128*3/784)) for nr in mn_rs]
+        config_json["model"]["sub_modules"]["Q_NET"]["parameters"]["layer_size"]=[int(nr*(64*64*3/784)) for nr in mn_rs]
 
         mn_rs=config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["inp_sizes"]
-        config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["inp_sizes"]=[int(nr*(128*128*3/784)) for nr in mn_rs]
+        config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["inp_sizes"]=[int(nr*(64*64*3/784)) for nr in mn_rs]
 
         # Size correction
         rep_dims = config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["flat"]=True
         rep_dims = config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["deflat"]=False
 
-        config_json["model"]["model_params"]["resize"]=[128, 128]
+        config_json["model"]["model_params"]["resize"]=[64, 64]
     else:
         print("type not found")
     
