@@ -38,7 +38,7 @@ def load_change_json(json_dir,args):
         mn_rs=config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["inp_sizes"]
         config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["inp_sizes"]=[int(nr*(64*64*3/784)) for nr in mn_rs]
 
-        config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["input_size"]=[1,64,64]
+        config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["input_size"]=[3,64,64]
     elif args.model=="VAE_CNN":
         config_json["experiment_state"]="waiting"
         config_json["trainer"]["batch_size"]=64
@@ -113,10 +113,12 @@ def load_change_json(json_dir,args):
         oid = config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["repr_sizes"][0]
         #config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["repr_sizes"][0]=round(oid**0.5)**2
 
+        config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["i_shape"]=[3,64,64]
+        
         c_shape=config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["i_shape"]
         cf=config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["compression_factor"]
         new_channel=int((round(oid**0.5)**2))
-        config_json["model"]["sub_modules"]["P_NET"]["parameters"]["layer_size"][-1]=int(new_channel*int(c_shape[0]*cf/(new_channel**0.5))*int(c_shape[1]*cf/(new_channel**0.5)))
+        config_json["model"]["sub_modules"]["P_NET"]["parameters"]["layer_size"][-1]=int(new_channel*int(c_shape[-2]*cf/(new_channel**0.5))*int(c_shape[-1]*cf/(new_channel**0.5)))
 
         config_json["model"]["model_params"]["resize"]=[64, 64]
     elif args.model=="VAE_CNN_DNN":
@@ -136,6 +138,8 @@ def load_change_json(json_dir,args):
                   "normalized_size":[64,64]
             }
         }
+
+        config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["decoder_parameters"]["input_size"]=[3,64,64]
 
         mn_rs=config_json["model"]["sub_modules"]["P_NET"]["parameters"]["layer_size"]
         config_json["model"]["sub_modules"]["P_NET"]["parameters"]["layer_size"]=[int(nr*(64*64*3/784)) for nr in mn_rs]
