@@ -24,8 +24,8 @@
             },
             "Size_Normalization": {
                   "normalized_size": [
-                        128,
-                        128
+                        64,
+                        64
                   ]
             }
       },
@@ -38,11 +38,11 @@
                         "parameters": {
                               "encoder_parameters": {
                                     "inp_sizes": [
-                                          49152,
-                                          56173,
-                                          65515,
-                                          78618,
-                                          98304
+                                          12288,
+                                          14043,
+                                          16378,
+                                          19654,
+                                          24576
                                     ],
                                     "activators": {
                                           "name": "LeakyReLU",
@@ -88,7 +88,7 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    98304,
+                                    24576,
                                     2916
                               ],
                               "dec_activators": {
@@ -103,8 +103,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    98304,
-                                    98304
+                                    24576,
+                                    24576
                               ],
                               "enc_activators": {
                                     "name": "Sigmoid",
@@ -121,8 +121,8 @@
                         "generative": 0.5
                   },
                   "resize": [
-                        128,
-                        128
+                        64,
+                        64
                   ]
             }
       },
