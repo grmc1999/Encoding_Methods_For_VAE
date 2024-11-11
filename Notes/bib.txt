@@ -1,0 +1,2664 @@
+@inproceedings{liu2017unsupervised,
+  title={Unsupervised {Image}-to-{Image} {Translation} {Networks}},
+  author={Liu, Ming-Yu and Breuel, Thomas and Kautz, Jan},
+  booktitle={NeurIPS},
+  year={2017}
+}
+
+@article{karras2021aliasfree,
+  title={Alias-{Free} {Generative} {Adversarial} {Networks}},
+  author={Tero Karras and Miika Aittala and Samuli Laine and Erik Härkönen and Janne Hellsten and Jaakko Lehtinen and Timo Aila},
+  journal={arXiv:2106.12423},
+  year={2021}
+}
+
+@inproceedings{tieleman2008training,
+  title={Training {Restricted} {Boltzmann} {Machines} using {Approximations} to the {Likelihood} {Gradient}},
+  author={Tieleman, Tijmen},
+  booktitle={ICML},
+  year={2008}
+}
+
+@article{jing2020self,
+  title={Self-{Supervised} {Visual} {Feature} {Learning} with {Deep} {Neural} {Networks}: {A} {Survey}},
+  author={Jing, Longlong and Tian, Yingli},
+  journal={IEEE TPAMI},
+  year={2020}
+}
+
+@article{luhman2021knowledge,
+  title={Knowledge {Distillation} in {Iterative} {Generative} {Models} for {Improved} {Sampling} {Speed}},
+  author={Luhman, Eric and Luhman, Troy},
+  journal={arXiv:2101.02388},
+  year={2021}
+}
+
+@article{hoogeboom2021argmax,
+  title={Argmax {Flows} and {Multinomial} {Diffusion}: {Learning} {Categorical} {Distributions}},
+  author={Hoogeboom, Emiel and Nielsen, Didrik and Jaini, Priyank and Forr{\'e}, Patrick and Welling, Max},
+  journal={arXiv:2102.05379},
+  year={2021}
+}
+
+@article{watson2021learning,
+  title={Learning to {Efficiently} {Sample} from {Diffusion} {Probabilistic} {Models}},
+  author={Watson, Daniel and Ho, Jonathan and Norouzi, Mohammad and Chan, William},
+  journal={arXiv:2106.03802},
+  year={2021}
+}
+
+@article{ho2021cascaded,
+  title={Cascaded {Diffusion} {Models} for {High} {Fidelity} {Image} {Generation}},
+  author={Ho, Jonathan and Saharia, Chitwan and Chan, William and Fleet, David J and Norouzi, Mohammad and Salimans, Tim},
+  year={2021}
+}
+
+@inproceedings{berg2020idf++,
+  title={{IDF++}: {Analyzing} and {Improving} {Integer} {Discrete} {Flows} for {Lossless} {Compression}},
+  author={Berg, Rianne van den and Gritsenko, Alexey A and Dehghani, Mostafa and S{\o}nderby, Casper Kaae and Salimans, Tim},
+  booktitle={ICLR},
+  year={2021}
+}
+
+@article{vahdat2021score,
+  title={Score-based {Generative} {Modeling} in {Latent} {Space}},
+  author={Vahdat, Arash and Kreis, Karsten and Kautz, Jan},
+  journal={arXiv:2106.05931},
+  year={2021}
+}
+
+@inproceedings{kaiser2018fast,
+  title={Fast {Decoding} in {Sequence} {Models} using {Discrete} {Latent} {Variables}},
+  author={Kaiser, Lukasz and Bengio, Samy and Roy, Aurko and Vaswani, Ashish and Parmar, Niki and Uszkoreit, Jakob and Shazeer, Noam},
+  booktitle={ICML},
+  year={2018},
+}
+
+@inproceedings{grathwohl2021oops,
+  title={Oops {I} {Took} {A} {Gradient}: {Scalable} {Sampling} for {Discrete} {Distributions}},
+  author={Grathwohl, Will and Swersky, Kevin and Hashemi, Milad and Duvenaud, David and Maddison, Chris J},
+  booktitle={ICML},
+  year={2021}
+}
+
+@article{dhariwal2021diffusion,
+  title={Diffusion {Models} {Beat} {GANs} on {Image} {Synthesis}},
+  author={Dhariwal, Prafulla and Nichol, Alex},
+  journal={arXiv:2105.05233},
+  year={2021}
+}
+
+@article{goyal2021exposing,
+ title={Exposing the {Implicit} {Energy} {Networks} behind {Masked} {Language} {Models} via {Metropolis}--{Hastings}}, 
+ author={Kartik Goyal and Chris Dyer and Taylor Berg-Kirkpatrick},
+ journal={arXiv:2106.02736},
+ year={2021},
+}
+
+@inproceedings{chen2018isolating,
+ title = {Isolating {Sources} of {Disentanglement} in {Variational} {Autoencoders}},
+ author = {Chen, Ricky T. Q. and Li, Xuechen and Grosse, Roger B and Duvenaud, David K},
+ booktitle = {NeurIPS},
+ year = {2018}
+}
+
+@inproceedings{devlin2019bert,
+  title={{BERT}: {Pre}-{Training} of {Deep} {Bidirectional} {Transformers} for {Language} {Understanding}},
+  author={Devlin, Jacob and Chang, Ming-Wei and Lee, Kenton and Toutanova, Kristina},
+  booktitle={NAACL-HLT},
+  year={2019}
+}
+
+@inproceedings{wang2019bert,
+  title={{BERT} has a {Mouth}, and it {Must} {Speak}: {BERT} as a {Markov} {Random} {Field} {Language} {Model}},
+  author={Wang, Alex and Cho, Kyunghyun},
+  booktitle={NeuralGen},
+  year={2019}
+}
+
+@inproceedings{jolicoeur2020adversarial,
+  title={Adversarial {Score} {Matching} and {Improved} {Sampling} for {Image} {Generation}},
+  booktitle={ICLR},
+  year={2021}
+}
+
+@article{jolicoeur2021gotta,
+  title={Gotta {Go} {Fast} {When} {Generating} {Data} with {Score}-{Based} {Models}},
+  author={Jolicoeur-Martineau, Alexia and Li, Ke and Pich{\'e}-Taillefer, R{\'e}mi and Kachman, Tal and Mitliagkas, Ioannis},
+  journal={arXiv:2105.14080},
+  year={2021}
+}
+
+@article{sasaki2021unit,
+  title={{UNIT}-{DDPM}: {UNpaired} {Image} {Translation} with {Denoising} {Diffusion} {Probabilistic} {Models}},
+  author={Sasaki, Hiroshi and Willcocks, Chris G and Breckon, Toby P},
+  journal={arXiv:2104.05358},
+  year={2021}
+}
+
+@inproceedings{Uria2013RNADE,
+ title = {{RNADE}: {The} {Real}-{Valued} {Neural} {Autoregressive} {Density}-{Estimator}},
+ author = {Uria, Benigno and Murray, Iain and Larochelle, Hugo},
+ booktitle = {NeurIPS},
+ year = {2013}
+}
+
+@inproceedings{germain2015made,
+  title={{MADE}: {Masked} {Autoencoder} for {Distribution} {Estimation}},
+  author={Germain, Mathieu and Gregor, Karol and Murray, Iain and Larochelle, Hugo},
+  booktitle={ICML},
+  year={2015},
+}
+
+@inproceedings{larochelle2011neural,
+  title={The {Neural} {Autoregressive} {Distribution} {Estimator}},
+  author={Larochelle, Hugo and Murray, Iain},
+  booktitle={AISTATS},
+  year={2011},
+}
+
+@inproceedings{theis2015generative,
+ title = {Generative {Image} {Modeling} {Using} {Spatial} {LSTMs}},
+ author = {Theis, Lucas and Bethge, Matthias},
+ booktitle = {NeurIPS},
+ year = {2015}
+}
+
+@inproceedings{cremer2018inference,
+  title={Inference {Suboptimality} in {Variational} {Autoencoders}},
+  author={Cremer, Chris and Li, Xuechen and Duvenaud, David},
+  booktitle={ICML},
+  year={2018},
+}
+
+@inproceedings{maddison2017concrete,
+  title={The {Concrete} {Distribution}: {A} {Continuous} {Relaxation} of {Discrete} {Random} {Variables}},
+  author={Maddison, Chris J and Mnih, Andriy and Teh, Yee Whye},
+  booktitle={ICLR},
+  year={2017}
+}
+
+@inproceedings{jang2017categorical,
+  title={Categorical {Reparameterization} with {Gumbel}-{Softmax}},
+  author={Jang, Eric and Gu, Shixiang and Poole, Ben},
+  booktitle={ICLR},
+  year={2017}
+}
+
+@inproceedings{alemi2018fixing,
+  title={Fixing a {Broken} {ELBO}},
+  author={Alemi, Alexander and Poole, Ben and Fischer, Ian and Dillon, Joshua and Saurous, Rif A and Murphy, Kevin},
+  booktitle={ICML},
+  year={2018},
+}
+
+@inproceedings{higgins2017beta,
+  title={beta-{Vae}: {Learning} {Basic} {Visual} {Concepts} with a {Constrained} {Variational} {Framework}},
+  author={Higgins, Irina and Matthey, Loic and Pal, Arka and Burgess, Christopher and Glorot, Xavier and Botvinick, Matthew and Mohamed, Shakir and Lerchner, Alexander},
+  booktitle={ICLR},
+  year={2017}
+}
+
+@inproceedings{bauer2019resampled,
+  title={Resampled {Priors} for {Variational} {Autoencoders}},
+  author={Bauer, Matthias and Mnih, Andriy},
+  booktitle={AISTATS},
+  pages={66--75},
+  year={2019},
+}
+
+@inproceedings{larsen2016autoencoding,
+  title={Autoencoding beyond pixels using a learned similarity metric},
+  author={Larsen, Anders Boesen Lindbo and S{\o}nderby, S{\o}ren Kaae and Larochelle, Hugo and Winther, Ole},
+  booktitle={ICML},
+  year={2016},
+}
+
+@article{huang2018introvae,
+    author = {Huang, Huaibo and li, zhihang and He, Ran and Sun, Zhenan and Tan, Tieniu},
+    journal = {NeurIPS},
+    title = {IntroVAE: {Introspective} {Variational} {Autoencoders} for {Photographic} {Image} {Synthesis}},
+    volume = {31},
+    year = {2018}
+}
+
+@article{grnarova2019domain,
+  title={A {Domain} {Agnostic} {Measure} for {Monitoring} and {Evaluating} {GANs}},
+  author={Grnarova, Paulina and Levy, Kfir Y and Lucchi, Aurelien and Perraudin, Nathanael and Goodfellow, Ian and Hofmann, Thomas and Krause, Andreas},
+  journal={NeurIPS},
+  volume={32},
+  year={2019}
+}
+
+@article{valvano2021learning,
+  title={Learning to {Segment} from {Scribbles} using {Multi}-scale {Adversarial} {Attention} {Gates}},
+  author={Valvano, Gabriele and Leo, Andrea and Tsaftaris, Sotirios A},
+  journal={IEEE T-MI},
+  year={2021}
+}
+
+@article{grnarova2021generative,
+  title={Generative {Minimization} {Networks}: {Training} {GANs} {Without} {Competition}},
+  author={Grnarova, Paulina and Kilcher, Yannic and Levy, Kfir Y and Lucchi, Aurelien and Hofmann, Thomas},
+  journal={arXiv:2103.12685},
+  year={2021}
+}
+
+@article{lin2021anycost,
+  title={Anycost {GANs} for {Interactive} {Image} {Synthesis} and {Editing}},
+  author={Lin, Ji and Zhang, Richard and Ganz, Frieder and Han, Song and Zhu, Jun-Yan},
+  journal={arXiv:2103.03243},
+  year={2021}
+}
+
+@article{schmidhuber2020generative,
+  title={Generative {Adversarial} {Networks} are special cases of {Artificial} {Curiosity} (1990) and also closely related to {Predictability} {Minimization} (1991)},
+  author={Schmidhuber, J{\"u}rgen},
+  journal={Neural Netw.},
+  volume={127},
+  pages={58--66},
+  year={2020},
+}
+
+@article{schmidhuber1990making,
+  title={Making the {World} {Differentiable}: {On} {Using} {Self}-{Supervised} {Fully} {Recurrent} {Neural} {Networks} for {Dynamic} {Reinforcement} {Learning} and {Planning} in {Non}-{Stationary} {Environments}},
+  author={Schmidhuber, J{\"u}rgen},
+  year={1990}
+}
+
+@article{tancik2020fourier,
+	title = {Fourier {Features} {Let} {Networks} {Learn} {High} {Frequency} {Functions} in {Low} {Dimensional} {Domains}},
+	volume = {33},
+	journal = {NeurIPS},
+	author = {Tancik, Matthew and Srinivasan, Pratul and Mildenhall, Ben and Fridovich-Keil, Sara and Raghavan, Nithin and Singhal, Utkarsh and Ramamoorthi, Ravi and Barron, Jonathan and Ng, Ren},
+	year = {2020},
+}
+
+@inproceedings{hafner2019dream,
+	title = {Dream to {Control}: {Learning} {Behaviors} by {Latent} {Imagination}},
+	booktitle = {ICLR},
+	author = {Hafner, Danijar and Lillicrap, Timothy and Ba, Jimmy and Norouzi, Mohammad},
+	year = {2020},
+}
+
+@article{ramesh2021zeroshot,
+	title = {Zero-{Shot} {Text}-to-{Image} {Generation}},
+	journal = {arXiv:2102.12092},
+	author = {Ramesh, Aditya and Pavlov, Mikhail and Goh, Gabriel and Gray, Scott and Voss, Chelsea and Radford, Alec and Chen, Mark and Sutskever, Ilya},
+	year = {2021},
+}
+
+@article{esser2021taming,
+	title = {Taming {Transformers} for {High}-{Resolution} {Image} {Synthesis}},
+	url = {http://arxiv.org/abs/2012.09841},
+	journal = {arXiv:2012.09841},
+	author = {Esser, Patrick and Rombach, Robin and Ommer, Björn},
+	year = {2021},
+}
+
+@article{jiang2021transgan,
+	title = {{TransGAN}: {Two} {Transformers} {Can} {Make} {One} {Strong} {GAN}},
+	journal = {arXiv:2102.07074},
+	author = {Jiang, Yifan and Chang, Shiyu and Wang, Zhangyang},
+	year = {2021},
+}
+
+@article{nichol2021improved,
+	title = {Improved {Denoising} {Diffusion} {Probabilistic} {Models}},
+	journal = {arXiv:2102.09672},
+	author = {Nichol, Alex and Dhariwal, Prafulla},
+	year = {2021},
+}
+
+@article{krizhevsky2009learning,
+	title = {Learning {Multiple} {Layers} of {Features} from {Tiny} {Images}},
+	author = {Krizhevsky, Alex},
+	year = {2009},
+}
+
+@article{yi2019generative,
+	title = {Generative {Adversarial} {Network} in {Medical} {Imaging}: {A} {Review}},
+	volume = {58},
+	journal = {MedIA},
+	author = {Yi, Xin and Walia, Ekta and Babyn, Paul},
+	year = {2019},
+}
+
+@article{kobyzev2020normalizing,
+	title = {Normalizing {Flows}: {An} {Introduction} and {Review} of {Current} {Methods}},
+	journal = {IEEE TPAMI},
+	author = {Kobyzev, I. and Prince, S. and Brubaker, M.},
+	year = {2020},
+	pages = {2008--2026},
+}
+
+@inproceedings{oussidi2018deep,
+	title = {Deep {Generative} {Models}: {Survey}},
+	booktitle = {IEEE ISCV},
+	author = {Oussidi, A. and Elhassouny, A.},
+	year = {2018},
+	pages = {1--8},
+}
+
+@article{gui2020review,
+	title = {A {Review} on {Generative} {Adversarial} {Networks}: {Algorithms}, {Theory}, and {Applications}},
+	journal = {arXiv:2001.06937},
+	author = {Gui, Jie and Sun, Zhenan and Wen, Yonggang and Tao, Dacheng and Ye, Jieping},
+	year = {2020},
+}
+
+@article{pan2019recent,
+	title = {Recent {Progress} on {Generative} {Adversarial} {Networks} ({GANs}): {A} {Survey}},
+	volume = {7},
+	issn = {2169-3536},
+	shorttitle = {Recent {Progress} on {Generative} {Adversarial} {Networks} ({GANs})},
+	doi = {10.1109/ACCESS.2019.2905015},
+	journal = {IEEE Access},
+	author = {Pan, Z. and Yu, W. and Yi, X. and Khan, A. and Yuan, F. and Zheng, Y.},
+	year = {2019},
+	pages = {36322--36333},
+}
+
+@article{song2021how,
+	title = {How to {Train} {Your} {Energy}-{Based} {Models}},
+	journal = {arXiv:2101.03288},
+	author = {Song, Yang and Kingma, Diederik P.},
+	year = {2021},
+}
+
+@inproceedings{luo2020sumo,
+	title = {{SUMO}: {Unbiased} {Estimation} of {Log} {Marginal} {Probability} for {Latent} {Variable} {Models}},
+	booktitle = {ICLR},
+	author = {Luo, Yucen and Beatson, Alex and Norouzi, Mohammad and Zhu, Jun and Duvenaud, David and Adams, Ryan P. and Chen, Ricky T. Q.},
+	year = {2020},
+}
+
+@inproceedings{jun2020distribution,
+	title = {Distribution {Augmentation} for {Generative} {Modeling}},
+	booktitle = {ICML},
+	author = {Jun, Heewoo and Child, Rewon and Chen, Mark and Schulman, John and Ramesh, Aditya and Radford, Alec and Sutskever, Ilya},
+	year = {2020},
+}
+
+@inproceedings{binkowski2018demystifying,
+	title = {Demystifying {MMD} {GANs}},
+	abstract = {Explain bias situation with MMD GANs; MMD GANs work with smaller critic networks than WGAN-GPs; new GAN evaluation metric.},
+	booktitle = {ICLR},
+	author = {Bińkowski, Mikołaj and Sutherland, Dougal J. and Arbel, Michael and Gretton, Arthur},
+	year = {2018},
+}
+
+@inproceedings{gulrajani2019gan,
+	title = {Towards {GAN} {Benchmarks} {Which} {Require} {Generalization}},
+	abstract = {We argue that GAN benchmarks must require a large sample from the model to penalize memorization and investigate whether neural network divergences have this property.},
+	booktitle = {ICLR},
+	author = {Gulrajani, Ishaan and Raffel, Colin and Metz, Luke},
+	year = {2019},
+}
+
+@article{bengio2013generalized,
+	title = {Generalized {Denoising} {Auto}-{Encoders} as {Generative} {Models}},
+	volume = {26},
+	journal = {NeurIPS},
+	author = {Bengio, Yoshua and Yao, Li and Alain, Guillaume and Vincent, Pascal},
+	year = {2013},
+}
+
+@inproceedings{gutmann2010noisecontrastive,
+	title = {Noise-{Contrastive} {Estimation}: {A} {New} {Estimation} {Principle} for {Unnormalized} {Statistical} {Models}},
+	shorttitle = {Noise-contrastive estimation},
+	booktitle = {AISTATS},
+	author = {Gutmann, Michael and Hyv\"arinen, Aapo},
+	year = {2010},
+	pages = {297--304},
+}
+
+@article{xie2020cooperative,
+	title = {Cooperative {Training} of {Descriptor} and {Generator} {Networks}},
+	volume = {42},
+	issn = {1939-3539},
+	doi = {10.1109/TPAMI.2018.2879081},
+	number = {1},
+	journal = {IEEE TPAMI},
+	author = {Xie, J. and Lu, Y. and Gao, R. and Zhu, S. and Wu, Y. N.},
+	year = {2020},
+	pages = {27--45},
+}
+
+@article{han2017alternating,
+	title = {Alternating {Back}-{Propagation} for {Generator} {Network}},
+	volume = {31},
+	issn = {2374-3468},
+	number = {1},
+	journal = {AAAI},
+	author = {Han, Tian and Lu, Yang and Zhu, Song-Chun and Wu, Ying Nian},
+	year = {2017},
+}
+
+@article{makhzani2016adversarial,
+	title = {Adversarial {Autoencoders}},
+	journal = {arXiv:1511.05644},
+	author = {Makhzani, Alireza and Shlens, Jonathon and Jaitly, Navdeep and Goodfellow, Ian and Frey, Brendan},
+	year = {2016},
+}
+
+@inproceedings{burda2016importance,
+	title = {Importance {Weighted} {Autoencoders}},
+	booktitle = {ICLR},
+	author = {Burda, Yuri and Grosse, Roger B. and Salakhutdinov, Ruslan},
+	year = {2016},
+}
+
+@inproceedings{sinha2021negative,
+	title = {Negative {Data} {Augmentation}},
+	booktitle = {ICLR},
+	author = {Sinha, Abhishek and Ayush, Kumar and Song, Jiaming and Uzkent, Burak and Jin, Hongxia and Ermon, Stefano},
+	year = {2021},
+}
+
+@article{dupont2021generative,
+	title = {Generative {Models} as {Distributions} of {Functions}},
+	journal = {arXiv:2102.04776},
+	author = {Dupont, Emilien and Teh, Yee Whye and Doucet, Arnaud},
+	year = {2021},
+}
+
+@inproceedings{sonderby2017amortised,
+	title = {Amortised {MAP} {Inference} for {Image} {Super}-resolution},
+	booktitle = {ICLR},
+	author = {Sønderby, Casper Kaae and Caballero, Jose and Theis, Lucas and Shi, Wenzhe and Huszár, Ferenc},
+	year = {2017},
+}
+
+@article{lim2017geometric,
+	title = {Geometric {GAN}},
+	journal = {arXiv:1705.02894},
+	author = {Lim, Jae Hyun and Ye, Jong Chul},
+	year = {2017},
+}
+
+@book{villani2008optimal,
+	title = {Optimal {Transport}: {Old} and {New}},
+	volume = {338},
+	author = {Villani, C\'edric},
+	year = {2008},
+	publisher={Springer Science \& Business Media}
+}
+
+@inproceedings{thanh-tung2020catastrophic,
+	title = {Catastrophic forgetting and mode collapse in {GANs}},
+	doi = {10.1109/IJCNN48605.2020.9207181},
+	booktitle = {IJCNN},
+	author = {Thanh-Tung, H. and Tran, T.},
+	year = {2020},
+	pages = {1--10},
+}
+
+@inproceedings{huang2017stacked,
+	title = {Stacked {Generative} {Adversarial} {Networks}},
+	author = {Huang, Xun and Li, Yixuan and Poursaeed, Omid and Hopcroft, John and Belongie, Serge},
+	booktitle = {IEEE CVPR},
+	year = {2017},
+}
+
+@inproceedings{odena2017conditional,
+	title = {Conditional {Image} {Synthesis} with {Auxiliary} {Classifier} {GANs}},
+	booktitle = {ICML},
+	author = {Odena, Augustus and Olah, Christopher and Shlens, Jonathon},
+	year = {2017},
+}
+
+@inproceedings{chollet2017xception,
+	title = {Xception: {Deep} {Learning} {With} {Depthwise} {Separable} {Convolutions}},
+	shorttitle = {Xception},
+	booktitle = {IEEE CVPR},
+	author = {Chollet, Francois},
+	year = {2017},
+}
+
+@inproceedings{ngxande2019depthwisegans,
+	title = {{DepthwiseGANs}: {Fast} {Training} {Generative} {Adversarial} {Networks} for {Realistic} {Image} {Synthesis}},
+	shorttitle = {{DepthwiseGANs}},
+	doi = {10.1109/RoboMech.2019.8704766},
+	booktitle = {{SAUPEC}/{RobMech}/{PRASA}},
+	author = {Ngxande, M. and Tapamo, J. and Burke, M.},
+	year = {2019},
+	pages = {111--116},
+}
+
+@article{madry2019deep,
+	title = {Towards {Deep} {Learning} {Models} {Resistant} to {Adversarial} {Attacks}},
+	journal = {arXiv:1706.06083},
+	author = {Madry, Aleksander and Makelov, Aleksandar and Schmidt, Ludwig and Tsipras, Dimitris and Vladu, Adrian},
+	year = {2019},
+}
+
+@inproceedings{wang2020solving,
+	title = {On {Solving} {Minimax} {Optimization} {Locally}: {A} {Follow}-the-{Ridge} {Approach}},
+	shorttitle = {On {Solving} {Minimax} {Optimization} {Locally}},
+	booktitle = {ICLR},
+	author = {Wang, Yuanhao and Zhang, Guodong and Ba, Jimmy},
+	year = {2020},
+}
+
+@book{villani2003topics,
+	title = {Topics in {Optimal} {Transportation}},
+	isbn = {978-0-8218-3312-4},
+	number = {58},
+	publisher = {American Mathematical Soc.},
+	author = {Villani, C\'edric},
+	year = {2003},
+}
+
+@incollection{caffarelli1999monge,
+	title = {{Monge} {Ampère} {Equation}: {Applications} to {Geometry}, {Optimization}},
+	publisher = {American Mathematical Soc.},
+	author = {Caffarelli, Luis A. and Milman, Mario},
+	year = {1999},
+}
+
+@article{hoogeboom2020convolution,
+	title = {The {Convolution} {Exponential} and {Generalized} {Sylvester} {Flows}},
+	volume = {33},
+	journal = {NeurIPS},
+	author = {Hoogeboom, Emiel and Garcia Satorras, Victor and Tomczak, Jakub and Welling, Max},
+	year = {2020},
+}
+
+@article{gouk2021regularisation,
+	title = {Regularisation of neural networks by enforcing {Lipschitz} continuity},
+	volume = {110},
+	issn = {1573-0565},
+	doi = {10.1007/s10994-020-05929-w},
+	number = {2},
+	journal = {Machine Learning},
+	author = {Gouk, Henry and Frank, Eibe and Pfahringer, Bernhard and Cree, Michael J.},
+	year = {2021},
+	pages = {393--416},
+}
+
+@inproceedings{he2016deep,
+	title = {Deep {Residual} {Learning} for {Image} {Recognition}},
+	author = {He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+	booktitle = {IEEE CVPR},
+	year = {2016},
+}
+
+@article{wehenkel2019unconstrained,
+	title = {Unconstrained {Monotonic} {Neural} {Networks}},
+	volume = {32},
+	journal = {NeurIPS},
+	author = {Wehenkel, Antoine and Louppe, Gilles},
+	year = {2019},
+}
+
+@inproceedings{Ziegler2019LatentNormalizingFlows,
+	title = {Latent {Normalizing} {Flows} for {Discrete} {Sequences}},
+	booktitle = {ICML},
+	author = {Ziegler, Zachary and Rush, Alexander},
+	year = {2019},
+}
+
+@article{Arjovsky2017WassersteinGAN,
+	title = {Wasserstein {GAN}},
+	journal = {arXiv:1701.07875},
+	author = {Arjovsky, Martin and Chintala, Soumith and Bottou, L\'eon},
+	year = {2017},
+}
+
+@article{zhang2018mongeamp,
+	title = {Monge-{Amp\`ere} {Flow} for {Generative} {Modeling}},
+	journal = {arXiv:1809.10188},
+	author = {Zhang, Linfeng and E, Weinan and Wang, Lei},
+	year = {2018},
+}
+
+@article{yang2020potential,
+	title = {Potential {Flow} {Generator} {With} {L2} {Optimal} {Transport} {Regularity} for {Generative} {Models}},
+	issn = {2162-2388},
+	doi = {10.1109/TNNLS.2020.3028042},
+	journal = {IEEE TNNLS},
+	author = {Yang, L. and Karniadakis, G. E.},
+	year = {2020},
+	pages = {1--11},
+}
+
+@inproceedings{huang2021convex,
+	title = {Convex {Potential} {Flows}: {Universal} {Probability} {Distributions} with {Optimal} {Transport} and {Convex} {Optimization}},
+	shorttitle = {Convex {Potential} {Flows}},
+	booktitle = {ICLR},
+	author = {Huang, Chin-Wei and Chen, Ricky T. Q. and Tsirigotis, Christos and Courville, Aaron},
+	year = {2021},
+}
+
+@inproceedings{taghvaei2019accelerated,
+	title = {Accelerated {Flow} for {Probability} {Distributions}},
+	booktitle = {ICML},
+	author = {Taghvaei, Amirhossein and Mehta, Prashant},
+	year = {2019},
+}
+
+@inproceedings{finlay2020how,
+	title = {How to {Train} {Your} {Neural} {ODE}: the {World} of {Jacobian} and {Kinetic} {Regularization}},
+	shorttitle = {How to {Train} {Your} {Neural} {ODE}},
+	booktitle = {ICML},
+	author = {Finlay, Chris and Jacobsen, Joern-Henrik and Nurbekyan, Levon and Oberman, Adam},
+	year = {2020},
+}
+
+@inproceedings{Onken2020OTFlowFastAccurate,
+	title = {{OT}-{Flow}: {Fast} and {Accurate} {Continuous} {Normalizing} {Flows} via {Optimal} {Transport}},
+	shorttitle = {{OT}-{Flow}},
+	booktitle = {AAAI},
+	author = {Onken, Derek and Fung, Samy Wu and Li, Xingjian and Ruthotto, Lars},
+	year = {2021},
+}
+
+@inproceedings{durkan2020contrastive,
+	title = {On {Contrastive} {Learning} for {Likelihood}-free {Inference}},
+	booktitle = {ICML},
+	author = {Durkan, Conor and Murray, Iain and Papamakarios, George},
+	year = {2020},
+}
+
+@article{mirza2014conditional,
+	title = {Conditional {Generative} {Adversarial} {Nets}},
+	journal = {arXiv:1411.1784},
+	author = {Mirza, Mehdi and Osindero, Simon},
+	year = {2014},
+}
+
+@article{loaiza-ganem2019continuous,
+	title = {The continuous {Bernoulli}: fixing a pervasive error in variational autoencoders},
+	volume = {32},
+	shorttitle = {The continuous {Bernoulli}},
+	journal = {NeurIPS},
+	author = {Loaiza-Ganem, Gabriel and Cunningham, John P.},
+	year = {2019},
+}
+
+@article{neklyudov2019implicit,
+	title = {The {Implicit} {Metropolis}-{Hastings} {Algorithm}},
+	volume = {32},
+	journal = {NeurIPS},
+	author = {Neklyudov, Kirill and Egorov, Evgenii and Vetrov, Dmitry P.},
+	year = {2019},
+}
+
+@inproceedings{turner2019metropolishastings,
+	title = {Metropolis-{Hastings} {Generative} {Adversarial} {Networks}},
+	booktitle = {ICML},
+	author = {Turner, Ryan and Hung, Jane and Frank, Eric and Saatchi, Yunus and Yosinski, Jason},
+	year = {2019},
+}
+
+@article{song2020discriminator,
+	title = {Discriminator {Contrastive} {Divergence}: {Semi}-{Amortized} {Generative} {Modeling} by {Exploring} {Energy} of the {Discriminator}},
+	shorttitle = {Discriminator {Contrastive} {Divergence}},
+	journal = {arXiv:2004.01704},
+	author = {Song, Yuxuan and Ye, Qiwei and Xu, Minkai and Liu, Tie-Yan},
+	year = {2020},
+}
+
+@article{zhong2020improving,
+	title = {Improving the {Speed} and {Quality} of {GAN} by {Adversarial} {Training}},
+	journal = {arXiv:2008.03364},
+	author = {Zhong, Jiachen and Liu, Xuanqing and Hsieh, Cho-Jui},
+	year = {2020},
+}
+
+@inproceedings{liu2019robgan,
+	title = {Rob-{GAN}: {Generator}, {Discriminator}, and {Adversarial} {Attacker}},
+	shorttitle = {Rob-{GAN}},
+	author = {Liu, Xuanqing and Hsieh, Cho-Jui},
+	booktitle = {IEEE CVPR},
+	year = {2019},
+}
+
+@article{tran2019improved,
+	title = {An {Improved} {Self}-supervised {GAN} via {Adversarial} {Training}},
+	journal = {arXiv:1905.05469},
+	author = {Tran, Ngoc-Trung and Tran, Viet-Hung and Nguyen, Ngoc-Bao and Cheung, Ngai-Man},
+	year = {2019},
+}
+
+@article{tran2019selfsupervised,
+	title = {Self-supervised {GAN}: {Analysis} and {Improvement} with {Multi}-class {Minimax} {Game}},
+	shorttitle = {Self-supervised {GAN}},
+	journal = {NeurIPS 32},
+	author = {Tran, Ngoc-Trung and Tran, Viet-Hung and Nguyen, Bao-Ngoc and Yang, Linxiao and Cheung, Ngai-Man},
+	year = {2019},
+}
+
+@inproceedings{sinha2020smallgan,
+	title = {Small-{GAN}: {Speeding} up {GAN} {Training} using {Core}-{Sets}},
+	shorttitle = {Small-{GAN}},
+	booktitle = {ICML},
+	author = {Sinha, Samarth and Zhang, Han and Goyal, Anirudh and Bengio, Yoshua and Larochelle, Hugo and Odena, Augustus},
+	year = {2020},
+}
+
+@inproceedings{mescheder2018which,
+	title = {Which {Training} {Methods} for {GANs} do actually {Converge}?},
+	booktitle = {ICML},
+	author = {Mescheder, Lars and Geiger, Andreas and Nowozin, Sebastian},
+	year = {2018},
+}
+
+@inproceedings{karnewar2020msggan,
+	title = {{MSG}-{GAN}: {Multi}-{Scale} {Gradients} for {Generative} {Adversarial} {Networks}},
+	shorttitle = {{MSG}-{GAN}},
+	booktitle = {IEEE CVPR},
+	author = {Karnewar, Animesh and Wang, Oliver},
+	year = {2020},
+}
+
+@article{denton2015deep,
+	title = {Deep {Generative} {Image} {Models} using a {Laplacian} {Pyramid} of {Adversarial} {Networks}},
+	volume = {28},
+	journal = {NeurIPS},
+	author = {Denton, Emily L. and Chintala, Soumith and Szlam, Arthur and Fergus, Rob},
+	year = {2015},
+}
+
+@inproceedings{arjovsky2017principled,
+	title = {Towards {Principled} {Methods} for {Training} {Generative} {Adversarial} {Networks}},
+	booktitle = {ICLR},
+	author = {Arjovsky, Martin and Bottou, Leon},
+	year = {2017},
+}
+
+@inproceedings{zhang2018unreasonable,
+	title = {The {Unreasonable} {Effectiveness} of {Deep} {Features} as a {Perceptual} {Metric}},
+	author = {Zhang, Richard and Isola, Phillip and Efros, Alexei A. and Shechtman, Eli and Wang, Oliver},
+	booktitle = {IEEE CVPR},
+	year = {2018},
+}
+
+@inproceedings{chen2019selfsupervised,
+	title = {Self-{Supervised} {GANs} via {Auxiliary} {Rotation} {Loss}},
+	author = {Chen, Ting and Zhai, Xiaohua and Ritter, Marvin and Lucic, Mario and Houlsby, Neil},
+	booktitle = {IEEE CVPR},
+	year = {2019},
+}
+
+@inproceedings{ulyanov2017improved,
+	title = {Improved {Texture} {Networks}: {Maximizing} {Quality} and {Diversity} in {Feed}-{Forward} {Stylization} and {Texture} {Synthesis}},
+	shorttitle = {Improved {Texture} {Networks}},
+	author = {Ulyanov, Dmitry and Vedaldi, Andrea and Lempitsky, Victor},
+	booktitle = {IEEE CVPR},
+	year = {2017},
+}
+
+@inproceedings{liu2021faster,
+	title = {Towards {Faster} and {Stabilized} {GAN} {Training} for {High}-fidelity {Few}-shot {Image} {Synthesis}},
+	booktitle = {ICLR},
+	author = {Liu, Bingchen and Zhu, Yizhe and Song, Kunpeng and Elgammal, Ahmed},
+	year = {2021},
+}
+
+@article{che2020your,
+	title = {Your {GAN} is {Secretly} an {Energy}-based {Model} and {You} {Should} {Use} {Discriminator} {Driven} {Latent} {Sampling}},
+	volume = {33},
+	journal = {NeurIPS},
+	author = {Che, Tong and Zhang, Ruixiang and Sohl-Dickstein, Jascha and Larochelle, Hugo and Paull, Liam and Cao, Yuan and Bengio, Yoshua},
+	year = {2020},
+}
+
+@article{karras2020training,
+	title = {Training {Generative} {Adversarial} {Networks} with {Limited} {Data}},
+	volume = {33},
+	journal = {NeurIPS},
+	author = {Karras, Tero and Aittala, Miika and Hellsten, Janne and Laine, Samuli and Lehtinen, Jaakko and Aila, Timo},
+	year = {2020},
+}
+
+@article{tran2021data,
+	title = {On {Data} {Augmentation} for {GAN} {Training}},
+	volume = {30},
+	issn = {1941-0042},
+	doi = {10.1109/TIP.2021.3049346},
+	journal = {IEEE TIP},
+	author = {Tran, N.-T. and Tran, V.-H. and Nguyen, N.-B. and Nguyen, T.-K. and Cheung, N.-M.},
+	year = {2021},
+	pages = {1882--1897},
+}
+
+@article{zhao2020image,
+	title = {Image {Augmentations} for {GAN} {Training}},
+	journal = {arXiv:2006.02595},
+	author = {Zhao, Zhengli and Zhang, Zizhao and Chen, Ting and Singh, Sameer and Zhang, Han},
+	year = {2020},
+}
+
+@article{zhang2019progressive,
+	title = {Progressive {Augmentation} of {GANs}},
+	volume = {32},
+	journal = {NeurIPS},
+	author = {Zhang, Dan and Khoreva, Anna},
+	year = {2019},
+}
+
+@article{zhao2020differentiable,
+	title = {Differentiable {Augmentation} for {Data}-{Efficient} {GAN} {Training}},
+	volume = {33},
+	journal = {NeurIPS},
+	author = {Zhao, Shengyu and Liu, Zhijian and Lin, Ji and Zhu, Jun-Yan and Han, Song},
+	year = {2020},
+}
+
+@inproceedings{shaham2019singan,
+	title = {{SinGAN}: {Learning} a {Generative} {Model} {From} a {Single} {Natural} {Image}},
+	shorttitle = {{SinGAN}},
+	author = {Shaham, Tamar Rott and Dekel, Tali and Michaeli, Tomer},
+	booktitle = {IEEE CVPR},
+	year = {2019},
+}
+
+@article{maaloe2019biva,
+	title = {{BIVA}: {A} {Very} {Deep} {Hierarchy} of {Latent} {Variables} for {Generative} {Modeling}},
+	volume = {33},
+	journal = {NeurIPS},
+	author = {Maaløe, Lars and Fraccaro, Marco and Li\'evin, Valentin and Winther, Ole},
+	year = {2019},
+}
+
+@article{vahdat2020nvae,
+	title = {{NVAE}: {A} {Deep} {Hierarchical} {Variational} {Autoencoder}},
+	volume = {33},
+	shorttitle = {{NVAE}},
+	journal = {NeurIPS},
+	author = {Vahdat, Arash and Kautz, Jan},
+	year = {2020},
+}
+
+@article{huang2017learnable,
+	title = {Learnable {Explicit} {Density} for {Continuous} {Latent} {Space} and {Variational} {Inference}},
+	journal = {arXiv:1710.02248},
+	author = {Huang, Chin-Wei and Touati, Ahmed and Dinh, Laurent and Drozdzal, Michal and Havaei, Mohammad and Charlin, Laurent and Courville, Aaron},
+	year = {2017},
+}
+
+@article{norouzi2020exemplar,
+	title = {Exemplar {VAE}: {Linking} {Generative} {Models}, {Nearest} {Neighbor} {Retrieval}, and {Data} {Augmentation}},
+	volume = {33},
+	shorttitle = {Exemplar {VAE}},
+	journal = {NeurIPS},
+	author = {Norouzi, Sajad and Fleet, David J. and Norouzi, Mohammad},
+	year = {2020},
+}
+
+@inproceedings{tomczak2018vae,
+	title = {{VAE} with a {VampPrior}},
+	booktitle = {AISTATS},
+	author = {Tomczak, Jakub and Welling, Max},
+	year = {2018},
+	pages = {1214--1223},
+}
+
+@article{zhao2019infovae,
+	title = {{InfoVAE}: {Balancing} {Learning} and {Inference} in {Variational} {Autoencoders}},
+	volume = {33},
+	issn = {2374-3468},
+	shorttitle = {{InfoVAE}},
+	doi = {10.1609/aaai.v33i01.33015885},
+	number = {01},
+	journal = {AAAI},
+	author = {Zhao, Shengjia and Song, Jiaming and Ermon, Stefano},
+	year = {2019},
+	pages = {5885--5892},
+}
+
+@inproceedings{ma2019mae,
+	title = {{MAE}: {Mutual} {Posterior}-{Divergence} {Regularization} for {Variational} {AutoEncoders}},
+	shorttitle = {{MAE}},
+	booktitle = {ICLR},
+	author = {Ma, Xuezhe and Zhou, Chunting and Hovy, Eduard},
+	year = {2019},
+}
+
+@article{sonderby2016ladder,
+	title = {Ladder {Variational} {Autoencoders}},
+	volume = {29},
+	journal = {NeurIPS},
+	author = {Sønderby, Casper Kaae and Raiko, Tapani and Maaløe, Lars and Sønderby, Søren Kaae and Winther, Ole},
+	year = {2016},
+}
+
+@inproceedings{ranganath2016hierarchical,
+	title = {Hierarchical {Variational} {Models}},
+	booktitle = {ICML},
+	author = {Ranganath, Rajesh and Tran, Dustin and Blei, David},
+	year = {2016},
+}
+
+@article{klushyn2019learning,
+	title = {Learning {Hierarchical} {Priors} in {VAEs}},
+	volume = {32},
+	journal = {NeurIPS},
+	author = {Klushyn, Alexej and Chen, Nutan and Kurle, Richard and Cseke, Botond and van der Smagt, Patrick},
+	year = {2019},
+}
+
+@inproceedings{gulrajani2016pixelvae,
+	title = {{PixelVAE}: {A} {Latent} {Variable} {Model} for {Natural} {Images}},
+	shorttitle = {{PixelVAE}},
+	booktitle = {ICLR},
+	author = {Gulrajani, Ishaan and Kumar, Kundan and Ahmed, Faruk and Taiga, Adrien Ali and Visin, Francesco and Vazquez, David and Courville, Aaron},
+	year = {2017},
+}
+
+@inproceedings{zhao2017learning,
+	title = {Learning {Hierarchical} {Features} from {Deep} {Generative} {Models}},
+	booktitle = {ICML},
+	author = {Zhao, Shengjia and Song, Jiaming and Ermon, Stefano},
+	year = {2017},
+}
+
+@article{dai2019diagnosing,
+	title = {Diagnosing and {Enhancing} {VAE} {Models}},
+	journal = {arXiv:1903.05789},
+	author = {Dai, Bin and Wipf, David},
+	year = {2019},
+}
+
+@inproceedings{tran2016variational,
+	title = {Variational {Gaussian} {Process}},
+	booktitle = {ICLR},
+	author = {Tran, Dustin and Ranganath, Rajesh and Blei, David M.},
+	year = {2016},
+}
+
+@inproceedings{rezende2014stochastic,
+	title = {Stochastic {Backpropagation} and {Approximate} {Inference} in {Deep} {Generative} {Models}},
+	booktitle = {ICML},
+	author = {Rezende, Danilo Jimenez and Mohamed, Shakir and Wierstra, Daan},
+	year = {2014},
+}
+
+@inproceedings{salimans2015markov,
+	title = {Markov {Chain} {Monte} {Carlo} and {Variational} {Inference}: {Bridging} the {Gap}},
+	shorttitle = {Markov {Chain} {Monte} {Carlo} and {Variational} {Inference}},
+	booktitle = {ICML},
+	author = {Salimans, Tim and Kingma, Diederik and Welling, Max},
+	year = {2015},
+}
+
+@article{bowman2016generating,
+	title = {Generating {Sentences} from a {Continuous} {Space}},
+	journal = {arXiv:1511.06349},
+	author = {Bowman, Samuel R. and Vilnis, Luke and Vinyals, Oriol and Dai, Andrew M. and Jozefowicz, Rafal and Bengio, Samy},
+	year = {2016},
+}
+
+@inproceedings{Grathwohl2018FFJORDFreeformContinuous,
+	title = {{FFJORD}: {Free}-form {Continuous} {Dynamics} for {Scalable} {Reversible} {Generative} {Models}},
+	booktitle = {ICLR},
+	author = {Grathwohl, Will and Chen, Ricky T. Q. and Bettencourt, Jesse and Sutskever, Ilya and Duvenaud, David},
+	year = {2019},
+}
+
+@inproceedings{Grathwohl2019YourClassifierSecretly,
+	title = {Your {Classifier} is {Secretly} an {Energy} {Based} {Model} and {You} {Should} {Treat} it {Like} {One}},
+	booktitle = {ICLR},
+	author = {Grathwohl, Will and Wang, Kuan-Chieh and Jacobsen, Jörn-Henrik and Duvenaud, David and Norouzi, Mohammad and Swersky, Kevin},
+	year = {2020},
+}
+
+@inproceedings{Bond-Taylor2020GradientOriginNetworks,
+	title = {Gradient {Origin} {Networks}},
+	booktitle = {ICLR},
+	author = {Bond-Taylor, Sam and Willcocks, Chris G.},
+	year = {2021},
+}
+
+@inproceedings{Mehri2017SampleRNNUnconditionalEndtoEnd,
+	title = {{SampleRNN}: {An} {Unconditional} {End}-to-{End} {Neural} {Audio} {Generation} {Model}},
+	shorttitle = {{SampleRNN}},
+	booktitle = {ICLR},
+	author = {Mehri, Soroush and Kumar, Kundan and Gulrajani, Ishaan and Kumar, Rithesh and Jain, Shubham and Sotelo, Jose and Courville, Aaron and Bengio, Yoshua},
+	year = {2017},
+}
+
+@inproceedings{lu2021implicit,
+	title = {Implicit {Normalizing} {Flows}},
+	booktitle = {ICLR},
+	author = {Lu, Cheng and Chen, Jianfei and Li, Chongxuan and Wang, Qiuhao and Zhu, Jun},
+	year = {2021},
+}
+
+@inproceedings{xiao2021vaebm,
+	title = {{VAEBM}: {A} {Symbiosis} between {Variational} {Autoencoders} and {Energy}-based {Models}},
+	shorttitle = {{VAEBM}},
+	booktitle = {ICLR},
+	author = {Xiao, Zhisheng and Kreis, Karsten and Kautz, Jan and Vahdat, Arash},
+	year = {2021},
+}
+
+@inproceedings{arbel2021generalized,
+	title = {Generalized {Energy} {Based} {Models}},
+	booktitle = {ICLR},
+	author = {Arbel, Michael and Zhou, Liang and Gretton, Arthur},
+	year = {2021},
+}
+
+@inproceedings{grathwohl2021no,
+	title = {No {MCMC} for me: {Amortized} sampling for fast and stable training of energy-based models},
+	shorttitle = {No {MCMC} for me},
+	booktitle = {ICLR},
+	author = {Grathwohl, Will Sussman and Kelly, Jacob Jin and Hashemi, Milad and Norouzi, Mohammad and Swersky, Kevin and Duvenaud, David},
+	year = {2021},
+}
+
+@inproceedings{gao2021learning,
+	title = {Learning {Energy}-{Based} {Models} by {Diffusion} {Recovery} {Likelihood}},
+	booktitle = {ICLR},
+	author = {Gao, Ruiqi and Song, Yang and Poole, Ben and Wu, Ying Nian and Kingma, Diederik P.},
+	year = {2021},
+}
+
+@inproceedings{song2021scorebased,
+	title = {Score-{Based} {Generative} {Modeling} through {Stochastic} {Differential} {Equations}},
+	booktitle = {ICLR},
+	author = {Song, Yang and Sohl-Dickstein, Jascha and Kingma, Diederik P. and Kumar, Abhishek and Ermon, Stefano and Poole, Ben},
+	year = {2021},
+}
+
+@inproceedings{song2021denoising,
+	title = {Denoising {Diffusion} {Implicit} {Models}},
+	booktitle = {ICLR},
+	author = {Song, Jiaming and Meng, Chenlin and Ermon, Stefano},
+	year = {2021},
+}
+
+@inproceedings{choromanski2021rethinking,
+	title = {Rethinking {Attention} with {Performers}},
+	booktitle = {ICLR},
+	author = {Choromanski, Krzysztof Marcin and Likhosherstov, Valerii and Dohan, David and Song, Xingyou and Gane, Andreea and Sarlos, Tamas and Hawkins, Peter and Davis, Jared Quincy and Mohiuddin, Afroz and Kaiser, Lukasz and Belanger, David Benjamin and Colwell, Lucy J. and Weller, Adrian},
+	year = {2021},
+}
+
+@inproceedings{meng2021improved,
+	title = {Improved {Autoregressive} {Modeling} with {Distribution} {Smoothing}},
+	booktitle = {ICLR},
+	author = {Meng, Chenlin and Song, Jiaming and Song, Yang and Zhao, Shengjia and Ermon, Stefano},
+	year = {2021},
+}
+
+@inproceedings{menick2019generating,
+	title = {Generating {High} {Fidelity} {Images} with {Subscale} {Pixel} {Networks} and {Multidimensional} {Upscaling}},
+	booktitle = {ICLR},
+	author = {Menick, Jacob and Kalchbrenner, Nal},
+	year = {2019},
+}
+
+@inproceedings{child2021very,
+	title = {Very {Deep} {VAEs} {Generalize} {Autoregressive} {Models} and {Can} {Outperform} {Them} on {Images}},
+	booktitle = {ICLR},
+	author = {Child, Rewon},
+	year = {2021},
+}
+
+@inproceedings{ghosh2020variational,
+	title = {From {Variational} to {Deterministic} {Autoencoders}},
+	booktitle = {ICLR},
+	author = {Ghosh, Partha and Sajjadi, Mehdi S. M. and Vergari, Antonio and Black, Michael and Scholkopf, Bernhard},
+	year = {2020},
+}
+
+@article{huszar2017variational,
+	title = {Variational {Inference} using {Implicit} {Distributions}},
+	journal = {arXiv:1702.08235},
+	author = {Huszár, Ferenc},
+	year = {2017},
+}
+
+@inproceedings{nijkamp2020learninga,
+	address = {Cham},
+	series = {Lecture {Notes} in {Computer} {Science}},
+	title = {Learning {Multi}-layer {Latent} {Variable} {Model} via {Variational} {Optimization} of {Short} {Run} {MCMC} for {Approximate} {Inference}},
+	isbn = {978-3-030-58539-6},
+	doi = {10.1007/978-3-030-58539-6_22},
+	booktitle = {ECCV},
+	author = {Nijkamp, Erik and Pang, Bo and Han, Tian and Zhou, Linqi and Zhu, Song-Chun and Wu, Ying Nian},
+	year = {2020},
+}
+
+@article{bojanowski2019optimizing,
+	title = {Optimizing the {Latent} {Space} of {Generative} {Networks}},
+	journal = {arXiv:1707.05776},
+	author = {Bojanowski, Piotr and Joulin, Armand and Lopez-Paz, David and Szlam, Arthur},
+	year = {2019},
+}
+
+@inproceedings{kim2018semiamortized,
+	title = {Semi-{Amortized} {Variational} {Autoencoders}},
+	booktitle = {ICML},
+	author = {Kim, Yoon and Wiseman, Sam and Miller, Andrew and Sontag, David and Rush, Alexander},
+	year = {2018},
+}
+
+@article{wang2020linformer,
+	title = {Linformer: {Self}-{Attention} with {Linear} {Complexity}},
+	shorttitle = {Linformer},
+	journal = {arXiv:2006.04768},
+	author = {Wang, Sinong and Li, Belinda Z. and Khabsa, Madian and Fang, Han and Ma, Hao},
+	year = {2020},
+}
+
+@inproceedings{katharopoulos2020transformers,
+	title = {Transformers are {RNNs}: {Fast} {Autoregressive} {Transformers} with {Linear} {Attention}},
+	shorttitle = {Transformers are {RNNs}},
+	booktitle = {ICML},
+	author = {Katharopoulos, Angelos and Vyas, Apoorv and Pappas, Nikolaos and Fleuret, François},
+	year = {2020},
+}
+
+@inproceedings{chen2020generative,
+	title = {Generative {Pretraining} {From} {Pixels}},
+	booktitle = {ICML},
+	author = {Chen, Mark and Radford, Alec and Child, Rewon and Wu, Jeffrey and Jun, Heewoo and Luan, David and Sutskever, Ilya},
+	year = {2020},
+}
+
+@inproceedings{parmar2018image,
+	title = {Image {Transformer}},
+	booktitle = {ICML},
+	author = {Parmar, Niki and Vaswani, Ashish and Uszkoreit, Jakob and Kaiser, Lukasz and Shazeer, Noam and Ku, Alexander and Tran, Dustin},
+	year = {2018},
+}
+
+@inproceedings{reed2017parallel,
+	title = {Parallel {Multiscale} {Autoregressive} {Density} {Estimation}},
+	booktitle = {ICML},
+	author = {Reed, Scott and Oord, A\"aron and Kalchbrenner, Nal and Colmenarejo, Sergio Gómez and Wang, Ziyu and Chen, Yutian and Belov, Dan and Freitas, Nando},
+	year = {2017},
+}
+
+@inproceedings{nash2019autoregressive,
+	title = {Autoregressive {Energy} {Machines}},
+	booktitle = {ICML},
+	author = {Nash, Charlie and Durkan, Conor},
+	year = {2019},
+}
+
+@article{meng2020autoregressive,
+	title = {Autoregressive {Score} {Matching}},
+	volume = {34},
+	journal = {NeurIPS},
+	author = {Meng, Chenlin and Yu, Lantao and Song, Yang and Song, Jiaming and Ermon, Stefano},
+	year = {2020},
+}
+
+@inproceedings{gao2020flow,
+	title = {Flow {Contrastive} {Estimation} of {Energy}-{Based} {Models}},
+	author = {Gao, Ruiqi and Nijkamp, Erik and Kingma, Diederik P. and Xu, Zhen and Dai, Andrew M. and Wu, Ying Nian},
+	booktitle = {IEEE CVPR},
+	year = {2020},
+}
+
+@article{pang2020learning,
+	title = {Learning {Latent} {Space} {Energy}-{Based} {Prior} {Model}},
+	volume = {34},
+	journal = {NeurIPS},
+	author = {Pang, Bo and Han, Tian and Nijkamp, Erik and Zhu, Song-Chun and Wu, Ying Nian},
+	year = {2020},
+}
+
+@article{du2020compositional,
+	title = {Compositional {Visual} {Generation} with {Energy} {Based} {Models}},
+	volume = {34},
+	journal = {NeurIPS},
+	author = {Du, Yilun and Li, Shuang and Mordatch, Igor},
+	year = {2020},
+}
+
+@article{song2017anicemc,
+	title = {A-{NICE}-{MC}: {Adversarial} {Training} for {MCMC}},
+	volume = {30},
+	shorttitle = {A-{NICE}-{MC}},
+	journal = {NeurIPS},
+	author = {Song, Jiaming and Zhao, Shengjia and Ermon, Stefano},
+	year = {2017},
+}
+
+@article{titsias2019gradientbased,
+	title = {Gradient-based {Adaptive} {Markov} {Chain} {Monte} {Carlo}},
+	volume = {32},
+	journal = {NeurIPS},
+	author = {Titsias, Michalis and Dellaportas, Petros},
+	year = {2019},
+}
+
+@inproceedings{li2020scalable,
+	title = {Scalable {Gradients} for {Stochastic} {Differential} {Equations}},
+	booktitle = {AISTATS},
+	author = {Li, Xuechen and Wong, Ting-Kam Leonard and Chen, Ricky T. Q. and Duvenaud, David},
+	year = {2020},
+	pages = {3870--3882},
+}
+
+@inproceedings{tzen2019theoretical,
+	title = {Theoretical guarantees for sampling and inference in generative models with latent diffusions},
+	booktitle = {COLT},
+	author = {Tzen, Belinda and Raginsky, Maxim},
+	year = {2019},
+	pages = {3084--3114},
+}
+
+@inproceedings{tzen2018local,
+	title = {Local {Optimality} and {Generalization} {Guarantees} for the {Langevin} {Algorithm} via {Empirical} {Metastability}},
+	booktitle = {COLT},
+	author = {Tzen, Belinda and Liang, Tengyuan and Raginsky, Maxim},
+	year = {2018},
+	pages = {857--875},
+}
+
+@inproceedings{shi2018spectral,
+	title = {A {Spectral} {Approach} to {Gradient} {Estimation} for {Implicit} {Distributions}},
+	booktitle = {ICML},
+	author = {Shi, Jiaxin and Sun, Shengyang and Zhu, Jun},
+	year = {2018},
+}
+
+@article{saremi2018deep,
+	title = {Deep {Energy} {Estimator} {Networks}},
+	journal = {arXiv:1805.08306},
+	author = {Saremi, Saeed and Mehrjou, Arash and Schölkopf, Bernhard and Hyv\"arinen, Aapo},
+	year = {2018},
+}
+
+@inproceedings{song2020sliced,
+	title = {Sliced {Score} {Matching}: {A} {Scalable} {Approach} to {Density} and {Score} {Estimation}},
+	shorttitle = {Sliced {Score} {Matching}},
+	booktitle = {UAI},
+	author = {Song, Yang and Garg, Sahaj and Shi, Jiaxin and Ermon, Stefano},
+	year = {2020},
+	pages = {574--584},
+}
+
+@inproceedings{grathwohl2020learning,
+	title = {Learning the {Stein} {Discrepancy} for {Training} and {Evaluating} {Energy}-{Based} {Models} without {Sampling}},
+	booktitle = {ICML},
+	author = {Grathwohl, Will and Wang, Kuan-Chieh and Jacobsen, Joern-Henrik and Duvenaud, David and Zemel, Richard},
+	year = {2020},
+}
+
+@article{kim2016deep,
+	title = {Deep {Directed} {Generative} {Models} with {Energy}-{Based} {Probability} {Estimation}},
+	journal = {arXiv:1606.03439},
+	author = {Kim, Taesup and Bengio, Yoshua},
+	year = {2016},
+}
+
+@article{kumar2019maximum,
+	title = {Maximum {Entropy} {Generators} for {Energy}-{Based} {Models}},
+	journal = {arXiv:1901.08508},
+	author = {Kumar, Rithesh and Ozair, Sherjil and Goyal, Anirudh and Courville, Aaron and Bengio, Yoshua},
+	year = {2019},
+}
+
+@article{Du2019ImplicitGenerationGeneralization,
+	title = {Implicit {Generation} and {Generalization} in {Energy}-{Based} {Models}},
+	volume = {33},
+	journal = {NeurIPS},
+	author = {Du, Yilun and Mordatch, Igor},
+	year = {2019},
+}
+
+@inproceedings{han2020joint,
+	title = {Joint {Training} of {Variational} {Auto}-{Encoder} and {Latent} {Energy}-{Based} {Model}},
+	author = {Han, Tian and Nijkamp, Erik and Zhou, Linqi and Pang, Bo and Zhu, Song-Chun and Wu, Ying Nian},
+	booktitle = {IEEE CVPR},
+	year = {2020},
+}
+
+@article{li2020neural,
+	title = {A {Neural} {Network} {MCMC} sampler that maximizes {Proposal} {Entropy}},
+	journal = {arXiv:2010.03587},
+	author = {Li, Zengyi and Chen, Yubei and Sommer, Friedrich T.},
+	year = {2020},
+}
+
+@article{hoffman2019neutralizing,
+	title = {{NeuTra}-lizing {Bad} {Geometry} in {Hamiltonian} {Monte} {Carlo} {Using} {Neural} {Transport}},
+	journal = {arXiv:1903.03704},
+	author = {Hoffman, Matthew and Sountsov, Pavel and Dillon, Joshua V. and Langmore, Ian and Tran, Dustin and Vasudevan, Srinivas},
+	year = {2019},
+}
+
+@inproceedings{yu2020training,
+	title = {Training {Deep} {Energy}-{Based} {Models} with f-{Divergence} {Minimization}},
+	booktitle = {ICML},
+	author = {Yu, Lantao and Song, Yang and Song, Jiaming and Ermon, Stefano},
+	year = {2020},
+}
+
+@article{roberts1996exponential,
+	title = {Exponential convergence of {Langevin} distributions and their discrete approximations},
+	volume = {2},
+	issn = {1350-7265},
+	number = {4},
+	journal = {Bernoulli},
+	author = {Roberts, Gareth O. and Tweedie, Richard L.},
+	year = {1996},
+	mrnumber = {MR1440273},
+	zmnumber = {0870.60027},
+	pages = {341--363},
+}
+
+@inproceedings{ho2019flow,
+	title = {Flow++: {Improving} {Flow}-{Based} {Generative} {Models} with {Variational} {Dequantization} and {Architecture} {Design}},
+	shorttitle = {Flow++},
+	booktitle = {ICML},
+	author = {Ho, Jonathan and Chen, Xi and Srinivas, Aravind and Duan, Yan and Abbeel, Pieter},
+	year = {2019},
+}
+
+@article{wu2020stochastic,
+	title = {Stochastic {Normalizing} {Flows}},
+	author = {Wu, Hao and Köhler, Jonas and No\'e, Frank},
+	journal = {NeurIPS},
+	year = {2020},
+}
+
+@inproceedings{vandenoord2015locallyconnected,
+	title = {Locally-connected transformations for deep {GMMs}}, 
+	booktitle = {ICML Workshop},
+	author = {van den Oord, A\"aron and Dambre, Joni},
+	year = {2015},
+}
+
+@article{duan2020transport,
+	title = {Transport {Monte} {Carlo}},
+	journal = {arXiv:1907.10448},
+	author = {Duan, Leo L.},
+	year = {2020},
+}
+
+@inproceedings{cornish2020relaxing,
+	title = {Relaxing {Bijectivity} {Constraints} with {Continuously} {Indexed} {Normalising} {Flows}},
+	booktitle = {ICML},
+	author = {Cornish, Rob and Caterini, Anthony and Deligiannidis, George and Doucet, Arnaud},
+	year = {2020},
+}
+
+@inproceedings{chen2020vflow,
+	title = {{VFlow}: {More} {Expressive} {Generative} {Flows} with {Variational} {Data} {Augmentation}},
+	shorttitle = {{VFlow}},
+	booktitle = {ICML},
+	author = {Chen, Jianfei and Lu, Cheng and Chenli, Biqi and Zhu, Jun and Tian, Tian},
+	year = {2020},
+}
+
+@article{huang2020augmented,
+	title = {Augmented {Normalizing} {Flows}: {Bridging} the {Gap} {Between} {Generative} {Flows} and {Latent} {Variable} {Models}},
+	shorttitle = {Augmented {Normalizing} {Flows}},
+	journal = {arXiv:2002.07101},
+	author = {Huang, Chin-Wei and Dinh, Laurent and Courville, Aaron},
+	year = {2020},
+}
+
+@article{nielsen2020survae,
+	title = {{SurVAE} {Flows}: {Surjections} to {Bridge} the {Gap} between {VAEs} and {Flows}},
+	volume = {33},
+	shorttitle = {{SurVAE} {Flows}},
+	journal = {NeurIPS},
+	author = {Nielsen, Didrik and Jaini, Priyank and Hoogeboom, Emiel and Winther, Ole and Welling, Max},
+	year = {2020},
+}
+
+@article{karami2019invertible,
+	title = {Invertible {Convolutional} {Flow}},
+	journal = {NeurIPS},
+	author = {Karami, Mahdi and Schuurmans, Dale and Sohl-Dickstein, Jascha and Dinh, Laurent and Duckworth, Daniel},
+	year = {2019},
+}
+
+@article{ma2019macow,
+	title = {{MaCow}: {Masked} {Convolutional} {Generative} {Flow}},
+	author = {Ma, Xuezhe and Kong, Xiang and Zhang, Shanghang and Hovy, Eduard},
+	journal = {NeurIPS},
+	year = {2019},
+}
+
+@article{song2019mintnet,
+	title = {{MintNet}: {Building} {Invertible} {Neural} {Networks} with {Masked} {Convolutions}},
+	volume = {32},
+	shorttitle = {{MintNet}},
+	journal = {NeurIPS},
+	author = {Song, Yang and Meng, Chenlin and Ermon, Stefano},
+	year = {2019},
+}
+
+@article{chen2019residual,
+	title = {Residual {Flows} for {Invertible} {Generative} {Modeling}},
+	author = {Chen, Ricky T. Q. and Behrmann, Jens and Duvenaud, David K. and Jacobsen, Joern-Henrik},
+	journal = {NeurIPS},
+	year = {2019},
+}
+
+@article{kim2020lipschitz,
+	title = {The {Lipschitz} {Constant} of {Self}-{Attention}},
+	journal = {arXiv:2006.04710},
+	author = {Kim, Hyunjik and Papamakarios, George and Mnih, Andriy},
+	year = {2020},
+}
+
+@inproceedings{durkan2019cubicspline,
+	title = {Cubic-{Spline} {Flows}},
+	booktitle = {ICML Workshop},
+	author = {Durkan, Conor and Bekasov, Artur and Murray, Iain and Papamakarios, George},
+	year = {2019},
+}
+
+@article{Aneja2020NCPVAEVariationalAutoencoders,
+	title = {{NCP}-{VAE}: {Variational} {Autoencoders} with {Noise} {Contrastive} {Priors}},
+	shorttitle = {{NCP}-{VAE}},
+	journal = {arXiv:2010.02917},
+	author = {Aneja, Jyoti and Schwing, Alexander and Kautz, Jan and Vahdat, Arash},
+	year = {2020},
+}
+
+@article{Krotov2019UnsupervisedLearningCompeting,
+	title = {Unsupervised learning by competing hidden units},
+	volume = {116},
+	issn = {0027-8424, 1091-6490},
+	doi = {10.1073/pnas.1820458116},
+	number = {16},
+	journal = {PNAS},
+	author = {Krotov, Dmitry and Hopfield, John J.},
+	year = {2019},
+	pages = {7723--7731},
+}
+
+@article{Santos2020StochasticElectrodynamicsInterpretation,
+	title = {Stochastic electrodynamics and the interpretation of quantum theory},
+	journal = {arXiv:1205.0916 [quant-ph]},
+	author = {Santos, Emilio},
+	year = {2020},
+}
+
+@article{Sacha2018TimeCrystalsReview,
+	title = {Time crystals: a review},
+	shorttitle = {Time crystals},
+	doi = {10.1088/1361-6633/aa8b38},
+	journal = {arXiv:1704.03735 [cond-mat, physics:quant-ph]},
+	author = {Sacha, Krzysztof and Zakrzewski, Jakub},
+	year = {2018},
+}
+
+@article{Yao2020ClassicalDiscreteTime,
+	title = {Classical {Discrete} {Time} {Crystals}},
+	volume = {16},
+	issn = {1745-2473, 1745-2481},
+	doi = {10.1038/s41567-019-0782-3},
+	number = {4},
+	journal = {Nature Physics},
+	author = {Yao, Norman Y. and Nayak, Chetan and Balents, Leon and Zaletel, Michael P.},
+	year = {2020},
+	pages = {438--447},
+}
+
+@article{Yao2017DiscreteTimeCrystals,
+	title = {Discrete time crystals: rigidity, criticality, and realizations},
+	volume = {118},
+	issn = {0031-9007, 1079-7114},
+	shorttitle = {Discrete time crystals},
+	doi = {10.1103/PhysRevLett.118.030401},
+	number = {3},
+	journal = {Physical Review Letters},
+	author = {Yao, Norman Y. and Potter, Andrew C. and Potirniche, Ionut-Dragos and Vishwanath, Ashvin},
+	year = {2017},
+	pages = {030401},
+}
+
+@article{Sacha2015ModelingSpontaneousBreaking,
+	title = {Modeling spontaneous breaking of time-translation symmetry},
+	doi = {10.1103/PhysRevA.91.033617},
+	journal = {arXiv:1410.3638 [cond-mat, physics:quant-ph]},
+	author = {Sacha, Krzysztof},
+	year = {2015},
+}
+
+@article{Else2016FloquetTimeCrystals,
+	title = {Floquet {Time} {Crystals}},
+	doi = {10.1103/PhysRevLett.117.090402},
+	journal = {arXiv:1603.08001 [cond-mat, physics:quant-ph]},
+	author = {Else, Dominic V. and Bauer, Bela and Nayak, Chetan},
+	year = {2016},
+}
+
+@article{Watanabe2015AbsenceQuantumTime,
+	title = {Absence of {Quantum} {Time} {Crystals}},
+	volume = {114},
+	issn = {0031-9007, 1079-7114},
+	doi = {10.1103/PhysRevLett.114.251603},
+	number = {25},
+	journal = {Physical Review Letters},
+	author = {Watanabe, Haruki and Oshikawa, Masaki},
+	year = {2015},
+	pages = {251603},
+}
+
+@article{Shapere2012ClassicalTimeCrystals,
+	title = {Classical {Time} {Crystals}},
+	doi = {10.1103/PhysRevLett.109.160402},
+	journal = {arXiv:1202.2537 [cond-mat, physics:gr-qc, physics:hep-th, physics:math-ph, physics:quant-ph]},
+	author = {Shapere, Alfred and Wilczek, Frank},
+	year = {2012},
+}
+
+@article{Wilczek2012QuantumTimeCrystals,
+	title = {Quantum {Time} {Crystals}},
+	volume = {109},
+	issn = {0031-9007, 1079-7114},
+	doi = {10.1103/PhysRevLett.109.160401},
+	number = {16},
+	journal = {Physical Review Letters},
+	author = {Wilczek, Frank},
+	year = {2012},
+	pages = {160401},
+}
+
+@article{EvansIntroductionStochasticDifferential,
+	title = {An {Introduction} {To} {Stochastic} {Differential} {Equations}},
+	author = {Evans, Lawrence C},
+	pages = {139},
+}
+
+@incollection{Huber1992RobustEstimationLocation,
+	address = {New York, NY},
+	series = {Springer {Series} in {Statistics}},
+	title = {Robust {Estimation} of a {Location} {Parameter}},
+	isbn = {978-1-4612-4380-9},
+	booktitle = {Breakthroughs in {Statistics}: {Methodology} and {Distribution}},
+	author = {Huber, Peter J.},
+	year = {1992},
+	doi = {10.1007/978-1-4612-4380-9_35},
+	pages = {492--518},
+}
+
+@article{Bousquet2017OptimalTransportGenerative,
+	title = {From optimal transport to generative modeling: the {VEGAN} cookbook},
+	shorttitle = {From optimal transport to generative modeling},
+	journal = {arXiv:1705.07642},
+	author = {Bousquet, Olivier and Gelly, Sylvain and Tolstikhin, Ilya and Simon-Gabriel, Carl-Johann and Schoelkopf, Bernhard},
+	year = {2017},
+}
+
+@article{Theis2016NoteEvaluationGenerative,
+	title = {A note on the evaluation of generative models},
+	journal = {arXiv:1511.01844},
+	author = {Theis, Lucas and Oord, A\"aron van den and Bethge, Matthias},
+	year = {2016},
+}
+
+@article{Brown2020LanguageModelsAre,
+	title = {Language {Models} are {Few}-{Shot} {Learners}},
+	journal = {arXiv:2005.14165},
+	author = {Brown, Tom B. and others},
+	year = {2020},
+}
+
+@inproceedings{Gregor2015DRAWRecurrentNeural,
+	title = {{DRAW}: {A} {Recurrent} {Neural} {Network} {For} {Image} {Generation}},
+	shorttitle = {{DRAW}},
+	booktitle = {ICML},
+	author = {Gregor, Karol and Danihelka, Ivo and Graves, Alex and Rezende, Danilo Jimenez and Wierstra, Daan},
+	year = {2015},
+}
+
+@article{Hochreiter1997LongShortTermMemory,
+	title = {Long {Short}-{Term} {Memory}},
+	volume = {9},
+	issn = {0899-7667},
+	doi = {10.1162/neco.1997.9.8.1735},
+	number = {8},
+	journal = {Neural Comput.},
+	author = {Hochreiter, Sepp and Schmidhuber, Jürgen},
+	year = {1997},
+	pages = {1735--1780},
+}
+
+@article{Chung2014EmpiricalEvaluationGated,
+	title = {Empirical {Evaluation} of {Gated} {Recurrent} {Neural} {Networks} on {Sequence} {Modeling}},
+	journal = {arXiv:1412.3555},
+	author = {Chung, Junyoung and Gulcehre, Caglar and Cho, KyungHyun and Bengio, Yoshua},
+	year = {2014},
+}
+
+@article{Bengio2003NeuralProbabilisticLanguage,
+	title = {A {Neural} {Probabilistic} {Language} {Model}},
+	volume = {3},
+	issn = {ISSN 1533-7928},
+	journal = {JMLR},
+	author = {Bengio, Yoshua and Ducharme, R\'ejean and Vincent, Pascal and Jauvin, Christian},
+	year = {2003},
+	pages = {1137--1155},
+}
+
+@article{Tzen2019NeuralStochasticDifferential,
+	title = {Neural {Stochastic} {Differential} {Equations}: {Deep} {Latent} {Gaussian} {Models} in the {Diffusion} {Limit}},
+	shorttitle = {Neural {Stochastic} {Differential} {Equations}},
+	journal = {arXiv:1905.09883},
+	author = {Tzen, Belinda and Raginsky, Maxim},
+	year = {2019},
+}
+
+@article{Nijkamp2020LearningEnergybasedModel,
+	title = {Learning {Energy}-based {Model} with {Flow}-based {Backbone} by {Neural} {Transport} {MCMC}},
+	journal = {arXiv:2006.06897},
+	author = {Nijkamp, Erik and Gao, Ruiqi and Sountsov, Pavel and Vasudevan, Srinivas and Pang, Bo and Zhu, Song-Chun and Wu, Ying Nian},
+	year = {2020},
+}
+
+@article{Bengio2013EstimatingPropagatingGradients,
+	title = {Estimating or {Propagating} {Gradients} {Through} {Stochastic} {Neurons} for {Conditional} {Computation}},
+	journal = {arXiv:1308.3432},
+	author = {Bengio, Yoshua and L\'eonard, Nicholas and Courville, Aaron},
+	year = {2013},
+}
+
+@article{Zhang2019ApproximationCapabilitiesNeural,
+	title = {Approximation {Capabilities} of {Neural} {Ordinary} {Diﬀerential} {Equations}},
+	journal = {arXiv:1907.12998},
+	author = {Zhang, Han and Gao, Xi and Unterman, Jacob and Arodz, Tom},
+	year = {2019},
+}
+
+@book{Pontryagin2018MathematicalTheoryOptimal,
+	title = {Mathematical {Theory} of {Optimal} {Processes}},
+	isbn = {978-1-351-43306-8},
+	publisher = {Routledge},
+	author = {Pontryagin, L. S.},
+	year = {2018},
+}
+
+@article{Alain2016GSNsGenerativeStochastic,
+	title = {{GSNs}: generative stochastic networks},
+	volume = {5},
+	issn = {2049-8764},
+	shorttitle = {{GSNs}},
+	doi = {10.1093/imaiai/iaw003},
+	number = {2},
+	journal = {Information and Inference},
+	author = {Alain, Guillaume and Bengio, Yoshua and Yao, Li and Yosinski, Jason and Thibodeau-Laufer, \'eric and Zhang, Saizheng and Vincent, Pascal},
+	year = {2016},
+	pages = {210--249},
+}
+
+@article{Bengio2013GeneralizedDenoisingAutoEncoders,
+	title = {Generalized {Denoising} {Auto}-{Encoders} as {Generative} {Models}},
+	journal = {NeurIPS 26},
+	author = {Bengio, Yoshua and Yao, Li and Alain, Guillaume and Vincent, Pascal},
+	year = {2013},
+}
+
+@inproceedings{Shaham2019SinGANLearningGenerative,
+	title = {{SinGAN}: {Learning} a {Generative} {Model} {From} a {Single} {Natural} {Image}},
+	shorttitle = {{SinGAN}},
+	author = {Shaham, Tamar Rott and Dekel, Tali and Michaeli, Tomer},
+	year = {2019},
+	pages = {4570--4580},
+}
+
+@inproceedings{Dai2017DiverseNaturalImage,
+	title = {Towards {Diverse} and {Natural} {Image} {Descriptions} via a {Conditional} {GAN}},
+	author = {Dai, Bo and Fidler, Sanja and Urtasun, Raquel and Lin, Dahua},
+	year = {2017},
+	pages = {2970--2979},
+}
+
+@inproceedings{Choi2020StarGANV2Diverse,
+	title = {{StarGAN} v2: {Diverse} {Image} {Synthesis} for {Multiple} {Domains}},
+	shorttitle = {{StarGAN} v2},
+	author = {Choi, Yunjey and Uh, Youngjung and Yoo, Jaejun and Ha, Jung-Woo},
+	year = {2020},
+	pages = {8188--8197},
+}
+
+@inproceedings{Zhu2017UnpairedImageToImageTranslation,
+	title = {Unpaired {Image}-{To}-{Image} {Translation} {Using} {Cycle}-{Consistent} {Adversarial} {Networks}},
+	author = {Zhu, Jun-Yan and Park, Taesung and Isola, Phillip and Efros, Alexei A.},
+	year = {2017},
+	pages = {2223--2232},
+}
+
+@article{Salimans2016ImprovedTechniquesTraining,
+	title = {Improved {Techniques} for {Training} {GANs}},
+	journal = {NeurIPS},
+	author = {Salimans, Tim and Goodfellow, Ian and Zaremba, Wojciech and Cheung, Vicki and Radford, Alec and Chen, Xi},
+	year = {2016},
+}
+
+@inproceedings{touati2020randomized,
+	title = {Randomized {Value} {Functions} via {Multiplicative} {Normalizing} {Flows}},
+	booktitle = {UAI},
+	author = {Touati, Ahmed and Satija, Harsh and Romoff, Joshua and Pineau, Joelle and Vincent, Pascal},
+	year = {2020},
+	pages = {422--432},
+}
+
+@article{ha2018world,
+	title = {World {Models}},
+	journal = {arXiv:1803.10122},
+	author = {Ha, David and Schmidhuber, Jürgen},
+	year = {2018},
+}
+
+@article{kumar2019melgan,
+	title = {{MelGAN}: {Generative} {Adversarial} {Networks} for {Conditional} {Waveform} {Synthesis}},
+	volume = {32},
+	journal = {NeurIPS},
+	author = {Kumar, Kundan and Kumar, Rithesh and de Boissiere, Thibault and Gestin, Lucas and Teoh, Wei Zhen and Sotelo, Jose and de Br\'ebisson, Alexandre and Bengio, Yoshua and Courville, Aaron C.},
+	year = {2019},
+}
+
+@inproceedings{prenger2019waveglow,
+	title = {{WaveGlow}: {A} {Flow}-based {Generative} {Network} for {Speech} {Synthesis}},
+	booktitle = {IEEE ICASSP},
+	author = {Prenger, R. and Valle, R. and Catanzaro, B.},
+	year = {2019},
+	pages = {3617--3621},
+}
+
+@inproceedings{nie2019relgan,
+	title = {{RelGAN}: {Relational} {Generative} {Adversarial} {Networks} for {Text} {Generation}},
+	booktitle = {ICLR},
+	author = {Nie, Weili and Narodytska, Nina and Patel, Ankit},
+	year = {2019},
+}
+
+@article{lee2018stochastic,
+	title = {Stochastic {Adversarial} {Video} {Prediction}},
+	journal = {arXiv:1804.01523},
+	author = {Lee, Alex X. and Zhang, Richard and Ebert, Frederik and Abbeel, Pieter and Finn, Chelsea and Levine, Sergey},
+	year = {2018},
+}
+
+@inproceedings{babaeizadeh2018stochastic,
+	title = {Stochastic {Variational} {Video} {Prediction}},
+	booktitle = {ICLR},
+	author = {Babaeizadeh, Mohammad and Finn, Chelsea and Erhan, Dumitru and Campbell, Roy H. and Levine, Sergey},
+	year = {2018},
+}
+
+@article{Heusel2017GANsTrainedTwo,
+	title = {{GANs} {Trained} by a {Two} {Time}-{Scale} {Update} {Rule} {Converge} to a {Local} {Nash} {Equilibrium}},
+	journal = {NeurIPS 30},
+	author = {Heusel, Martin and Ramsauer, Hubert and Unterthiner, Thomas and Nessler, Bernhard and Hochreiter, Sepp},
+	year = {2017},
+}
+
+@inproceedings{Karras2020AnalyzingImprovingImage,
+	title = {Analyzing and {Improving} the {Image} {Quality} of {StyleGAN}},
+	author = {Karras, Tero and Laine, Samuli and Aittala, Miika and Hellsten, Janne and Lehtinen, Jaakko and Aila, Timo},
+	booktitle = {IEEE CVPR},
+	year = {2020},
+}
+
+@inproceedings{Karras2019StyleBasedGeneratorArchitecture,
+	title = {A {Style}-{Based} {Generator} {Architecture} for {Generative} {Adversarial} {Networks}},
+	author = {Karras, Tero and Laine, Samuli and Aila, Timo},
+	booktitle = {IEEE CVPR},
+	year = {2019},
+}
+
+@inproceedings{Karras2018ProgressiveGrowingGANsa,
+	title = {Progressive {Growing} of {GANs} for {Improved} {Quality}, {Stability}, and {Variation}},
+	booktitle = {ICLR},
+	author = {Karras, Tero and Aila, Timo and Laine, Samuli and Lehtinen, Jaakko},
+	year = {2018},
+}
+
+@inproceedings{Zhang2017StackGANTextPhotoRealistic,
+	title = {{StackGAN}: {Text} to {Photo}-{Realistic} {Image} {Synthesis} {With} {Stacked} {Generative} {Adversarial} {Networks}},
+	shorttitle = {{StackGAN}},
+	author = {Zhang, Han and Xu, Tao and Li, Hongsheng and Zhang, Shaoting and Wang, Xiaogang and Huang, Xiaolei and Metaxas, Dimitris N.},
+	booktitle = {IEEE CVPR},
+	year = {2017},
+}
+
+@article{Ioffe2015BatchNormalizationAccelerating,
+	title = {Batch {Normalization}: {Accelerating} {Deep} {Network} {Training} by {Reducing} {Internal} {Covariate} {Shift}},
+	shorttitle = {Batch {Normalization}},
+	journal = {arXiv:1502.03167},
+	author = {Ioffe, Sergey and Szegedy, Christian},
+	year = {2015},
+}
+
+@inproceedings{Radford2016UnsupervisedRepresentationLearning,
+	title = {Unsupervised {Representation} {Learning} with {Deep} {Convolutional} {Generative} {Adversarial} {Networks}},
+	booktitle = {ICLR},
+	author = {Radford, Alec and Metz, Luke and Chintala, Soumith},
+	year = {2016},
+}
+
+@article{Ramsauer2020HopfieldNetworksAll,
+	title = {Hopfield {Networks} is {All} {You} {Need}},
+	journal = {arXiv:2008.02217},
+	author = {Ramsauer, Hubert and Sch\"afl, Bernhard and Lehner, Johannes and Seidl, Philipp and Widrich, Michael and Gruber, Lukas and Holzleitner, Markus and Pavlović, Milena and Sandve, Geir Kjetil and Greiff, Victor and Kreil, David and Kopp, Michael and Klambauer, Günter and Brandstetter, Johannes and Hochreiter, Sepp},
+	year = {2020},
+}
+
+@article{Tolstikhin2019WassersteinAutoEncoders,
+	title = {Wasserstein {Auto}-{Encoders}},
+	journal = {arXiv:1711.01558},
+	author = {Tolstikhin, Ilya and Bousquet, Olivier and Gelly, Sylvain and Schoelkopf, Bernhard},
+	year = {2019},
+}
+
+@inproceedings{Swersky2011AutoencodersScoreMatching,
+	title = {On {Autoencoders} and {Score} {Matching} for {Energy} {Based} {Models}},
+	booktitle = {ICML},
+	author = {Swersky, Kevin and Ranzato, Marc’Aurelio and Buchman, David and Marlin, Benjamin M and de Freitas, Nando},
+	year = {2011},
+}
+
+@inproceedings{Sohl-Dickstein2015DeepUnsupervisedLearning,
+	title = {Deep {Unsupervised} {Learning} using {Nonequilibrium} {Thermodynamics}},
+	booktitle = {ICML},
+	author = {Sohl-Dickstein, Jascha and Weiss, Eric A. and Maheswaranathan, Niru and Ganguli, Surya},
+	year = {2015},
+}
+
+@inproceedings{Ronneberger2015UNetConvolutionalNetworks,
+	address = {Cham},
+	series = {Lecture {Notes} in {Computer} {Science}},
+	title = {U-{Net}: {Convolutional} {Networks} for {Biomedical} {Image} {Segmentation}},
+	isbn = {978-3-319-24574-4},
+	shorttitle = {U-{Net}},
+	doi = {10.1007/978-3-319-24574-4_28},
+	booktitle = {MICCAI},
+	author = {Ronneberger, Olaf and Fischer, Philipp and Brox, Thomas},
+	year = {2015},
+	pages = {234--241},
+}
+
+@article{Li2019LearningEnergyBasedModels,
+	title = {Learning {Energy}-{Based} {Models} in {High}-{Dimensional} {Spaces} with {Multi}-scale {Denoising} {Score} {Matching}},
+	journal = {arXiv:1910.07762},
+	author = {Li, Zengyi and Chen, Yubei and Sommer, Friedrich T.},
+	year = {2019},
+}
+
+@article{Vincent2011ConnectionScoreMatching,
+	title = {A {Connection} {Between} {Score} {Matching} and {Denoising} {Autoencoders}},
+	volume = {23},
+	issn = {0899-7667},
+	doi = {10.1162/NECO_a_00142},
+	number = {7},
+	journal = {Neural Comput.},
+	author = {Vincent, Pascal},
+	year = {2011},
+	pages = {1661--1674},
+}
+
+@article{Hyvarinen2005EstimationNonNormalizedStatistical,
+	title = {Estimation of {Non}-{Normalized} {Statistical} {Models} by {Score} {Matching}},
+	volume = {6},
+	journal = {JMLR},
+	author = {Hyv\"arinen, Aapo},
+	year = {2005},
+	pages = {695--709},
+}
+
+@article{Tancik2020FourierFeaturesLet,
+	title = {Fourier {Features} {Let} {Networks} {Learn} {High} {Frequency} {Functions} in {Low} {Dimensional} {Domains}},
+	journal = {arXiv:2006.10739},
+	author = {Tancik, Matthew and Srinivasan, Pratul P. and Mildenhall, Ben and Fridovich-Keil, Sara and Raghavan, Nithin and Singhal, Utkarsh and Ramamoorthi, Ravi and Barron, Jonathan T. and Ng, Ren},
+	year = {2020},
+}
+
+@article{Zadeh2019VariationalAutoDecoder,
+	title = {Variational {Auto}-{Decoder}},
+	journal = {arXiv:1903.00840},
+	author = {Zadeh, Amir and Lim, Yao-Chong and Liang, Paul Pu and Morency, Louis-Philippe},
+	year = {2019},
+}
+
+@inproceedings{VanDenOord2016PixelRecurrentNeural,
+	title = {Pixel {Recurrent} {Neural} {Networks}},
+	isbn = {978-1-5108-2900-8},
+	booktitle = {ICML},
+	author = {Van Den Oord, A\"aron and Kalchbrenner, Nal and Kavukcuoglu, Koray},
+	year = {2016},
+}
+
+@inproceedings{Chen2017VariationalLossyAutoencoder,
+	title = {Variational {Lossy} {Autoencoder}},
+	booktitle = {ICLR},
+	author = {Chen, Xi and Kingma, Diederik P. and Salimans, Tim and Duan, Yan and Dhariwal, Prafulla and Schulman, John and Sutskever, Ilya and Abbeel, Pieter},
+	year = {2017},
+}
+
+@article{Kingma2017AdamMethodStochastic,
+	title = {Adam: {A} {Method} for {Stochastic} {Optimization}},
+	shorttitle = {Adam},
+	journal = {arXiv:1412.6980},
+	author = {Kingma, Diederik P. and Ba, Jimmy},
+	year = {2017},
+}
+
+@inproceedings{Park2019DeepSDFLearningContinuous,
+	title = {{DeepSDF}: {Learning} {Continuous} {Signed} {Distance} {Functions} for {Shape} {Representation}},
+	shorttitle = {{DeepSDF}},
+	booktitle = {IEEE CVPR},
+	author = {Park, Jeong Joon and Florence, Peter and Straub, Julian and Newcombe, Richard and Lovegrove, Steven},
+	year = {2019},
+}
+
+@article{Lecun1998GradientbasedLearningApplied,
+	title = {Gradient-based learning applied to document recognition},
+	volume = {86},
+	issn = {1558-2256},
+	doi = {10.1109/5.726791},
+	number = {11},
+	journal = {Proceedings of the IEEE},
+	author = {Lecun, Y. and Bottou, L. and Bengio, Y. and Haffner, P.},
+	year = {1998},
+	pages = {2278--2324},
+}
+
+@article{Sitzmann2020MetaSDFMetalearningSigned,
+	title = {{MetaSDF}: {Meta}-learning {Signed} {Distance} {Functions}},
+	shorttitle = {{MetaSDF}},
+	journal = {arXiv:2006.09662},
+	author = {Sitzmann, Vincent and Chan, Eric R. and Tucker, Richard and Snavely, Noah and Wetzstein, Gordon},
+	year = {2020},
+}
+
+@article{Sitzmann2020ImplicitNeuralRepresentationsa,
+	title = {Implicit {Neural} {Representations} with {Periodic} {Activation} {Functions}},
+	journal = {arXiv:2006.09661},
+	author = {Sitzmann, Vincent and Martel, Julien N. P. and Bergman, Alexander W. and Lindell, David B. and Wetzstein, Gordon},
+	year = {2020},
+}
+
+@article{Song2019GenerativeModelingEstimating,
+	title = {Generative {Modeling} by {Estimating} {Gradients} of the {Data} {Distribution}},
+	journal = {NeurIPS 32},
+	author = {Song, Yang and Ermon, Stefano},
+	year = {2019},
+}
+
+@article{Ho2020DenoisingDiffusionProbabilistic,
+	title = {Denoising {Diffusion} {Probabilistic} {Models}},
+	journal = {arXiv:2006.11239},
+	author = {Ho, Jonathan and Jain, Ajay and Abbeel, Pieter},
+	year = {2020},
+}
+
+@inproceedings{Jaini2019SumofSquaresPolynomialFlow,
+	title = {Sum-of-{Squares} {Polynomial} {Flow}},
+	booktitle = {ICML},
+	author = {Jaini, Priyank and Selby, Kira A. and Yu, Yaoliang},
+	year = {2019},
+}
+
+@article{Noe2019BoltzmannGeneratorsSampling,
+	title = {Boltzmann generators: {Sampling} equilibrium states of many-body systems with deep learning},
+	volume = {365},
+	number = {6457},
+	journal = {Science},
+	author = {No\'e, Frank and Olsson, Simon and Köhler, Jonas and Wu, Hao},
+	year = {2019},
+}
+
+@article{Muller2019NeuralImportanceSampling,
+	title = {Neural {Importance} {Sampling}},
+	volume = {38},
+	issn = {0730-0301},
+	doi = {10.1145/3341156},
+	number = {5},
+	journal = {ACM TOG},
+	author = {Müller, Thomas and Mcwilliams, Brian and Rousselle, Fabrice and Gross, Markus and Novák, Jan},
+	year = {2019},
+	pages = {145:1--145:19},
+}
+
+@inproceedings{Hoogeboom2019EmergingConvolutionsGenerative,
+	title = {Emerging {Convolutions} for {Generative} {Normalizing} {Flows}},
+	booktitle = {ICML},
+	author = {Hoogeboom, Emiel and Berg, Rianne van den and Welling, Max},
+	year = {2019},
+}
+
+@article{Tran2019DiscreteFlowsInvertible,
+	title = {Discrete {Flows}: {Invertible} {Generative} {Models} of {Discrete} {Data}},
+	shorttitle = {Discrete {Flows}},
+	journal = {NeurIPS 32},
+	author = {Tran, Dustin and Vafa, Keyon and Agrawal, Kumar and Dinh, Laurent and Poole, Ben},
+	year = {2019},
+}
+
+@inproceedings{Oord2018ParallelWaveNetFast,
+	title = {Parallel {WaveNet}: {Fast} {High}-{Fidelity} {Speech} {Synthesis}},
+	shorttitle = {Parallel {WaveNet}},
+	booktitle = {ICML},
+	author = {van den Oord, Aaron and others},
+	year = {2018},
+}
+% 	author = {Oord, Aaron and Li, Yazhe and Babuschkin, Igor and Simonyan, Karen and Vinyals, Oriol and Kavukcuoglu, Koray and Driessche, George and Lockhart, Edward and Cobo, Luis and Stimberg, Florian and Casagrande, Norman and Grewe, Dominik and Noury, Seb and Dieleman, Sander and Elsen, Erich and Kalchbrenner, Nal and Zen, Heiga and Graves, Alex and King, Helen and Walters, Tom and Belov, Dan and Hassabis, Demis},
+
+@article{Hoogeboom2019IntegerDiscreteFlows,
+	title = {Integer {Discrete} {Flows} and {Lossless} {Compression}},
+	journal = {NeurIPS 32},
+	author = {Hoogeboom, Emiel and Peters, Jorn and van den Berg, Rianne and Welling, Max},
+	year = {2019},
+}
+
+@article{Papamakarios2019NormalizingFlowsProbabilistic,
+	title = {Normalizing {Flows} for {Probabilistic} {Modeling} and {Inference}},
+	journal = {JMLR},
+	author = {Papamakarios, George and Nalisnick, Eric and Rezende, Danilo Jimenez and Mohamed, Shakir and Lakshminarayanan, Balaji},
+	year = {2021},
+	volume={22},
+    number={57},
+    pages={1--64},
+}
+
+@inproceedings{Dinh2019RADApproachDeep,
+	title = {A {RAD} approach to deep mixture models},
+	booktitle = {{ICLR} {Workshop}},
+	author = {Dinh, Laurent and Sohl-Dickstein, Jascha and Pascanu, Razvan and Larochelle, Hugo},
+	year = {2019},
+}
+
+@inproceedings{Kumar2019VideoFlowFlowBasedGenerative,
+	title = {{VideoFlow}: {A} {Flow}-{Based} {Generative} {Model} for {Video}},
+	booktitle = {ICML Workshop},
+	author = {Kumar, Manoj and Babaeizadeh, Mohammad and Erhan, Dumitru and Finn, Chelsea and Levine, Sergey and Dinh, Laurent and Kingma, Durk},
+	year = {2019},
+}
+
+@article{Hoogeboom2020LearningDiscreteDistributions,
+	title = {Learning {Discrete} {Distributions} by {Dequantization}},
+	journal = {arXiv:2001.11235},
+	author = {Hoogeboom, Emiel and Cohen, Taco S. and Tomczak, Jakub M.},
+	year = {2020},
+}
+
+@inproceedings{Grover2018FlowGANCombiningMaximum,
+	title = {Flow-{GAN}: {Combining} {Maximum} {Likelihood} and {Adversarial} {Learning} in {Generative} {Models}},
+	shorttitle = {Flow-{GAN}},
+	booktitle = {AAAI},
+	author = {Grover, Aditya and Dhar, Manik and Ermon, Stefano},
+	year = {2018},
+}
+
+@article{Bogachev2005TriangularTransformationsMeasures,
+	title = {Triangular transformations of measures},
+	volume = {196},
+	issn = {1064-5616, 1468-4802},
+	doi = {10.1070/SM2005v196n03ABEH000882},
+	number = {3},
+	journal = {Sbornik: Mathematics},
+	author = {Bogachev, V I and Kolesnikov, A V and Medvedev, K V},
+	year = {2005},
+	pages = {309--335},
+}
+
+@inproceedings{DeCao2019BlockNeuralAutoregressive,
+	title = {Block {Neural} {Autoregressive} {Flow}},
+	booktitle = {UAI},
+	author = {De Cao, Nicola and Titov, Ivan and Aziz, Wilker},
+	year = {2019},
+}
+
+@article{Durkan2019NeuralSplineFlows,
+	title = {Neural {Spline} {Flows}},
+	journal = {NeurIPS 32},
+	author = {Durkan, Conor and Bekasov, Artur and Murray, Iain and Papamakarios, George},
+	year = {2019},
+}
+
+@inproceedings{Huang2018NeuralAutoregressiveFlows,
+	title = {Neural {Autoregressive} {Flows}},
+	booktitle = {ICML},
+	author = {Huang, Chin-Wei and Krueger, David and Lacoste, Alexandre and Courville, Aaron},
+	year = {2018},
+}
+
+@inproceedings{Behrmann2019InvertibleResidualNetworks,
+	title = {Invertible {Residual} {Networks}},
+	booktitle = {ICML},
+	author = {Behrmann, Jens and Grathwohl, Will and Chen, Ricky T. Q. and Duvenaud, David and Jacobsen, Jörn-Henrik},
+	year = {2019},
+}
+
+@inproceedings{Jacobsen2018IRevNetDeepInvertible,
+	title = {i-{RevNet}: {Deep} {Invertible} {Networks}},
+	shorttitle = {i-{RevNet}},
+	booktitle = {ICLR},
+	author = {Jacobsen, Jörn-Henrik and Smeulders, Arnold and Oyallon, Edouard},
+	year = {2018},
+}
+
+@inproceedings{Berg2018SylvesterNormalizingFlows,
+	title = {Sylvester {Normalizing} {Flows} for {Variational} {Inference}},
+	booktitle = {UAI},
+	author = {Berg, Rianne van den and Hasenclever, Leonard and Tomczak, Jakub M. and Welling, Max},
+	year = {2018},
+}
+
+@inproceedings{Hasenclever2017VariationalInferenceOrthogonal,
+	title = {Variational {Inference} with {Orthogonal} {Normalizing} {Flows}},
+	booktitle = {Workshop  on  {Bayesian}  {Deep}  {Learning}, {NIPS}},
+	author = {Hasenclever, Leonard and Tomczak, Jakub M and Welling, Max},
+	year = {2017},
+}
+
+@article{Zhang2019SelfAttentionGenerativeAdversarial,
+	title = {Self-{Attention} {Generative} {Adversarial} {Networks}},
+	journal = {arXiv:1805.08318},
+	author = {Zhang, Han and Goodfellow, Ian and Metaxas, Dimitris and Odena, Augustus},
+	year = {2019},
+}
+
+@article{Brock2019LargeScaleGAN,
+	title = {Large {Scale} {GAN} {Training} for {High} {Fidelity} {Natural} {Image} {Synthesis}},
+	journal = {arXiv:1809.11096},
+	author = {Brock, Andrew and Donahue, Jeff and Simonyan, Karen},
+	year = {2019},
+}
+
+@inproceedings{Liu2019SpectralRegularizationCombating,
+	title = {Spectral {Regularization} for {Combating} {Mode} {Collapse} in {GANs}},
+	isbn = {978-1-72814-803-8},
+	doi = {10.1109/ICCV.2019.00648},
+	booktitle = {IEEE ICCV},
+	author = {Liu, Kanglin and Qiu, Guoping and Tang, Wenming and Zhou, Fei},
+	year = {2019},
+}
+
+@article{Huszar2015HowNotTrain,
+	title = {How (not) to {Train} your {Generative} {Model}: {Scheduled} {Sampling}, {Likelihood}, {Adversary}?},
+	shorttitle = {How (not) to {Train} your {Generative} {Model}},
+	journal = {arXiv:1511.05101},
+	author = {Huszár, Ferenc},
+	year = {2015},
+}
+
+@inproceedings{Ding2020GuidedVariationalAutoencoder,
+	title = {Guided {Variational} {Autoencoder} for {Disentanglement} {Learning}},
+	booktitle = {IEEE CVPR},
+	author = {Ding, Zheng and Xu, Yifan and Xu, Weijian and Parmar, Gaurav and Yang, Yang and Welling, Max and Tu, Zhuowen},
+	year = {2020},
+}
+
+@article{VanDenOord2017NeuralDiscreteRepresentation,
+	title = {Neural {Discrete} {Representation} {Learning}},
+	journal = {NeurIPS 30},
+	author = {van den Oord, Aaron and Vinyals, Oriol and kavukcuoglu, koray},
+	year = {2017},
+}
+
+@inproceedings{He2019LaggingInferenceNetworks,
+	title = {Lagging {Inference} {Networks} and {Posterior} {Collapse} in {Variational} {Autoencoders}},
+	booktitle = {ICLR},
+	author = {He, Junxian and Spokoyny, Daniel and Neubig, Graham and Berg-Kirkpatrick, Taylor},
+	year = {2019},
+}
+
+@article{Hinton2006ReducingDimensionalityData,
+	title = {Reducing the {Dimensionality} of {Data} with {Neural} {Networks}},
+	volume = {313},
+	issn = {0036-8075, 1095-9203},
+	doi = {10.1126/science.1127647},
+	number = {5786},
+	journal = {Science},
+	author = {Hinton, G. E. and Salakhutdinov, R. R.},
+	year = {2006},
+	pmid = {16873662},
+	pages = {504--507},
+}
+
+@inproceedings{Nijkamp2020AnatomyMCMCBasedMaximum,
+	title = {On the {Anatomy} of {MCMC}-{Based} {Maximum} {Likelihood} {Learning} of {Energy}-{Based} {Models}},
+	booktitle = {{arXiv}:1903.12370},
+	author = {Nijkamp, Erik and Hill, Mitch and Han, Tian and Zhu, Song-Chun and Wu, Ying Nian},
+	year = {2020},
+}
+
+@inproceedings{Welling2011BayesianLearningStochastic,
+	title = {Bayesian {Learning} via {Stochastic} {Gradient} {Langevin} {Dynamics}},
+	booktitle = {ICML},
+	author = {Welling, Max and Teh, Yee Whye},
+	year = {2011},
+}
+
+@article{Zagoruyko2017WideResidualNetworks,
+	title = {Wide {Residual} {Networks}},
+	journal = {arXiv:1605.07146},
+	author = {Zagoruyko, Sergey and Komodakis, Nikos},
+	year = {2017},
+}
+
+@inproceedings{Xie2016TheoryGenerativeConvNet,
+	title = {A {Theory} of {Generative} {ConvNet}},
+	booktitle = {ICML},
+	author = {Xie, Jianwen and Lu, Yang and Zhu, Song-Chun and Wu, Ying Nian},
+	year = {2016},
+}
+
+@article{Hinton2006FastLearningAlgorithm,
+	title = {A {Fast} {Learning} {Algorithm} for {Deep} {Belief} {Nets}},
+	volume = {18},
+	issn = {0899-7667, 1530-888X},
+	doi = {10.1162/neco.2006.18.7.1527},
+	number = {7},
+	journal = {Neural Comput.},
+	author = {Hinton, Geoffrey E. and Osindero, Simon and Teh, Yee-Whye},
+	year = {2006},
+	pages = {1527--1554},
+}
+
+@article{Sutskever2010ConvergencePropertiesContrastive,
+	title = {On the {Convergence} {Properties} of {Contrastive} {Divergence}},
+	journal = {AISTATS},
+	author = {Sutskever, Ilya and Tieleman, Tijmen},
+	year = {2010},
+	pages = {789--795},
+}
+
+@inproceedings{Carreira-Perpinan2005ContrastiveDivergenceLearning,
+	title = {On {Contrastive} {Divergence} {Learning}},
+	booktitle = {AISTATS, 10},
+	author = {Carreira-Perpinan, Miguel A and Hinton, Geoffrey E},
+	year = {2005},
+	pages = {33--40},
+}
+
+@inproceedings{Hinton1983OptimalPerceptualInference,
+	title = {Optimal {Perceptual} {Inference}},
+	booktitle = {IEEE CVPR},
+	author = {Hinton, G E and Sejnowski, T J},
+	year = {1983},
+}
+
+@article{Hinton2002TrainingProductsExperts,
+	title = {Training {Products} of {Experts} by {Minimizing} {Contrastive} {Divergence}},
+	volume = {14},
+	issn = {0899-7667, 1530-888X},
+	doi = {10.1162/089976602760128018},
+	number = {8},
+	journal = {Neural Comput.},
+	author = {Hinton, Geoffrey E.},
+	year = {2002},
+	pages = {1771--1800},
+}
+
+@incollection{Welling2002NewLearningAlgorithma,
+	address = {Berlin, Heidelberg},
+	title = {A {New} {Learning} {Algorithm} for {Mean} {Field} {Boltzmann} {Machines}},
+	volume = {2415},
+	isbn = {978-3-540-44074-1 978-3-540-46084-8},
+	booktitle = {ICANN},
+	author = {Welling, Max and Hinton, Geoffrey E.},
+	year = {2002},
+	doi = {10.1007/3-540-46084-5_57},
+	pages = {351--357},
+}
+
+@article{LeCun2006TutorialEnergyBasedLearning,
+	title = {A {Tutorial} on {Energy}-{Based} {Learning}},
+	volume = {1},
+	number = {0},
+	journal = {A Tutorial on Energy-Based Learning},
+	author = {LeCun, Yann and Chopra, Sumit and Hadsell, Raia and Ranzato, Marc’Aurelio and Huang, Fu Jie},
+	year = {2006},
+}
+
+@article{Miyato2018SpectralNormalizationGenerative,
+	title = {Spectral {Normalization} for {Generative} {Adversarial} {Networks}},
+	journal = {ICLR},
+	author = {Miyato, Takeru and Kataoka, Toshiki and Koyama, Masanori and Yoshida, Yuichi},
+	year = {2018},
+}
+
+@article{Jolicoeur-Martineau2018RelativisticDiscriminatorKey,
+	title = {The relativistic discriminator: a key element missing from standard {GAN}},
+	shorttitle = {The relativistic discriminator},
+	journal = {ICLR},
+	author = {Jolicoeur-Martineau, Alexia},
+	year = {2018},
+}
+
+@inproceedings{Mao2017LeastSquaresGenerative,
+	title = {Least {Squares} {Generative} {Adversarial} {Networks}},
+	author = {Mao, Xudong and Li, Qing and Xie, Haoran and Lau, Raymond Y. K. and Wang, Zhen and Paul Smolley, Stephen},
+	booktitle = {IEEE CVPR},
+	year = {2017},
+}
+
+@article{Gulrajani2017ImprovedTrainingWasserstein,
+	title = {Improved {Training} of {Wasserstein} {GANs}},
+	journal = {NeurIPS 30},
+	author = {Gulrajani, Ishaan and Ahmed, Faruk and Arjovsky, Martin and Dumoulin, Vincent and Courville, Aaron C},
+	year = {2017},
+}
+
+@article{Lucic2018AreGANsCreated,
+	title = {Are {GANs} {Created} {Equal}? {A} {Large}-{Scale} {Study}},
+	shorttitle = {Are {GANs} {Created} {Equal}?},
+	journal = {NeurIPS 31},
+	author = {Lucic, Mario and Kurach, Karol and Michalski, Marcin and Gelly, Sylvain and Bousquet, Olivier},
+	year = {2018},
+}
+
+@article{Qin2019HowDoesLipschitz,
+	title = {How does {Lipschitz} {Regularization} {Influence} {GAN} {Training}?},
+	journal = {arXiv:1811.09567},
+	author = {Qin, Yipeng and Mitra, Niloy and Wonka, Peter},
+	year = {2019},
+}
+
+@article{Nijkamp2019LearningNonConvergentNonPersistent,
+	title = {Learning {Non}-{Convergent} {Non}-{Persistent} {Short}-{Run} {MCMC} {Toward} {Energy}-{Based} {Model}},
+	journal = {NeurIPS 32},
+	author = {Nijkamp, Erik and Hill, Mitch and Zhu, Song-Chun and Wu, Ying Nian},
+	year = {2019},
+}
+
+@inproceedings{Zhao2017EnergybasedGenerativeAdversarial,
+	title = {Energy-based {Generative} {Adversarial} {Network}},
+	booktitle = {ICLR},
+	author = {Zhao, Junbo and Mathieu, Michael and LeCun, Yann},
+	year = {2017},
+}
+
+@incollection{Turner2011TwoProblemsVariational,
+	address = {Cambridge},
+	title = {Two problems with variational expectation maximisation for time series models},
+	isbn = {978-0-511-98467-9},
+	booktitle = {Bayesian {Time} {Series} {Models}},
+	author = {Turner, Richard Eric and Sahani, Maneesh},
+	year = {2011},
+	doi = {10.1017/CBO9780511984679.006},
+	pages = {104--124},
+}
+
+@inproceedings{Ying2019X2CTGANReconstructingCT,
+	title = {{X2CT}-{GAN}: {Reconstructing} {CT} {From} {Biplanar} {X}-{Rays} {With} {Generative} {Adversarial} {Networks}},
+	shorttitle = {{X2CT}-{GAN}},
+	author = {Ying, Xingde and Guo, Heng and Ma, Kai and Wu, Jian and Weng, Zhengxin and Zheng, Yefeng},
+	year = {2019},
+	pages = {10619--10628},
+}
+
+@article{Chen2018NeuralOrdinaryDifferential,
+	title = {Neural {Ordinary} {Differential} {Equations}},
+	journal = {NeurIPS 31},
+	author = {Chen, Ricky T. Q. and Rubanova, Yulia and Bettencourt, Jesse and Duvenaud, David K},
+	year = {2018},
+}
+
+@article{Papamakarios2017MaskedAutoregressiveFlow,
+	title = {Masked {Autoregressive} {Flow} for {Density} {Estimation}},
+	journal = {NeurIPS 30},
+	author = {Papamakarios, George and Pavlakou, Theo and Murray, Iain},
+	year = {2017},
+}
+
+@article{Kingma2016ImprovedVariationalInference,
+	title = {Improved {Variational} {Inference} with {Inverse} {Autoregressive} {Flow}},
+	journal = {NeurIPS 29},
+	author = {Kingma, Durk P and Salimans, Tim and Jozefowicz, Rafal and Chen, Xi and Sutskever, Ilya and Welling, Max},
+	year = {2016},
+}
+
+@article{Rezende2015VariationalInferenceNormalizing,
+	title = {Variational {Inference} with {Normalizing} {Flows}},
+	journal = {ICML},
+	author = {Rezende, Danilo Jimenez and Mohamed, Shakir},
+	year = {2015},
+}
+
+@article{Zhao2017DeeperUnderstandingVariational,
+	title = {Towards {Deeper} {Understanding} of {Variational} {Autoencoding} {Models}},
+	journal = {arXiv:1702.08658},
+	author = {Zhao, Shengjia and Song, Jiaming and Ermon, Stefano},
+	year = {2017},
+}
+
+@article{Christiano2018SupervisingStrongLearners,
+	title = {Supervising strong learners by amplifying weak experts},
+	journal = {arXiv:1810.0857},
+	author = {Christiano, Paul and Shlegeris, Buck and Amodei, Dario},
+	year = {2018},
+}
+
+@article{Chen2017PixelSNAILImprovedAutoregressive,
+	title = {{PixelSNAIL}: {An} {Improved} {Autoregressive} {Generative} {Model}},
+	journal = {ICML},
+	author = {Chen, Xi and Mishra, Nikhil and Rohaninejad, Mostafa and Abbeel, Pieter},
+	year = {2017},
+}
+
+@article{Holzinger2017WhatWeNeed,
+	title = {What do we need to build explainable {AI} systems for the medical domain?},
+	journal = {arXiv:1712.09923},
+	author = {Holzinger, Andreas and Biemann, Chris and Pattichis, Constantinos S. and Kell, Douglas B.},
+	year = {2017},
+}
+
+@article{Oord2016WaveNetGenerativeModel,
+	title = {{WaveNet}: {A} {Generative} {Model} for {Raw} {Audio}},
+	journal = {arXiv:1609.03499},
+	author = {van den Oord, Aaron and Dieleman, Sander and Zen, Heiga and Simonyan, Karen and Vinyals, Oriol and Graves, Alex and Kalchbrenner, Nal and Senior, Andrew and Kavukcuoglu, Koray},
+	year = {2016},
+}
+
+@article{Salimans2017PixelCNNImprovingPixelCNN,
+	title = {{PixelCNN}++: {Improving} the {PixelCNN} with {Discretized} {Logistic} {Mixture} {Likelihood} and {Other} {Modifications}},
+	journal = {ICLR},
+	author = {Salimans, Tim and Karpathy, Andrej and Chen, Xi and Kingma, Diederik P.},
+	year = {2017},
+}
+
+@article{Bengio2000ModelingHighDimensionalDiscrete,
+	title = {Modeling {High}-{Dimensional} {Discrete} {Data} with {Multi}-{Layer} {Neural} {Networks}},
+	journal = {NeurIPS},
+	author = {Bengio, Yoshua and Bengio, Samy},
+	year = {2000},
+}
+
+@article{Barrett2018MeasuringAbstractReasoning,
+	title = {Measuring abstract reasoning in neural networks},
+	journal = {ICML},
+	author = {Barrett, David G. T. and Hill, Felix and Santoro, Adam and Morcos, Ari S. and Lillicrap, Timothy},
+	year = {2018},
+}
+
+@article{Adams1975UncertaintiesTransmittedPremises,
+	title = {On the {Uncertainties} {Transmitted} from {Premises} to {Conclusions} in {Deductive} {Inferences}},
+	volume = {30},
+	number = {4},
+	journal = {Synthese},
+	author = {Adams, Ernest W and Levine, Howard P},
+	year = {1975},
+	pages = {429--460},
+}
+
+@inproceedings{Dinh2015NICENonlinearIndependent,
+	title = {{NICE}: {Non}-{Linear} {Independent} {Components} {Estimation}},
+	booktitle = {ICLR Workshop},
+	author = {Dinh, Laurent and Krueger, David and Bengio, Yoshua},
+	year = {2015},
+}
+
+@article{Jordan1999IntroductionVariationalMethods,
+	title = {Introduction to variational methods for graphical models},
+	volume = {37},
+	issn = {08856125},
+	doi = {10.1023/A:1007665907178},
+	number = {2},
+	journal = {Machine Learning},
+	author = {Jordan, Michael I. and Ghahramani, Zoubin and Jaakkola, Tommi S. and Saul, Lawrence K.},
+	year = {1999},
+	pages = {183--233},
+}
+
+@article{Burgess2018UnderstandingDisentanglingBeta,
+	title = {Understanding disentangling in \${\textbackslash}beta\$-{VAE}},
+	journal = {arXiv:1804.03599},
+	author = {Burgess, Christopher P. and Higgins, Irina and Pal, Arka and Matthey, Loic and Watters, Nick and Desjardins, Guillaume and Lerchner, Alexander},
+	year = {2018},
+}
+
+@article{Kingma2018GlowGenerativeFlow,
+	title = {Glow: {Generative} {Flow} with {Invertible} 1x1 {Convolutions}},
+	shorttitle = {Glow},
+	journal = {NeurIPS 31},
+	author = {Kingma, Durk P and Dhariwal, Prafulla},
+	year = {2018},
+}
+
+@article{Goodfellow2014GenerativeAdversarialNets,
+	title = {Generative {Adversarial} {Nets}},
+	journal = {NeurIPS 27},
+	author = {Goodfellow, Ian and Pouget-Abadie, Jean and Mirza, Mehdi and Xu, Bing and Warde-Farley, David and Ozair, Sherjil and Courville, Aaron and Bengio, Yoshua},
+	year = {2014},
+}
+
+@article{Razavi2019GeneratingDiverseHighFidelity,
+	title = {Generating {Diverse} {High}-{Fidelity} {Images} with {VQ}-{VAE}-2},
+	journal = {NeurIPS 32},
+	author = {Razavi, Ali and van den Oord, Aaron and Vinyals, Oriol},
+	year = {2019},
+}
+
+@article{Nowozin2016FGANTrainingGenerative,
+	title = {f-{GAN}: {Training} {Generative} {Neural} {Samplers} using {Variational} {Divergence} {Minimization}},
+	shorttitle = {f-{GAN}},
+	journal = {NeurIPS 29},
+	author = {Nowozin, Sebastian and Cseke, Botond and Tomioka, Ryota},
+	year = {2016},
+}
+
+@inproceedings{Hoffman2016ELBOSurgeryAnother,
+	title = {{ELBO} surgery: yet another way to carve up the variational evidence lower bound},
+	booktitle = {NeurIPS Workshop},
+	author = {Hoffman, Matthew D and Johnson, Matthew J},
+	year = {2016},
+}
+
+@article{VanDenOord2016ConditionalImageGeneration,
+	title = {Conditional {Image} {Generation} with {PixelCNN} {Decoders}},
+	journal = {NeurIPS 29},
+	author = {van den Oord, Aaron and Kalchbrenner, Nal and Espeholt, Lasse and kavukcuoglu, koray and Vinyals, Oriol and Graves, Alex},
+	year = {2016},
+}
+
+@article{Kingma2014AutoEncodingVariationalBayes,
+	title = {Auto-{Encoding} {Variational} {Bayes}},
+	journal = {ICLR},
+	author = {Kingma, Diederik P. and Welling, Max},
+	year = {2014},
+}
+
+@article{Dupont2019AugmentedNeuralODEs,
+	title = {Augmented {Neural} {ODEs}},
+	journal = {NeurIPS 32},
+	author = {Dupont, Emilien and Doucet, Arnaud and Teh, Yee Whye},
+	year = {2019},
+}
+
+@article{Vaswani2017AttentionAllYou,
+	title = {Attention is {All} you {Need}},
+	journal = {NeurIPS 30},
+	author = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N and Kaiser, Łukasz and Polosukhin, Illia},
+	year = {2017},
+}
+
+@article{Child2019GeneratingLongSequences,
+	title = {Generating {Long} {Sequences} with {Sparse} {Transformers}},
+	journal = {arXiv:1904.10509},
+	author = {Child, Rewon and Gray, Scott and Radford, Alec and Sutskever, Ilya},
+	year = {2019},
+}
+
+@article{Dosovitskiy2016GeneratingImagesPerceptual,
+	title = {Generating {Images} with {Perceptual} {Similarity} {Metrics} based on {Deep} {Networks}},
+	journal = {NeurIPS},
+	author = {Dosovitskiy, Alexey and Brox, Thomas},
+	year = {2016},
+}
+
+@article{Dinh2016DensityEstimationUsing,
+	title = {Density estimation using {Real} {NVP}},
+	journal = {ICLR},
+	author = {Dinh, Laurent and Sohl-Dickstein, Jascha and Bengio, Samy},
+	year = {2017},
+}
+
+@article{Ostrovski2018AutoregressiveQuantileNetworks,
+	title = {Autoregressive {Quantile} {Networks} for {Generative} {Modeling}},
+	journal = {ICML},
+	author = {Ostrovski, Georg and Dabney, Will and Munos, R\'emi},
+	year = {2018},
+}
+
+@article{Bottou2014MachineLearningMachine,
+	title = {From machine learning to machine reasoning: {An} essay},
+	volume = {94},
+	issn = {08856125},
+	doi = {10.1007/s10994-013-5335-x},
+	number = {2},
+	journal = {Machine Learning},
+	author = {Bottou, L\'eon},
+	year = {2014},
+	pages = {133--149},
+}
+
+@article{Samek2017ExplainableArtificialIntelligence,
+	title = {Explainable {Artificial} {Intelligence}: {Understanding}, {Visualizing} and {Interpreting} {Deep} {Learning} {Models}},
+	journal = {arXiv:1708.08296},
+	author = {Samek, Wojciech and Wiegand, Thomas and Müller, Klaus-Robert},
+	year = {2017},
+}
+
+@article{Saxton2019AnalysingMathematicalReasoning,
+	title = {Analysing {Mathematical} {Reasoning} {Abilities} of {Neural} {Models}},
+	journal = {ICLR},
+	author = {Saxton, David and Grefenstette, Edward and Hill, Felix and Kohli, Pushmeet},
+	year = {2019},
+}
+
+@article{Santoro2017SimpleNeuralNetwork,
+	title = {A simple neural network module for relational reasoning},
+	journal = {NeurIPS 30},
+	author = {Santoro, Adam and Raposo, David and Barrett, David G and Malinowski, Mateusz and Pascanu, Razvan and Battaglia, Peter and Lillicrap, Timothy},
+	year = {2017},
+}
+
+@book{Litjens2017SurveyDeepLearning,
+	title = {A survey on deep learning in medical image analysis},
+	volume = {42},
+	author = {Litjens, Geert and Kooi, Thijs and Bejnordi, Babak Ehteshami and Setio, Arnaud Arindra Adiyoso and Ciompi, Francesco and Ghafoorian, Mohsen and van der Laak, Jeroen A.W.M. and van Ginneken, Bram and Sánchez, Clara I.},
+	year = {2017},
+	doi = {10.1016/j.media.2017.07.005},
+	pmid = {28778026},
+}
+
+@article{Zhang2019AdvancesVariationalInference,
+	title = {Advances in {Variational} {Inference}},
+	volume = {41},
+	issn = {19393539},
+	doi = {10.1109/TPAMI.2018.2889774},
+	number = {8},
+	journal = {IEEE TPAMI},
+	author = {Zhang, Cheng and Butepage, Judith and Kjellstrom, Hedvig and Mandt, Stephan},
+	year = {2019},
+	pmid = {30596568},
+	pages = {2008--2026},
+}
+
+@article{pang2020efficient,
+  title={Efficient {Learning} of {Generative} {Models} via {Finite}-{Difference} {Score} {Matching}},
+  author={Pang, Tianyu and Xu, Kun and Li, Chongxuan and Song, Yang and Ermon, Stefano and Zhu, Jun},
+  journal={NeurIPS 34},
+  year={2020}
+}
