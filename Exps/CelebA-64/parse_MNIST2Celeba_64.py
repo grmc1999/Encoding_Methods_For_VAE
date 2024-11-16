@@ -73,7 +73,7 @@ def load_change_json(json_dir,args):
         rep_dims = config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["encoder_parameters"]["repr_sizes"]
         base_stride=config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["encoder_parameters"]["stride"]
         base_stride=(base_stride[0] if isinstance(base_stride,list) else base_stride)
-        min_rep=np.sum(image_size%(base_stride**np.arange(25))==0)-1
+        min_rep=np.sum(min(image_size_x,image_size_y)%(base_stride**np.arange(25))==0)-1
         config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["encoder_parameters"]["repr_sizes"]=[r if i<min_rep else rep_dims[min_rep] for i,r in enumerate(rep_dims)]
         config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["encoder_parameters"]["stride"]=[base_stride if i<min_rep else 1 for i,_ in enumerate(rep_dims[:-1])]
 
