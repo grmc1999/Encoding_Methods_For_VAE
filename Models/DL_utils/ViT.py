@@ -18,7 +18,7 @@ class ViT_ENC(nn.Module):
 
         inputs=Transformer_layers_sizes[:-1]
         
-        assert image_shape[1]%patch_shape[0]==0 and image_shape[2]%patch_shape[1]==0, "image shape is not divisible by patch shape"
+        assert not(image_shape[1]%patch_shape[0]==0 and image_shape[2]%patch_shape[1]==0), "image shape is not divisible by patch shape"
 
         self.num_patches=(image_shape[0]//patch_shape[0]) * (image_shape[1]//patch_shape[1])
 
