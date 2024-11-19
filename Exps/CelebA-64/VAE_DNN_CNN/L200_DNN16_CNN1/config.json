@@ -8,7 +8,7 @@
             "model": null,
             "epochs": 50,
             "folds": 2,
-            "batch_size": 2048,
+            "batch_size": 64,
             "use_cuda": true,
             "data_dir": null,
             "in_device": "cuda:0",
@@ -38,23 +38,23 @@
                         "parameters": {
                               "encoder_parameters": {
                                     "inp_sizes": [
-                                          12288,
-                                          12679,
-                                          13103,
-                                          13557,
-                                          14043,
-                                          14560,
-                                          15109,
-                                          15720,
-                                          16378,
-                                          17084,
-                                          17867,
-                                          18714,
-                                          19654,
-                                          20688,
-                                          21833,
-                                          23118,
-                                          24576
+                                          192595,
+                                          198723,
+                                          205369,
+                                          212485,
+                                          220102,
+                                          228205,
+                                          236810,
+                                          246386,
+                                          256700,
+                                          267765,
+                                          280037,
+                                          293313,
+                                          308046,
+                                          324252,
+                                          342198,
+                                          362339,
+                                          385191
                                     ],
                                     "activators": {
                                           "name": "LeakyReLU",
@@ -98,7 +98,7 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    24576,
+                                    385191,
                                     15876
                               ],
                               "dec_activators": {
@@ -113,8 +113,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    24576,
-                                    24576
+                                    385191,
+                                    385191
                               ],
                               "enc_activators": {
                                     "name": "Sigmoid",

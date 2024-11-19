@@ -38,11 +38,11 @@
                         "parameters": {
                               "encoder_parameters": {
                                     "inp_sizes": [
-                                          12288,
-                                          9827,
-                                          8181,
-                                          7021,
-                                          6144
+                                          192595,
+                                          154023,
+                                          128224,
+                                          110043,
+                                          96297
                                     ],
                                     "activators": {
                                           "name": "LeakyReLU",
@@ -53,8 +53,8 @@
                               },
                               "decoder_parameters": {
                                     "inp_sizes": [
-                                          6144,
-                                          12288
+                                          96297,
+                                          192595
                                     ],
                                     "activators": {
                                           "name": [
@@ -79,8 +79,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    6144,
-                                    6144
+                                    96297,
+                                    96297
                               ],
                               "dec_activators": {
                                     "name": "LeakyReLU",
@@ -94,8 +94,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    6144,
-                                    6144
+                                    96297,
+                                    96297
                               ],
                               "enc_activators": {
                                     "name": "Sigmoid",

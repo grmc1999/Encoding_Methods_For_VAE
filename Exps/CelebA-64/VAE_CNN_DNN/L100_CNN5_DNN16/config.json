@@ -8,7 +8,7 @@
             "model": null,
             "epochs": 200,
             "folds": 2,
-            "batch_size": 2048,
+            "batch_size": 64,
             "use_cuda": true,
             "data_dir": null,
             "in_device": "cuda:0",
@@ -63,23 +63,23 @@
                               },
                               "decoder_parameters": {
                                     "inp_sizes": [
-                                          12288,
-                                          12288,
-                                          12288,
-                                          12288,
-                                          12288,
-                                          12288,
-                                          12288,
-                                          12288,
-                                          12288,
-                                          12288,
-                                          12288,
-                                          12288,
-                                          12288,
-                                          12288,
-                                          12288,
-                                          12288,
-                                          12288
+                                          192595,
+                                          192595,
+                                          192595,
+                                          192595,
+                                          192595,
+                                          192595,
+                                          192595,
+                                          192595,
+                                          192595,
+                                          192595,
+                                          192595,
+                                          192595,
+                                          192595,
+                                          192595,
+                                          192595,
+                                          192595,
+                                          192595
                                     ],
                                     "activators": {
                                           "name": [
@@ -142,8 +142,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    12288,
-                                    12288
+                                    192595,
+                                    192595
                               ],
                               "dec_activators": {
                                     "name": "LeakyReLU",
@@ -157,8 +157,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    12288,
-                                    12288
+                                    192595,
+                                    192595
                               ],
                               "enc_activators": {
                                     "name": "Sigmoid",
