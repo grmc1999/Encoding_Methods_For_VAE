@@ -8,6 +8,8 @@ from DL_utils.DNN import b_encoder_NN as DNN_ENC
 from DL_utils.DNN import b_decoder_NN as DNN_DEC
 from DL_utils.CNN import b_encoder_conv as CNN_ENC
 from DL_utils.CNN import b_decoder_conv as CNN_DEC
+from DL_utils.ViT import ViT_DEC as ViT_DEC
+from DL_utils.ViT import ViT_ENC as ViT_ENC
 
 class EncodingDecodingModule(nn.Module):
   def __init__(self):
