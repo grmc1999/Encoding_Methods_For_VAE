@@ -28,7 +28,7 @@
           "model_name": "Unpaired_Flexible_Encoding_Decoding_VAE",
           "sub_modules": {
                 "encoding_decoding_module": {
-                      "module_type": "Asymmetrical_Convolutional_EDM",
+                      "module_type": "Asymmetrical_CNN_DNN_EDM",
                       "parameters": {
                             "encoder_parameters": {
                                 "image_shape":[28,28],
@@ -46,7 +46,8 @@
                               },
                                 "pre_dropout":0.5
                             },
-                            "image_shape":[28,28],
+                            "decoder_parameters":{
+                              "image_shape":[28,28],
                                 "patch_shape":[4,4],
                                 "Transformer_layers_sizes":196,
                                 "Attention_mechanisms":"Dot_product_attention",
@@ -60,8 +61,18 @@
                                     "params": {}
                               },
                                 "pre_dropout":0.5
-                      }
-                },
+                              },
+                              "flat": false,
+                              "deflat": false,
+                              "compression_factor": 0.25,
+                              "i_shape": [
+                                    28,
+                                    28
+                              ],
+                              "Enc_type": "ViT_ENC",
+                              "Dec_type": "ViT_DEC"
+                }
+            },
                 "P_NET": {
                       "variational_generation_type": "VAE_NETs",
                       "parameters": {
