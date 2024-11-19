@@ -34,11 +34,11 @@
                                     "repr_sizes": [
                                           1,
                                           4,
-                                          16,
-                                          16,
-                                          16
+                                          4,
+                                          4,
+                                          4
                                     ],
-                                    "kernel_size": 5,
+                                    "kernel_size": 9,
                                     "activators": {
                                           "name": "LeakyReLU",
                                           "params": {}
@@ -47,8 +47,8 @@
                                     "batch_norm": false,
                                     "dropout": null,
                                     "stride": [
-                                          2,
-                                          2,
+                                          4,
+                                          1,
                                           1,
                                           1
                                     ]
