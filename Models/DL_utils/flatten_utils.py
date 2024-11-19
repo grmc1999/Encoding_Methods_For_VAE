@@ -17,6 +17,8 @@ dim_DNN_ENC_type=(lambda module: module.comp_layer[0].out_features)
 dim_DNN_DEC_type=(lambda module: module.comp_layer[0].in_features)
 dim_CNN_ENC_type=(lambda module: module.comp_layer[0].out_channels)
 dim_CNN_DEC_type=(lambda module: module.comp_layer[0].in_channels)
+dim_ViT_ENC_type=(lambda module: module.image_patch_embedding[1].out_features)
+dim_ViT_DEC_type=(lambda module: module.image_patch_embedding[0].in_features)
 
 
 class hyb_view(object):
