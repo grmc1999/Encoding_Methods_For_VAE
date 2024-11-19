@@ -94,8 +94,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    3072,
-                                    3072
+                                    48148,
+                                    48148
                               ],
                               "dec_activators": {
                                     "name": "LeakyReLU",
@@ -109,8 +109,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    3072,
-                                    3072
+                                    48148,
+                                    48148
                               ],
                               "enc_activators": {
                                     "name": "LeakyReLU",

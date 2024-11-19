@@ -8,7 +8,7 @@
             "model": null,
             "epochs": 200,
             "folds": 2,
-            "batch_size": 2048,
+            "batch_size": 64,
             "use_cuda": true,
             "data_dir": null,
             "in_device": "cuda:0",
@@ -56,8 +56,8 @@
                               },
                               "decoder_parameters": {
                                     "inp_sizes": [
-                                          24576,
-                                          12288
+                                          385191,
+                                          192595
                                     ],
                                     "activators": {
                                           "name": [
@@ -90,8 +90,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    24576,
-                                    24576
+                                    385191,
+                                    385191
                               ],
                               "dec_activators": {
                                     "name": "LeakyReLU",
@@ -105,8 +105,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    24576,
-                                    24576
+                                    385191,
+                                    385191
                               ],
                               "enc_activators": {
                                     "name": "Sigmoid",

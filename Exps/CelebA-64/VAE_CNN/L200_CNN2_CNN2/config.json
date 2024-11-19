@@ -84,8 +84,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    24576,
-                                    24576
+                                    385191,
+                                    385191
                               ],
                               "dec_activators": {
                                     "name": "LeakyReLU",
@@ -99,8 +99,8 @@
                         "variational_generation_type": "VAE_NETs",
                         "parameters": {
                               "layer_size": [
-                                    24576,
-                                    24576
+                                    385191,
+                                    385191
                               ],
                               "enc_activators": {
                                     "name": "Sigmoid",
