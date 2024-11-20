@@ -70,7 +70,7 @@ class ViT_DEC(nn.Module):
         """
         super(ViT_DEC,self).__init__()
 
-        inputs=Transformer_layers_sizes[:-1]
+        inputs=Transformer_layers_sizes
         
         assert image_shape[0]%patch_shape[0]==0 and image_shape[1]%patch_shape[1]==0, "image shape is not divisible by patch shape"
 
