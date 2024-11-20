@@ -117,7 +117,7 @@ class ViT_DEC(nn.Module):
         self.est_class_token=est_class_token
 
         x=self.image_patch_embedding(x)
-
+        x=nn.Sigmoid(x)
         
         
         return x
