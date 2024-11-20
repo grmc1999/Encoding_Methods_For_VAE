@@ -13,18 +13,18 @@ class s_view(nn.Module):
 
 # TODO: add flexibility on in or out for decoder or encoder
 
-dim_DNN_ENC_type=(lambda module: module.comp_layer[0].out_features)
-dim_DNN_DEC_type=(lambda module: module.comp_layer[0].in_features)
-dim_CNN_ENC_type=(lambda module: module.comp_layer[0].out_channels)
-dim_CNN_DEC_type=(lambda module: module.comp_layer[0].in_channels)
+dim_DNN_ENC_type=(lambda module: module.im_layers[-1].comp_layer[0].out_features)
+dim_DNN_DEC_type=(lambda module: module.im_layers[0].comp_layer[0].in_features)
+dim_CNN_ENC_type=(lambda module: module.im_layers[-1].comp_layer[0].out_channels)
+dim_CNN_DEC_type=(lambda module: module.im_layers[0].comp_layer[0].in_channels)
 dim_ViT_ENC_type=(lambda module: module.image_patch_embedding[1].out_features)
 dim_ViT_DEC_type=(lambda module: module.image_patch_embedding[0].in_features)
 
 
 class hyb_view(object):
     def __init__(self,original_shape,cf,enc,dec,enc_dim_func,dec_dim_func):
-        self.enc_dims=enc_dim_func(enc.im_layers[-1])
-        self.dec_dims=dec_dim_func(dec.im_layers[0])
+        self.enc_dims=enc_dim_func(enc)
+        self.dec_dims=dec_dim_func(dec)
         if len(original_shape)==2:
             self.channel_shape=1
         else:
