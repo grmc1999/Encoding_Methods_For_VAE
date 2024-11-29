@@ -101,6 +101,7 @@ class ViT_DEC(nn.Module):
             batch_norm=batch_norm,
             mode="Decoding"
         )
+        self.last_act=nn.Sigmoid()
 
 
     def forward(self,x):
@@ -117,7 +118,4 @@ class ViT_DEC(nn.Module):
         self.est_class_token=est_class_token
 
         x=self.image_patch_embedding(x)
-        x=nn.Sigmoid(x)
-        
-        
-        return x
+        x=self.last_act(x)
