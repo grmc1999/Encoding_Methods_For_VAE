@@ -119,3 +119,4 @@ class ViT_DEC(nn.Module):
 
         x=self.image_patch_embedding(x)
         x=self.last_act(x)
+        return x
