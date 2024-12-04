@@ -115,7 +115,7 @@ class multi_head_Attenttion(nn.Module):
         self.head_size=head_size
         
         self.multi_qkv_heads=nn.Linear(input_size,heads*head_size*3)
-        self.Attention_mechanism=Attention_mechanism
+        self.Attention_mechanism=Attention_mechanism(head_size)
         self.last_layer=nn.Sequential(
             nn.Linear(heads*head_size,input_size),
             nn.Dropout(Dropout)

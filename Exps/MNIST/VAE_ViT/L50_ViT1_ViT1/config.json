@@ -36,7 +36,7 @@
                                 "Transformer_layers_sizes":[100],
                                 "Attention_mechanisms":"Dot_product_attention",
                                 "layers_heads":[4],
-                                "layer_head_sizes":[196],
+                                "layer_head_sizes":[392],
                                 "dropout": 0.5,
                                 "batch_norm": false,
                                 "pre_batch_norm": false,
@@ -52,7 +52,7 @@
                                 "Transformer_layers_sizes":[100],
                                 "Attention_mechanisms":"Dot_product_attention",
                                 "layers_heads":[4],
-                                "layer_head_sizes":[196],
+                                "layer_head_sizes":[392],
                                 "dropout": 0.5,
                                 "batch_norm": false,
                                 "pre_batch_norm": false,
@@ -64,7 +64,7 @@
                               },
                               "flat": false,
                               "deflat": false,
-                              "compression_factor": 0.25,
+                              "compression_factor": 0.5,
                               "i_shape": [
                                     28,
                                     28
@@ -74,35 +74,35 @@
                 }
             },
                 "P_NET": {
-                      "variational_generation_type": "VAE_NETs",
-                      "parameters": {
-                            "layer_size": [
-                                  196,
-                                  196
-                            ],
-                            "dec_activators": {
-                                  "name": "LeakyReLU",
-                                  "params": {}
-                            },
-                            "batch_norm": false,
-                            "dropout": null
-                      }
-                },
-                "Q_NET": {
-                      "variational_generation_type": "VAE_NETs",
-                      "parameters": {
-                            "layer_size": [
-                                  196,
-                                  196
-                            ],
-                            "enc_activators": {
-                                  "name": "LeakyReLU",
-                                  "params": {}
-                            },
-                            "batch_norm": false,
-                            "dropout": null
-                      }
-                }
+                        "variational_generation_type": "VAE_NETs",
+                        "parameters": {
+                              "layer_size": [
+                                    392,
+                                    392
+                              ],
+                              "dec_activators": {
+                                    "name": "LeakyReLU",
+                                    "params": {}
+                              },
+                              "batch_norm": false,
+                              "dropout": null
+                        }
+                  },
+                  "Q_NET": {
+                        "variational_generation_type": "VAE_NETs",
+                        "parameters": {
+                              "layer_size": [
+                                    392,
+                                    392
+                              ],
+                              "enc_activators": {
+                                    "name": "Sigmoid",
+                                    "params": {}
+                              },
+                              "batch_norm": false,
+                              "dropout": null
+                        }
+                  }
           },
           "model_params": {
                 "losses_weigths": {
