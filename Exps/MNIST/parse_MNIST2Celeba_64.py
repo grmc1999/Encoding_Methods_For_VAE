@@ -96,6 +96,18 @@ def load_change_json(json_dir,args):
         config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["flat"]=True
         config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["deflat"]=False
 
+    elif args.model=="VAE_DNN_ViT":
+
+        # Size correction
+        config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["flat"]=False
+        config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["deflat"]=False
+
+    elif args.model=="VAE_ViT_DNN":
+
+        # Size correction
+        config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["flat"]=False
+        config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["deflat"]=False
+
     else:
         print("type not found")
     
