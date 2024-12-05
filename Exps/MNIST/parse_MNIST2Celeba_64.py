@@ -84,6 +84,18 @@ def load_change_json(json_dir,args):
 
         config_json["model"]["model_params"]["resize"]=[28, 28]
 
+    elif args.model=="VAE_ViT_CNN":
+
+        # Size correction
+        config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["flat"]=False
+        config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["deflat"]=True
+
+    elif args.model=="VAE_CNN_ViT":
+
+        # Size correction
+        config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["flat"]=True
+        config_json["model"]["sub_modules"]["encoding_decoding_module"]["parameters"]["deflat"]=False
+
     else:
         print("type not found")
     
