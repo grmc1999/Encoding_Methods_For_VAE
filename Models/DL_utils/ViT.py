@@ -3,7 +3,7 @@ import torch
 from einops.layers.torch import Rearrange
 from einops import repeat
 from .utils import Transformer
-import Attention_methods
+from . import Attention_methods
 
 
 #if deepViT
@@ -42,8 +42,8 @@ class ViT_ENC(nn.Module):
         self.Transformer=Transformer(
             Transformer_layers_sizes,
             #Attention_mechanisms=getattr(Attention_methods,Attention_mechanisms)(),
-            list( getattr(Attention_methods,am) for am in Attention_mechanisms) if isinstance(Attention_mechanisms,list) else getattr(Attention_methods,Attention_mechanisms),
-            #getattr(Attention_methods,Attention_mechanisms)(),
+            list( getattr(Attention_methods,am) for am in Attention_mechanisms) if isinstance(Attention_mechanisms,list) else [getattr(Attention_methods,Attention_mechanisms)],
+            #[getattr(Attention_methods,Attention_mechanisms)](),
             layers_heads,
             layer_head_sizes,
             dropout=dropout,
@@ -98,7 +98,7 @@ class ViT_DEC(nn.Module):
 
         self.Transformer=Transformer(
             Transformer_layers_sizes[::-1],
-            list( getattr(Attention_methods,am) for am in Attention_mechanisms[::-1]) if isinstance(Attention_mechanisms,list) else getattr(Attention_methods,Attention_mechanisms),
+            list( getattr(Attention_methods,am) for am in Attention_mechanisms[::-1]) if isinstance(Attention_mechanisms,list) else [getattr(Attention_methods,Attention_mechanisms)],
             #Attention_mechanisms[::-1],
             layers_heads[::-1],
             layer_head_sizes[::-1],
